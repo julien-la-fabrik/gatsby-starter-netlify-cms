@@ -16,6 +16,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `julien-lfk-test`,
+        short_name: `julien-lfk-test`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#ff2200`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `img/favicon-32x32.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
@@ -66,7 +81,7 @@ module.exports = {
       },
     },
     {
-      resolve:'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true,            // Activates purging in npm run develop
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
