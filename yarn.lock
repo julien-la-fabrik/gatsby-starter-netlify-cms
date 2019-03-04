@@ -5478,6 +5478,15 @@ gatsby-link@^2.0.10:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-manifest@^2.0.19:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.21.tgz#58f037ae1a279735704debf05612827356ec10a5"
+  integrity sha512-4O6AW+5WP1Qc6EeLwg9FFPo/P3lprOxEn6bfTue/Yt11/FQDkPfEhXjR6i0CLQCE2prddMFbTNojDdKW2+9qrQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    bluebird "^3.5.0"
+    sharp "^0.21.3"
+
 gatsby-plugin-netlify-cms@^3.0.9:
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.12.tgz#1812653fba2690f85b2796fa22e4b59b7b169520"
