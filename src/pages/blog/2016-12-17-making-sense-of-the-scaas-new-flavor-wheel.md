@@ -8,6 +8,7 @@ description: >-
 tags:
   - flavor
   - tasting
+location: '{"type":"Point","coordinates":[-87.3344421,34.0742749]}'
 ---
 ![flavor wheel](/img/boat.jpg)
 
