@@ -12,22 +12,24 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout>
-    <section className="uk-container uk-margin-bottom">
-      <Helmet title={`Tags | ${title}`} />
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="uk-list">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
+    <Layout>
+      <section className="uk-section">
+        <div className="uk-container">
+          <Helmet title={`Tags | ${title}`} />
+          <h1 className="title is-size-2 is-bold-light">Tags</h1>
+          <ul className="uk-list">
+            {group.map(tag => (
+              <li key={tag.fieldValue}>
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  {tag.fieldValue} ({tag.totalCount})
                   </Link>
-                </li>
-              ))}
-            </ul>
-    </section>
-  </Layout>
-)
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </Layout>
+  )
 
 export default TagsPage
 

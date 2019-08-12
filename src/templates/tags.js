@@ -18,17 +18,19 @@ class TagRoute extends React.Component {
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`
+      } tagged with “${tag}”`
 
     return (
       <Layout>
-        <section className="uk-container uk-margin-bottom">
-          <Helmet title={`${tag} | ${title}`} />
-          <h3 className="">{tagHeader}</h3>
-          <ul className="uk-list">{postLinks}</ul>
-          <p>
-            <Link to="/tags/">Browse all tags</Link>
-          </p>
+        <section className="uk-section">
+          <div className="uk-container">
+            <Helmet title={`${tag} | ${title}`} />
+            <h3 className="">{tagHeader}</h3>
+            <ul className="uk-list">{postLinks}</ul>
+            <p>
+              <Link to="/tags/">Browse all tags</Link>
+            </p>
+          </div>
         </section>
       </Layout>
     )

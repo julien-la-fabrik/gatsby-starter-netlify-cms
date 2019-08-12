@@ -6,22 +6,28 @@ import BlogRoll from '../../components/BlogRoll'
 export default class BlogIndexPage extends React.Component {
   render() {
 
-  return (
+    return (
       <Layout>
-        <section className="uk-container uk-margin-bottom">
 
-                <h1
-                  className="has-text-weight-bold is-size-1"
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
-                >
-                  Latest Stories
-                </h1>
-              <BlogRoll />
+        <div className="uk-margin-bottom uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -500" style={{
+          backgroundImage: `url('/img/blog-index.jpg')`,
+        }}
+        >
+          <div className="uk-container uk-margin-auto-vertical">
+
+            <div className="uk-text-center">
+              <h1 className="uk-background-primary uk-padding-small"            >
+                Latest Stories
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <section className="uk-section">
+          <div className="uk-container">
+            <BlogRoll />
+
+          </div>
         </section>
       </Layout>
     )

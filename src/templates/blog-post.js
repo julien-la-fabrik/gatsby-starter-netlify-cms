@@ -17,27 +17,29 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="uk-container uk-margin-bottom">
-      {helmet || ''}
-      <article className="uk-article">
-            <h1 className="uk-article-title">
-              {title}
-            </h1>
-            <p className="uk-article-meta">{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <div className="uk-grid uk-grid-small uk-child-width-auto">
-                  {tags.map(tag => (
-                    <div key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </div>
-                  ))}
-                </div>
+    <section className="uk-section">
+      <div className="uk-container">
+        {helmet || ''}
+        <article className="uk-article">
+          <h1 className="uk-article-title">
+            {title}
+          </h1>
+          <p className="uk-article-meta">{description}</p>
+          <PostContent content={content} />
+          {tags && tags.length ? (
+            <div style={{ marginTop: `4rem` }}>
+              <h4>Tags</h4>
+              <div className="uk-grid uk-grid-small uk-child-width-auto">
+                {tags.map(tag => (
+                  <div key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </div>
+                ))}
               </div>
-            ) : null}
-      </article>
+            </div>
+          ) : null}
+        </article>
+      </div>
     </section>
   )
 }

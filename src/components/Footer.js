@@ -10,85 +10,85 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="uk-background-secondary uk-padding-large">
-      <img
-      className="uk-align-center uk-margin-bottom"
-        src={logo}
-        alt="Kaldi"
-        style={{ width: '14em', height: '10em' }}
-      />
+      <footer className="uk-background-secondary uk-section">
+        <img
+          className="uk-align-center uk-margin-bottom"
+          src={logo}
+          alt="Kaldi"
+          style={{ width: '14em', height: '10em' }}
+        />
         <div className="uk-container">
           <div className="uk-grid uk-child-width-expand@s">
-                <section className="">
-                    <ul className="uk-nav uk-background-secondary">
-                      <li><Link to="/" className="">Home</Link></li>
-                      <li><Link className="" to="/about">About</Link></li>
-                      <li><Link className="" to="/products">
-                        Products
+            <section className="">
+              <ul className="uk-nav uk-background-secondary">
+                <li><Link to="/" className="">Home</Link></li>
+                <li><Link className="" to="/about">About</Link></li>
+                <li><Link className="" to="/products">
+                  Products
                       </Link>
-                    </li>
-                    <li>
-                    <Link className="" to="/contact/examples">
-                      Form Examples
+                </li>
+                <li>
+                  <Link className="" to="/contact/examples">
+                    Form Examples
                     </Link>
-                    </li>
-                    <li><a
-                      className=""
-                      href="/admin/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Admin
+                </li>
+                <li><a
+                  className=""
+                  href="/admin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Admin
                     </a></li>
-                    </ul>
-                  </section>
-                <section>
-                  <ul className="uk-nav">
-                  <li>
-                    <Link className="" to="/blog">
-                      Latest Stories
+              </ul>
+            </section>
+            <section>
+              <ul className="uk-nav">
+                <li>
+                  <Link className="" to="/blog">
+                    Latest Stories
                     </Link>
-                  </li>
-                  <li>
-                    <Link className="" to="/contact">
-                      Contact
+                </li>
+                <li>
+                  <Link className="" to="/contact">
+                    Contact
                     </Link>
-                  </li>
-                  </ul>
-                </section>
-                <div className="column is-4 social">
+                </li>
+              </ul>
+            </section>
+            <div className="column is-4 social">
 
-                  <a title="facebook" href="https://facebook.com">
-                    <img
-                      src={facebook}
-                      alt="Facebook"
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
+              <a title="facebook" href="https://facebook.com">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                  style={{ width: '1em', height: '1em' }}
+                />
+              </a>
+              <a title="twitter" href="https://twitter.com">
+                <img
+                  className="fas fa-lg"
+                  src={twitter}
+                  alt="Twitter"
+                  style={{ width: '1em', height: '1em' }}
+                />
+              </a>
+              <a title="instagram" href="https://instagram.com">
+                <img
                   src={instagram}
                   alt="Instagram"
                   style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
+                />
+              </a>
+              <a title="vimeo" href="https://vimeo.com">
+                <img
                   src={vimeo}
                   alt="Vimeo"
                   style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                </div>
+                />
+              </a>
             </div>
+          </div>
         </div>
       </footer>
     )
