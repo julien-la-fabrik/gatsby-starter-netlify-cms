@@ -18,12 +18,7 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
-  <section className="section section--gradient">
-    <div className="container">
-      <div className="section">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
+  <section className="uk-container uk-margin-bottom">
               <div
                 className="full-width-image-container margin-top-0"
                 style={{
@@ -100,11 +95,7 @@ export const ProductPageTemplate = ({
               </h2>
               <p className="is-size-5">{pricing.description}</p>
               <Pricing data={pricing.plans} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </section>
 )
 

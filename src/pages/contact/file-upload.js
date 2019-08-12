@@ -43,9 +43,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <section className="uk-container uk-margin-bottom">
               <h1>File Upload</h1>
               <form
                 name="file-upload"
@@ -69,7 +67,7 @@ export default class Contact extends React.Component {
                   </label>
                   <div className="control">
                     <input
-                      className="input"
+                      className="uk-input"
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -78,29 +76,23 @@ export default class Contact extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <div className="file">
-                    <label className="file-label">
-                      <input
-                        className="file-input"
-                        type="file"
-                        name="attachment"
-                        onChange={this.handleAttachment}
-                      />
-                      <span className="file-cta">
-                        <span className="file-label">Choose a file…</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+
+                <div className="uk-margin">
+                        <div uk-form-custom="target: true">
+                            <input type="file"
+                            name="attachment"
+                            onChange={this.handleAttachment}/>
+                            <input className="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled/>
+                        </div>
+                        <button className="uk-button uk-button-default">Choose a file…</button>
+                    </div>
+
+                <div className="uk-margin">
+                  <button className="uk-button uk-button-primary" type="submit">
                     Send
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
         </section>
       </Layout>
     )

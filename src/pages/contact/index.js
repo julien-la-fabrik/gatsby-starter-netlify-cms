@@ -36,9 +36,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <section className="uk-container uk-margin-bottom">
               <h1>Contact</h1>
               <form
                 name="contact"
@@ -57,12 +55,12 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
-                  </label>
-                  <div className="control">
+                  <div className="uk-margin">
+                    <label className="label" htmlFor={'name'}>
+                      Your name
+                    </label>
                     <input
-                      className="input"
+                      className="uk-input"
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -72,12 +70,12 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'email'}>
-                    Email
-                  </label>
-                  <div className="control">
+                  <div className="uk-margin">
+                    <label className="label" htmlFor={'email'}>
+                      Email
+                    </label>
                     <input
-                      className="input"
+                      className="uk-input"
                       type={'email'}
                       name={'email'}
                       onChange={this.handleChange}
@@ -87,12 +85,12 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'message'}>
-                    Message
-                  </label>
-                  <div className="control">
+                  <div className="uk-margin">
+                    <label className="label" htmlFor={'message'}>
+                      Message
+                    </label>
                     <textarea
-                      className="textarea"
+                      className="uk-textarea"
                       name={'message'}
                       onChange={this.handleChange}
                       id={'message'}
@@ -101,13 +99,11 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
+                  <button className="uk-button uk-button-primary" type="submit">
                     Send
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
         </section>
       </Layout>
     )

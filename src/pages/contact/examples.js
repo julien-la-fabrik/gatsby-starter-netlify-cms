@@ -6,9 +6,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <section className="uk-container uk-margin-bottom">
               <h1>Hi people</h1>
               <p>
                 This is an example site integrating Netlify’s form handling with
@@ -41,8 +39,6 @@ export default class Index extends React.Component {
                 </a>{' '}
                 for a working example.
               </p>
-            </div>
-          </div>
         </section>
       </Layout>
     )

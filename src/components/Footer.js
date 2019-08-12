@@ -19,21 +19,21 @@ const Footer = class extends React.Component {
       />
         <div className="uk-container">
           <div className="uk-grid uk-child-width-expand@s">
-                <section className="menu">
-                    <ul className="menu-list">
-                      <li><Link to="/" className="navbar-item">Home</Link></li>
-                      <li><Link className="navbar-item" to="/about">About</Link></li>
-                      <li><Link className="navbar-item" to="/products">
+                <section className="">
+                    <ul className="uk-nav uk-background-secondary">
+                      <li><Link to="/" className="">Home</Link></li>
+                      <li><Link className="" to="/about">About</Link></li>
+                      <li><Link className="" to="/products">
                         Products
                       </Link>
                     </li>
                     <li>
-                    <Link className="navbar-item" to="/contact/examples">
+                    <Link className="" to="/contact/examples">
                       Form Examples
                     </Link>
                     </li>
                     <li><a
-                      className="navbar-item"
+                      className=""
                       href="/admin/"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -43,14 +43,14 @@ const Footer = class extends React.Component {
                     </ul>
                   </section>
                 <section>
-                  <ul className="menu-list">
+                  <ul className="uk-nav">
                   <li>
-                    <Link className="navbar-item" to="/blog">
+                    <Link className="" to="/blog">
                       Latest Stories
                     </Link>
                   </li>
                   <li>
-                    <Link className="navbar-item" to="/contact">
+                    <Link className="" to="/contact">
                       Contact
                     </Link>
                   </li>
