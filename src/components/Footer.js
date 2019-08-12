@@ -10,18 +10,15 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-              <div className="columns">
-                <div className="column is-4">
+      <footer className="uk-background-secondary uk-padding-large">
+      <img
+      className="uk-align-center uk-margin-bottom"
+        src={logo}
+        alt="Kaldi"
+        style={{ width: '14em', height: '10em' }}
+      />
+        <div className="uk-container">
+          <div className="uk-grid uk-child-width-expand@s">
                 <section className="menu">
                     <ul className="menu-list">
                       <li><Link to="/" className="navbar-item">Home</Link></li>
@@ -45,8 +42,6 @@ const Footer = class extends React.Component {
                     </a></li>
                     </ul>
                   </section>
-                </div>
-                <div className="column is-4">
                 <section>
                   <ul className="menu-list">
                   <li>
@@ -61,11 +56,10 @@ const Footer = class extends React.Component {
                   </li>
                   </ul>
                 </section>
-                </div>
                 <div className="column is-4 social">
-                
+
                   <a title="facebook" href="https://facebook.com">
-                    <img 
+                    <img
                       src={facebook}
                       alt="Facebook"
                       style={{ width: '1em', height: '1em' }}
@@ -94,7 +88,6 @@ const Footer = class extends React.Component {
                   />
                 </a>
                 </div>
-              </div>
             </div>
         </div>
       </footer>

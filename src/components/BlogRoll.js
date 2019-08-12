@@ -7,28 +7,31 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    
+
     return (
-      <div className="columns is-multiline">
+      <div className="uk-child-width-1-2@s uk-grid-medium uk-grid-match uk-grid">
       {posts && (posts
           .map(({ node: post }) => (
             <div
-              className="is-parent column is-6"
+              className=""
               key={post.id}
             >
-            <article className="tile is-child box notification">
+            <article className="">
               <p>
-                <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
+                <span className="uk-article-title">
+                <Link className="uk-link-reset" to={post.fields.slug}>
+
                   {post.frontmatter.title}
                 </Link>
+              </span>
                 <span> &bull; </span>
-                <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span>
+                <span className="uk-article-meta">{post.frontmatter.date}</span>
               </p>
               <p>
                 {post.excerpt}
                 <br />
                 <br />
-                <Link className="button" to={post.fields.slug}>
+                <Link className="uk-button uk-button-default" to={post.fields.slug}>
                   Keep Reading →
                 </Link>
               </p>
