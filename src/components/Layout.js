@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 
 // import './all.sass'
 import './uikit.scss';
-import 'uikit'
+// import 'uikit'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
