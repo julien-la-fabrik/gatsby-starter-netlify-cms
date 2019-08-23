@@ -3,10 +3,6 @@ templateKey: landing-page
 title: Test
 sections:
   - header: Welcome
-    images:
-      - /img/chemex.jpg
-      - /img/flavor_wheel.jpg
-      - /img/products-grid2.jpg
     template: hero
     type: carousel
   - header: Spotlight
