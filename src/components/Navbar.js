@@ -62,6 +62,11 @@ const Navbar = class extends React.Component {
               Form Examples
             </Link>
           </li>
+          <li>
+            <Link className="navbar-item" to="/landing">
+              Landing Example
+            </Link>
+          </li>
         </ul>
 
       </div>

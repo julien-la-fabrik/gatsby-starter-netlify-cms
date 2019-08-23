@@ -1,36 +1,36 @@
 import React from 'react'
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const Section = ({ type, content }) => {
-  if (type == "carousel") {
-    console.log(content);
+  if (type === "carousel") {
     return (
       <section className="uk-section">
         <div className="uk-container">
           <h2 className="">
             Carousel
         </h2>
-          <div class="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
+          <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
 
-            <ul class="uk-slideshow-items">
+            <ul className="uk-slideshow-items">
               {
                 content.images.map((image, index) => (
                   <li key={"section-img-" + index}>
-                    <img src={image} alt="" uk-cover />
+                  <PreviewCompatibleImage imageInfo={image} />
                   </li>
                 ))
               }
 
             </ul>
 
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            <span className="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous="" uk-slideshow-item="previous"></span>
+            <span className="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next="" uk-slideshow-item="next"></span>
 
           </div>
         </div>
       </section>
     )
   }
-  if (type == "spotlight") {
+  if (type === "spotlight") {
     return (
       <section className="uk-section">
         <div className="uk-container">
