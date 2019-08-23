@@ -7,6 +7,7 @@ import Section from '../components/sections/Section'
 
 export const LandingPageTemplate = ({ title, content, contentComponent, sections }) => {
   const PageContent = contentComponent || Content
+  sections= sections || []
   return (
     <section className="uk-section">
       <div className="uk-container">
@@ -24,16 +25,15 @@ export const LandingPageTemplate = ({ title, content, contentComponent, sections
   )
 }
 
-LandingPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  sections: PropTypes.array,
-  contentComponent: PropTypes.func,
-}
+// LandingPageTemplate.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   content: PropTypes.string,
+//   sections: PropTypes.array,
+//   contentComponent: PropTypes.func,
+// }
 
 const LandingPage = ({ data }) => {
   const { markdownRemark: post } = data
-  console.log(post);
   return (
     <Layout>
       <LandingPageTemplate

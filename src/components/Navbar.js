@@ -26,8 +26,10 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <div className="uk-container">
-      <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar="true">
+      <nav className="uk-navbar-container" >
+        <div className="uk-container">
+          <div className="uk-navbar">
+
       <div className="uk-navbar-left">
 
         <Link to="/" className="uk-navbar-item uk-logo" title="Logo">
@@ -70,8 +72,9 @@ const Navbar = class extends React.Component {
         </ul>
 
       </div>
+            </div>
+            </div>
     </nav>
-          </div>
         )
   }
 }
