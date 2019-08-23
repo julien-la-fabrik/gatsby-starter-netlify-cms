@@ -2,15 +2,23 @@
 templateKey: landing-page
 title: Test
 sections:
-  - header: Spotlight
-    template: full
-    text: lorem ipsum
-    type: spotlight
   - header: head
     images:
       - image: /img/home-jumbotron.jpg
       - image: /img/chemex.jpg
     template: hero
+    type: carousel
+  - header: Spotlight
+    template: full
+    text: lorem ipsum
+    type: spotlight
+  - header: new
+    images:
+      - image: /img/blog-index.jpg
+      - image: /img/flavor_wheel.jpg
+      - image: /img/products-grid2.jpg
+      - image: /img/products-grid3.jpg
+    template: test
     type: carousel
 ---
 ### Shade-grown coffee
