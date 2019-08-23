@@ -70,7 +70,16 @@ export const landingPageQuery = graphql`
           header
           template
           type
-          images
+          images{
+            image{
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+
+          }
         }
       }
     }
