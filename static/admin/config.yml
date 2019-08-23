@@ -20,7 +20,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Content", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "categories"}
   - label: "Blog en Francais"
     name: "french_posts"
     create: true
@@ -35,7 +34,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Contenu", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "categories"}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -53,6 +51,30 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/landing/index.md"
+        label: "Landing"
+        name: "landing"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Home Section"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Carousel"
+                name: "carousel"
+                widget: object
+                fields:
+                  - {label: Header, name: header, widget: string, default: "Image Gallery"}
+                  - {label: Template, name: template, widget: string, default: "carousel.html"}
+                  - label: Images
+                    name: images
+                    widget: list
+                    field: {label: Image, name: image, widget: image}
+          - label: "Spotlight"
+            name: "spotlight"
+            widget: object
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "Index Page"
