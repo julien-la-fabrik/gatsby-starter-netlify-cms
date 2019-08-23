@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Section from '../components/sections/Section'
 
-export const LandingPageTemplate = ({ title, content, contentComponent }) => {
+export const LandingPageTemplate = ({ title, content, contentComponent, sections }) => {
   const PageContent = contentComponent || Content
-
+  console.log(sections);
   return (
     <section className="uk-section">
       <div className="uk-container">
@@ -14,6 +15,11 @@ export const LandingPageTemplate = ({ title, content, contentComponent }) => {
           {title}
         </h2>
         <PageContent className="content" content={content} />
+        {
+          sections.map((section, index) => (
+            <Section key={"section-" + index} type={section.type} content={section} />
+          ))
+        }
       </div>
     </section>
   )
@@ -22,25 +28,34 @@ export const LandingPageTemplate = ({ title, content, contentComponent }) => {
 LandingPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
+  sections: PropTypes.array,
   contentComponent: PropTypes.func,
 }
 
 const LandingPage = ({ data }) => {
   const { markdownRemark: post } = data
-
+  console.log(post);
   return (
     <Layout>
       <LandingPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        sections={post.frontmatter.sections}
       />
     </Layout>
   )
 }
 
+// LandingPage.propTypes = {
+//   data: PropTypes.object.isRequired,
+// }
 LandingPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default LandingPage
@@ -51,6 +66,12 @@ export const landingPageQuery = graphql`
       html
       frontmatter {
         title
+        sections {
+          header
+          template
+          type
+          images
+        }
       }
     }
   }

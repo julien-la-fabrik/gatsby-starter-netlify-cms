@@ -1,6 +1,6 @@
 ---
 templateKey: landing-page
-title: About our values
+title: Test
 sections:
   - header: Welcome
     images:
