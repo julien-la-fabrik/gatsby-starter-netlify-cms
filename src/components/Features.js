@@ -4,7 +4,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
   <section className="uk-section">
-    <div className="uk-child-width-1-2 uk-grid-medium uk-grid-match uk-grid">
+    <div uk-grid="" className="uk-child-width-1-2 uk-grid-medium uk-grid-match ">
       {gridItems.map(item => (
         <div key={item.text}>
           <div className="uk-card uk-card-default">

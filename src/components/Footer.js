@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
           style={{ width: '14em', height: '10em' }}
         />
         <div className="uk-container">
-          <div className="uk-grid uk-child-width-expand@s">
+          <div uk-grid="" className=" uk-child-width-expand@s">
             <section className="">
               <ul className="uk-nav uk-background-secondary">
                 <li><Link to="/" className="">Home</Link></li>

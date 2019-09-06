@@ -58,7 +58,7 @@ export const ProductPageTemplate = ({
               <p>{main.description}</p>
             </div>
           </div>
-          <div className="uk-grid uk-child-width-expand@s uk-flex-middle">
+          <div uk-grid="" className="uk-child-width-expand@s uk-flex-middle">
             <div>
               <PreviewCompatibleImage imageInfo={main.image1} />
             </div>

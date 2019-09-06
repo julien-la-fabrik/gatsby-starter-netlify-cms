@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Pricing = ({ data }) => (
-  <div className="uk-grid uk-child-width-expand@s">
+  <div uk-grid="" className="uk-child-width-expand@s">
     {data.map(price => (
       <div key={price.plan} >
         <div className="uk-card uk-card-default uk-card-small uk-card-body">

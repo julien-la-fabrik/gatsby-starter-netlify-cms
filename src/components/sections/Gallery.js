@@ -26,10 +26,10 @@ export const Gallery = ({ content }) => {
     <section className="uk-section">
       <div className="uk-container">
         <h2 className="">Gallery</h2>
-        <div className="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid uk-grid-medium" uk-lightbox="animation: slide">
+        <div uk-grid="" className="uk-grid-medium" uk-lightbox="animation: slide">
           {
             content.images.map((image, index) => (
-              <div key={"section-img-" + index}>
+              <div className="uk-width-1-2@s uk-width-1-3@m  " key={"section-img-" + index}>
                 <a href={GetimgUrl(image)}>
                   <PreviewCompatibleImage imageInfo={image} />
                 </a>
