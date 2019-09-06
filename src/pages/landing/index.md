@@ -6,6 +6,11 @@ sections:
     images:
       - image: /img/home-jumbotron.jpg
       - image: /img/chemex.jpg
+      - image: /img/products-full-width.jpg
+      - image: /img/aerial-shot-beach-daytime-995939.jpg
+      - image: /img/jumbotron.jpg
+      - image: /img/boat.jpg
+      - image: /img/products-grid1.jpg
     template: Slider
     type: carousel
   - header: Spotlight
