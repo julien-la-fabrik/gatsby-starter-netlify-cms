@@ -24,7 +24,7 @@ sections:
     images:
       - image: /img/blog-index.jpg
       - image: /img/boat.jpg
-    template: carousel.html
+    template: carousel
     type: sliderhero
 ---
 ### Shade-grown coffee
