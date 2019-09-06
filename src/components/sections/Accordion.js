@@ -1,32 +1,29 @@
 import React from 'react'
-import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
-export const Carousel = ({ content }) => {
+export const Accordion = ({ content }) => {
   return (
     <section className="uk-section">
       <div className="uk-container">
-        <h2 className="">
-          Carousel
-      </h2>
-        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
+        <h2>{content.header}</h2>
 
-          <ul className="uk-slideshow-items">
+          <ul uk-accordion="">
             {
-              content.images.map((image, index) => (
+              content.cards.map((card, index) => (
                 <li key={"section-img-" + index}>
-                  <PreviewCompatibleImage imageInfo={image} />
+                <a className="uk-accordion-title" href="#">{card.title}</a>
+                <div className="uk-accordion-content">
+                    <p>
+                    {card.body}
+                    </p>
+                </div>
                 </li>
               ))
             }
 
           </ul>
 
-          <span className="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous="" uk-slideshow-item="previous"></span>
-          <span className="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next="" uk-slideshow-item="next"></span>
-
-        </div>
       </div>
     </section>
   )
 }
-export default Carousel
+export default Accordion

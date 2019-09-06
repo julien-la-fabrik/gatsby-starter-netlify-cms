@@ -6,7 +6,7 @@ export const Columns = ({ content }) => {
   return (
     <section className="uk-section">
       <div className="uk-container">
-        <h2 className="">{content.header}</h2>
+        <h2>{content.header}</h2>
         <div uk-grid="">
           {
             content.cards.map((card, index) => (

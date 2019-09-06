@@ -5,9 +5,7 @@ export const Carousel = ({ content }) => {
   return (
     <section className="uk-section">
       <div className="uk-container">
-        <h2 className="">
-          Carousel
-      </h2>
+        <h2>{content.header}</h2>
         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
 
           <ul className="uk-slideshow-items">

@@ -5,7 +5,7 @@ export const Slider = ({ content }) => {
   return (
     <section className="uk-section">
       <div className="uk-container">
-        <h2 className="">Slider</h2>
+        <h2>{content.header}</h2>
         <div uk-slider="autoplay: true">
           <ul className="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@">
             {

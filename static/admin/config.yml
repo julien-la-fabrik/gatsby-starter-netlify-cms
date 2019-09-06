@@ -45,7 +45,6 @@ collections:
             fields:
               - {label: Header, name: header, widget: string, default: "Spotlight"}
               - {label: Template, name: template, widget: hidden, default: "Spotlight"}
-              - {label: Text, name: text, widget: text, default: "Hello World"}
               - {label: "Body", name: "body", widget: "markdown"}
   - label: "Blog en Francais"
     name: "french_posts"

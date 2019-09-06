@@ -25,7 +25,7 @@ export const Gallery = ({ content }) => {
   return (
     <section className="uk-section">
       <div className="uk-container">
-        <h2 className="">Gallery</h2>
+        <h2>{content.header}</h2>
         <div uk-grid="" className="uk-grid-medium" uk-lightbox="animation: slide">
           {
             content.images.map((image, index) => (
