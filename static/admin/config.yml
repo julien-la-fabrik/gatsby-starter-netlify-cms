@@ -35,8 +35,8 @@ collections:
             fields:
               - {label: Header, name: header, widget: string, default: "Image Gallery"}
               - {label: Template, name: template,widget: "select", options: ["Columns", "Masonry", "Accordion"]}
-              - label: Images
-                name: images
+              - label: Cards
+                name: cards
                 widget: list
                 fields: [{label: "Title", name: "title", widget: "string"},{label: Image, name: image, widget: image},{label: "Body", name: "body", widget: "markdown"}]
           - label: "Spotlight"

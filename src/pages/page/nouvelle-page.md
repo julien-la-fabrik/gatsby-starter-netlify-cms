@@ -15,7 +15,7 @@ sections:
     text: Hello World
     type: spotlight
   - header: Quelques chiffres
-    images:
+    cards:
       - title: '4303'
         body: requetes
         image: /img/apple-touch-icon.png
