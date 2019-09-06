@@ -11,5 +11,4 @@ CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 // CMS.registerPreviewTemplate('landing', LandingPagePreview)
-CMS.registerPreviewStyle('../components/uikit.scss')
- CMS.init();
+// CMS.registerPreviewStyle('../components/uikit.scss')

@@ -6,20 +6,47 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Blog in English"
-    name: "english_posts"
+  - label: "Pages"
+    name: "pagebuild"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "src/pages/posts"
-    filter: {field: "language", value: "en"}
+    slug: "{{slug}}"
+    folder: "src/pages/page"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"]}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Content", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        types:
+          - label: "Images"
+            name: "image"
+            widget: object
+            fields:
+              - {label: Header, name: header, widget: string, default: "Image Gallery"}
+              - {label: Template, name: template,widget: "select", options: ["Carousel", "SliderHero", "Slider", "Gallery"]}
+              - label: Images
+                name: images
+                widget: list
+                fields: [{label: Image, name: image, widget: image}]
+          - label: "cards"
+            name: "cards"
+            widget: object
+            fields:
+              - {label: Header, name: header, widget: string, default: "Image Gallery"}
+              - {label: Template, name: template,widget: "select", options: ["Columns", "Masonry", "Accordion"]}
+              - label: Images
+                name: images
+                widget: list
+                fields: [{label: "Title", name: "title", widget: "string"},{label: Image, name: image, widget: image},{label: "Body", name: "body", widget: "markdown"}]
+          - label: "Spotlight"
+            name: "spotlight"
+            widget: object
+            fields:
+              - {label: Header, name: header, widget: string, default: "Spotlight"}
+              - {label: Template, name: template, widget: hidden, default: "Spotlight"}
+              - {label: Text, name: text, widget: text, default: "Hello World"}
+              - {label: "Body", name: "body", widget: "markdown"}
   - label: "Blog en Francais"
     name: "french_posts"
     create: true
@@ -49,7 +76,7 @@ collections:
       - {label: "Location", name: "location", widget: "map" }
       - {label: Mainpitch, name: mainpitch, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
   - name: "pages"
-    label: "Pages"
+    label: "Pages Custom"
     files:
       - file: "src/pages/landing/index.md"
         label: "Landing"
