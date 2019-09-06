@@ -2,7 +2,7 @@ import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const Slider = ({ content }) => {
-  console.log(content);
+  console.log(content.images);
   return (
     <section className="uk-section">
       <div className="uk-container">

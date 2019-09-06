@@ -62,12 +62,12 @@ collections:
             name: "sections"
             widget: "list"
             types:
-              - label: "Carousel"
+              - label: "Images"
                 name: "carousel"
                 widget: object
                 fields:
                   - {label: Header, name: header, widget: string, default: "Image Gallery"}
-                  - {label: Template, name: template,widget: "select", options: ["Carousel", "SliderHero", "Slider"]}
+                  - {label: Template, name: template,widget: "select", options: ["Carousel", "SliderHero", "Slider", "Gallery"]}
                   - label: Images
                     name: images
                     widget: list
