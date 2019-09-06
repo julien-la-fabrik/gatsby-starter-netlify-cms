@@ -6,10 +6,10 @@ sections:
     images:
       - image: /img/home-jumbotron.jpg
       - image: /img/chemex.jpg
-    template: hero
+    template: SliderHero
     type: carousel
   - header: Spotlight
-    template: full
+    template: Spotlight
     text: lorem ipsum
     type: spotlight
   - header: new
@@ -18,7 +18,7 @@ sections:
       - image: /img/flavor_wheel.jpg
       - image: /img/products-grid2.jpg
       - image: /img/products-grid3.jpg
-    template: test
+    template: Carousel
     type: carousel
   - header: Image Gallery
     images:

@@ -1,7 +1,7 @@
 import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
-export const Carousel = ({ content }) => {
+export const SliderHero = ({ content }) => {
   console.log(content);
   return (
     <section className="uk-section">
@@ -30,4 +30,4 @@ export const Carousel = ({ content }) => {
     </section>
   )
 }
-export default Carousel
+export default SliderHero

@@ -67,7 +67,17 @@ collections:
                 widget: object
                 fields:
                   - {label: Header, name: header, widget: string, default: "Image Gallery"}
-                  - {label: Template, name: template, widget: string, default: "carousel.html"}
+                  - {label: Template, name: template, widget: hidden, default: "Carousel"}
+                  - label: Images
+                    name: images
+                    widget: list
+                    fields: [{label: Image, name: image, widget: image}]
+              - label: "Slider Hero"
+                name: "sliderhero"
+                widget: object
+                fields:
+                  - {label: Header, name: header, widget: string, default: "Image Gallery"}
+                  - {label: Template, name: template, widget: hidden, default: "SliderHero"}
                   - label: Images
                     name: images
                     widget: list
@@ -77,7 +87,7 @@ collections:
                 widget: object
                 fields:
                   - {label: Header, name: header, widget: string, default: "Spotlight"}
-                  - {label: Template, name: template, widget: string, default: "spotlight.html"}
+                  - {label: Template, name: template, widget: hidden, default: "Spotlight"}
                   - {label: Text, name: text, widget: text, default: "Hello World"}
       - file: "src/pages/index.md"
         label: "Landing Page"

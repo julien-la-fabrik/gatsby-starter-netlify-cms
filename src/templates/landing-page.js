@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Section from '../components/sections/Section'
+import Section from '../components/Section'
 
 export const LandingPageTemplate = ({ title, content, contentComponent, sections }) => {
   const PageContent = contentComponent || Content
-  sections= sections || []
+  sections = sections || []
+  console.log(sections);
   return (
     <section className="uk-section">
       <div className="uk-container">
@@ -17,7 +18,7 @@ export const LandingPageTemplate = ({ title, content, contentComponent, sections
         <PageContent className="content" content={content} />
         {
           sections.map((section, index) => (
-            <Section key={"section-" + index} type={section.type} content={section} />
+            <Section key={"section-" + index} type={section.template} content={section} />
           ))
         }
       </div>
