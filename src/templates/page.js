@@ -5,39 +5,24 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
-export const LandingPageTemplate = ({ title, content, contentComponent, sections }) => {
-  const PageContent = contentComponent || Content
+export const PageTemplate = ({ title, content, contentComponent, sections }) => {
+  // const PageContent = contentComponent || Content
   sections = sections || []
-  // console.log(sections);
   return (
-    <section className="uk-section">
-      <div className="uk-container">
-        <h2 className="">
-          {title}
-        </h2>
-        <PageContent className="content" content={content} />
-      </div>
+    <div className="uk-width-1-1">
       {
         sections.map((section, index) => (
           <Section key={"section-" + index} type={section.template} content={section} />
         ))
       }
-    </section>
+    </div>
   )
 }
-
-// LandingPageTemplate.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   content: PropTypes.string,
-//   sections: PropTypes.array,
-//   contentComponent: PropTypes.func,
-// }
-
-const LandingPage = ({ data }) => {
+const Page = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <Layout>
-      <LandingPageTemplate
+      <PageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -47,10 +32,7 @@ const LandingPage = ({ data }) => {
   )
 }
 
-// LandingPage.propTypes = {
-//   data: PropTypes.object.isRequired,
-// }
-LandingPage.propTypes = {
+Page.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -58,10 +40,10 @@ LandingPage.propTypes = {
   }),
 }
 
-export default LandingPage
+export default Page
 
-export const landingPageQuery = graphql`
-  query LandingPage($id: String!) {
+export const PageQuery = graphql`
+  query Page($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

@@ -12,7 +12,7 @@ collections:
     slug: "{{slug}}"
     folder: "src/pages/page"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Sections"

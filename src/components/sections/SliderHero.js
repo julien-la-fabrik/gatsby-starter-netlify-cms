@@ -3,16 +3,15 @@ import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const SliderHero = ({ content }) => {
   return (
-    <section className="uk-section">
-      <div className="uk-container">
-        <h2>{content.header}</h2>
-        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
 
-          <ul className="uk-slideshow-items">
+      <div className="uk-width-1-1">
+        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull,ratio: false">
+
+          <ul className="uk-slideshow-items" uk-height-viewport="">
             {
               content.images.map((image, index) => (
                 <li key={"section-img-" + index}>
-                  <PreviewCompatibleImage imageInfo={image} />
+                  <PreviewCompatibleImage imageInfo={image} className="uk-height-1-1"/>
                 </li>
               ))
             }
@@ -24,7 +23,6 @@ export const SliderHero = ({ content }) => {
 
         </div>
       </div>
-    </section>
   )
 }
 export default SliderHero

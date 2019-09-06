@@ -1,5 +1,5 @@
 ---
-templateKey: landing-page
+templateKey: page
 title: Nouvelle page
 sections:
   - header: Image Gallery
