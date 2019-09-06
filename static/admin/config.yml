@@ -67,7 +67,7 @@ collections:
                 widget: object
                 fields:
                   - {label: Header, name: header, widget: string, default: "Image Gallery"}
-                  - {label: Template, name: template, widget: hidden, default: "Carousel"}
+                  - {label: Template, name: template,widget: "select", options: ["Carousel", "SliderHero", "Slider"]}
                   - label: Images
                     name: images
                     widget: list
