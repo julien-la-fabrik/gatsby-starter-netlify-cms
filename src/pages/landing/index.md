@@ -18,7 +18,7 @@ sections:
       - image: /img/flavor_wheel.jpg
       - image: /img/products-grid2.jpg
       - image: /img/products-grid3.jpg
-    template: Carousel
+    template: Gallery
     type: carousel
   - header: Image Gallery
     images:

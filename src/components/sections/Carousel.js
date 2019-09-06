@@ -2,7 +2,6 @@ import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const Carousel = ({ content }) => {
-  console.log(content);
   return (
     <section className="uk-section">
       <div className="uk-container">

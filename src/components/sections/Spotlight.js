@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const Spotlight = ({ content }) => {
-  console.log(content);
   return (
     <section className="uk-section">
       <div className="uk-container">

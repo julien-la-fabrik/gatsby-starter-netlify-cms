@@ -8,7 +8,7 @@ import Section from '../components/Section'
 export const LandingPageTemplate = ({ title, content, contentComponent, sections }) => {
   const PageContent = contentComponent || Content
   sections = sections || []
-  console.log(sections);
+  // console.log(sections);
   return (
     <section className="uk-section">
       <div className="uk-container">
