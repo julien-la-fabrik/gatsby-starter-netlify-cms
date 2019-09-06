@@ -6,7 +6,7 @@ sections:
     images:
       - image: /img/home-jumbotron.jpg
       - image: /img/chemex.jpg
-    template: SliderHero
+    template: Slider
     type: carousel
   - header: Spotlight
     template: Spotlight
