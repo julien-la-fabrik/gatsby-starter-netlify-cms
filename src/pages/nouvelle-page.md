@@ -1,6 +1,6 @@
 ---
 templateKey: page
-title: Nouvelle page
+title: index
 sections:
   - header: Image Gallery
     images:
@@ -14,8 +14,7 @@ sections:
     template: Spotlight
     text: Hello World
     type: spotlight
-  - header: Quelques chiffres
-    cards:
+  - cards:
       - title: '4303'
         body: requetes
         image: /img/apple-touch-icon.png
@@ -25,6 +24,7 @@ sections:
       - title: '300'
         body: un film
         image: /img/apple-touch-icon.png
+    header: Quelques chiffres
     template: Columns
     type: cards
 ---
