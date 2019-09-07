@@ -1,0 +1,47 @@
+{
+  "title": "menus",
+  "mainmenu": [
+    {
+      "title": "About",
+      "path": "/about"
+    },
+    {
+      "title": "Products",
+      "path": "/products"
+    },
+    {
+      "title": "Blog",
+      "path": "/blog"
+    },
+    {
+      "title": "Contact",
+      "path": "/contact"
+    },
+    {
+      "title": "page exemple",
+      "path": "/page/nouvelle-page"
+    }
+  ],
+  "footermenu": [
+    {
+      "title": "About",
+      "path": "/about"
+    },
+    {
+      "title": "Products",
+      "path": "/products"
+    },
+    {
+      "title": "Blog",
+      "path": "/blog"
+    },
+    {
+      "title": "Contact",
+      "path": "/contact"
+    },
+    {
+      "title": "page exemple",
+      "path": "/page/nouvelle-page"
+    }
+  ]
+}

@@ -48,11 +48,15 @@ const Navbar = class extends React.Component {
             </li>
           ))
         }
-        <li className="" >
-        <a href="#offcanvas-usage" uk-toggle="">Open</a>
-        </li>
         </ul>
 
+      </div>
+      <div className="uk-navbar-right">
+      <ul className="uk-navbar-nav">
+      <li className="uk-hidden@s" >
+      <a className="uk-navbar-toggle" uk-toggle="" uk-navbar-toggle-icon="" href="#offcanvas-usage"></a>
+      </li>
+      </ul>
       </div>
             </div>
             </div>

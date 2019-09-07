@@ -74,19 +74,6 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Location", name: "location", widget: "map" }
       - {label: Mainpitch, name: mainpitch, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-  - name: "settings"
-    label: "Settings"
-    files:
-      - file: "src/settings/index.json"
-        extention: "json"
-        label: "Settings"
-        name: "settings"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
-          - {label: Description, name: description, widget: string}
-          - {label: Brand Color, name: brandcolor, widget: string, default:"#ff4400"}
-          - {label: Main Menu, name: mainmenu, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Path, name: path, widget: string}]}
   - name: "pages"
     label: "Pages Custom"
     files:
@@ -162,3 +149,44 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "src/settings/index.json"
+        extention: "json"
+        label: "Settings"
+        name: "settings"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Description, name: description, widget: string}
+          - {label: Brand Color, name: brandcolor, widget: string, default: "#ff4400"}
+          - {label: Main Menu, name: mainmenu, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Path, name: path, widget: string}]}
+      - file: "src/settings/theme.json"
+        extention: "json"
+        label: "Theme"
+        name: "theme"
+        fields:
+          - {label: Title, name: title, widget: hidden, default: "theme"}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Primary Brand Color, name: brandcolorprimary, widget: string, default: "#ff4400"}
+          - {label: Secondary Brand Color, name: brandcolorsecondary, widget: string, default: "#ff4400"}
+          - {label: Menu top Type, name: menutopbartype, widget: "select", options: ["normal", "sticky"]}
+      - file: "src/settings/menus.json"
+        extention: "json"
+        label: "Menus"
+        name: "menus"
+        fields:
+          - {label: Title, name: title, widget: hidden, default: "menus"}
+          - {label: Main Menu Top, name: mainmenu, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Path, name: path, widget: string}]}
+          - {label: Menu Footer, name: footermenu, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Path, name: path, widget: string}]}
+      - file: "src/settings/siteinfos.json"
+        extention: "json"
+        label: "Site Information"
+        name: "siteinfos"
+        fields:
+          - {label: Title, name: title, widget: hidden, default: "siteinfos"}
+          - {label: Site name, name: sitename, widget: string, default: "siteinfos"}
+          - {label: Description, name: description, widget: string}
+          - {label: Google Analitics code, name: gacode, widget: string}
+          - {label: Logo, name: logo, widget: image}
