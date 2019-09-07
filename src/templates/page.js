@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import  { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
 export const PageTemplate = ({ title, content, contentComponent, sections }) => {
