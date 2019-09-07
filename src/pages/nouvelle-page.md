@@ -1,6 +1,6 @@
 ---
 templateKey: page
-title: index
+title: Nouvelle page
 sections:
   - header: Image Gallery
     images:

@@ -115,7 +115,7 @@ collections:
                   - {label: Header, name: header, widget: string, default: "Spotlight"}
                   - {label: Template, name: template, widget: hidden, default: "Spotlight"}
                   - {label: Text, name: text, widget: text, default: "Hello World"}
-      - file: "src/pages/index.md"
+      - file: "src/pages/old/index.md"
         label: "Landing Page"
         name: "Index Page"
         fields:
