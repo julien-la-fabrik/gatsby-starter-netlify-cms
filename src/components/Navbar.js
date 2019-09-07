@@ -1,7 +1,5 @@
 import React from 'react'
 import {Link} from 'gatsby'
-// import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
 import settings from '../settings';
 const Navbar = class extends React.Component {
   render() {
@@ -13,7 +11,7 @@ const Navbar = class extends React.Component {
       <div className="uk-navbar-left">
 
         <Link to="/" className="uk-navbar-item uk-logo" title="Logo">
-          <img src={logo} alt={settings.siteinfos.sitename} style={{
+          <img src={settings.siteinfos.logo} alt={settings.siteinfos.sitename} style={{
               width: '88px'
             }}/>
         </Link>

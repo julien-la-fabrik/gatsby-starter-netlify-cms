@@ -10,7 +10,7 @@ collections:
     name: "pagebuild"
     create: true
     slug: "{{slug}}"
-    folder: "src/pages/page"
+    folder: "src/pages"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
