@@ -19,7 +19,7 @@
     },
     {
       "title": "page exemple",
-      "path": "/page/nouvelle-page"
+      "path": "/nouvelle-page"
     }
   ],
   "footermenu": [
@@ -41,7 +41,7 @@
     },
     {
       "title": "page exemple",
-      "path": "/page/nouvelle-page"
+      "path": "/nouvelle-page"
     }
   ]
 }
