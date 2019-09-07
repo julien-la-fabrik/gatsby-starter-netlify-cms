@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 // import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
-
+import settings from '../settings/index.json';
 const Navbar = class extends React.Component {
   componentDidMount() {
     // Get all "navbar-burger" elements
@@ -39,36 +39,18 @@ const Navbar = class extends React.Component {
         </Link>
 
         <ul className="uk-navbar-nav">
-          <li>
-            <Link className="navbar-item" to="/about">
-              About
+        {
+          settings.mainmenu.map((links, index) => (
+            <li className="uk-visible@s" key={"main-menu-" + index}>
+            <Link className="navbar-item" to={links.path}>
+              {links.title}
             </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/products">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/blog">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/landing">
-              Landing Example
-            </Link>
-          </li>
+            </li>
+          ))
+        }
+        <li className="" >
+        <a href="#offcanvas-usage" uk-toggle="">Open</a>
+        </li>
         </ul>
 
       </div>

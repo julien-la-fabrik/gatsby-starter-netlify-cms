@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Navbar from '../components/Navbar'
+import Offcanvas from '../components/Offcanvas'
 import Footer from '../components/Footer'
 
 import './uikit.scss';
-
-
 
 class TemplateWrapper extends Component {
   state = { ready: false };
@@ -76,7 +75,9 @@ class TemplateWrapper extends Component {
                 </Helmet>
                 <Navbar />
                 <div>{this.props.children}</div>
-                <Footer />
+<Footer />
+                <Offcanvas />
+
               </div>
             )}
           />

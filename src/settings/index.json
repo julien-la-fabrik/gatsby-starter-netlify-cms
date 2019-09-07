@@ -1,28 +1,28 @@
 {
   "title": "Site de test",
   "logo": "/img/apple-touch-icon.png",
-  "heading": "Great coffee with a conscience",
+  "description": "Great coffee with a conscience",
   "brandcolor": "#ff4400",
   "mainmenu": [
     {
       "title": "About",
-      "path": "about"
+      "path": "/about"
     },
     {
       "title": "Products",
-      "path": "products"
+      "path": "/products"
     },
     {
       "title": "Blog",
-      "path": "blog"
+      "path": "/blog"
     },
     {
       "title": "Contact",
-      "path": "contact"
+      "path": "/contact"
     },
     {
       "title": "page exemple",
-      "path": "page/nouvelle-page"
+      "path": "/page/nouvelle-page"
     }
   ]
 }
