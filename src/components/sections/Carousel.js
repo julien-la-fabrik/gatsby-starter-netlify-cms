@@ -2,9 +2,10 @@ import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const Carousel = ({ content }) => {
+
   return (
     <section className="uk-section">
-      <div className="uk-container">
+      <div className={content.container =="full" ? 'uk-width-1-1':"uk-container"}>
         <h2>{content.header}</h2>
         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
 

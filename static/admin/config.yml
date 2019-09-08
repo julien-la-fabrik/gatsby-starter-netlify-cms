@@ -25,16 +25,18 @@ collections:
             fields:
               - {label: Header, name: header, widget: string, default: "Image Gallery"}
               - {label: Template, name: template,widget: "select", options: ["Carousel", "SliderHero", "Slider", "Gallery"]}
+              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - label: Images
                 name: images
                 widget: list
-                fields: [{label: Image, name: image, widget: image}]
+                fields: [{label: "Title", name: "title", widget: "string"},{label: Image, name: image, widget: image},{label: "Body", name: "body", widget: "markdown"}]
           - label: "cards"
             name: "cards"
             widget: object
             fields:
               - {label: Header, name: header, widget: string, default: "Image Gallery"}
               - {label: Template, name: template,widget: "select", options: ["Columns", "Masonry", "Accordion"]}
+              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - label: Cards
                 name: cards
                 widget: list
@@ -45,21 +47,8 @@ collections:
             fields:
               - {label: Header, name: header, widget: string, default: "Spotlight"}
               - {label: Template, name: template, widget: hidden, default: "Spotlight"}
+              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Blog en Francais"
-    name: "french_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "src/pages/posts"
-    filter: {field: "language", value: "es"}
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Langue", name: "language", widget: "select", options: ["en", "fr"]}
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Contenu", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"

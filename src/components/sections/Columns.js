@@ -5,7 +5,7 @@ export const Columns = ({ content }) => {
   // console.log(content);
   return (
     <section className="uk-section">
-      <div className="uk-container">
+      <div className={content.container =="full" ? 'uk-width-1-1':"uk-container"}>
         <h2>{content.header}</h2>
         <div uk-grid="">
           {
