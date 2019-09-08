@@ -52,6 +52,8 @@ export const PageQuery = graphql`
           header
           template
           type
+          body
+          container
           cards{
             title
             body

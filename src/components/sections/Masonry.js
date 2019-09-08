@@ -4,7 +4,7 @@ import PreviewCompatibleImage from '../PreviewCompatibleImage'
 export const Carousel = ({ content }) => {
   return (
     <section className="uk-section">
-      <div className={content.container =="full" ? 'uk-width-1-1':"uk-container"}>
+      <div className={content.container ==="full" ? 'uk-width-1-1':"uk-container"}>
         <h2 className="">
           Carousel
       </h2>
