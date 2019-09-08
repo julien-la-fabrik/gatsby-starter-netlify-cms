@@ -178,16 +178,7 @@ collections:
             widget: object
             fields:
               - {label: Title, name: title, widget: string, default: "Label", required: false}
-              - {label: Template, name: template,widget: "select", options: [{label:"Texte court" value:"Text"}, {label:"Texte Long" value:"TextArea"}, {label:"Email" value:"Email"},{label:"Mot de passe" value:"Password"}]}
-              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
-              - {label: Description Type, name: description,widget: string, default: "Description", required: false}
-              - {label: Identifiant css, name: cssid, widget: "string", required: false}
-              - {label: Class css, name: cssclass, widget: "string", required: false}
-          - label: "Texte Long"
-            name: "textarea"
-            widget: object
-            fields:
-              - {label: Title, name: title, widget: string, default: "Label", required: false}
+              - {label: Template, name: template,widget: "select", options:[Text,TextArea,Email,Password]}
               - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
               - {label: Description Type, name: description,widget: string, default: "Description", required: false}
               - {label: Identifiant css, name: cssid, widget: "string", required: false}
