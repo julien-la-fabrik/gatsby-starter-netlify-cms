@@ -179,8 +179,8 @@ collections:
             fields:
               - {label: Title, name: title, widget: string, default: "Label", required: false}
               - {label: Template, name: template,widget: "select", options: [{label:"Texte court" value:"Text"}, {label:"Texte Long" value:"TextArea"}, {label:"Email" value:"Email"},{label:"Mot de passe" value:"Password"}]}
-              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}}
-              - {label: Description Type, name: description,widget: string, default: "Description", required: false}}
+              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
+              - {label: Description Type, name: description,widget: string, default: "Description", required: false}
               - {label: Identifiant css, name: cssid, widget: "string", required: false}
               - {label: Class css, name: cssclass, widget: "string", required: false}
           - label: "Texte Long"
@@ -188,8 +188,8 @@ collections:
             widget: object
             fields:
               - {label: Title, name: title, widget: string, default: "Label", required: false}
-              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}}
-              - {label: Description Type, name: description,widget: string, default: "Description", required: false}}
+              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
+              - {label: Description Type, name: description,widget: string, default: "Description", required: false}
               - {label: Identifiant css, name: cssid, widget: "string", required: false}
               - {label: Class css, name: cssclass, widget: "string", required: false}
           - label: "Liste"
@@ -198,21 +198,11 @@ collections:
             fields:
               - {label: Title, name: title, widget: string, default: "Label", required: false}
               - {label: Template, name: template,widget: "select", options: ["Select", "Radio", "Checkbox"]}
-              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}}
-              - {label: Description Type, name: description,widget: string, default: "Description", required: false}}
+              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
+              - {label: Description Type, name: description,widget: string, default: "Description", required: false}
               - {label: Identifiant css, name: cssid, widget: "string", required: false}
               - {label: Class css, name: cssclass, widget: "string", required: false}
               - label: Valeurs
                 name: values
                 widget: list
-                fields: [{label: "Valeur", name: "value", widget: "string"},{label: "Label", name: "label", widget: "string"}
-          - label: "Spotlight"
-            name: "spotlight"
-            widget: object
-            fields:
-              - {label: Header, name: header, widget: string, default: "Spotlight", required: false}
-              - {label: Template, name: template, widget: hidden, default: "Spotlight"}
-              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
-              - {label: "Body", name: "body", widget: "markdown"}
-              - {label: Identifiant css, name: cssid, widget: "string", required: false}
-              - {label: Class css, name: cssclass, widget: "string", required: false}
+                fields: [{label: "Valeur", name: "value", widget: "string"},{label: "Label", name: "label", widget: "string"}]
