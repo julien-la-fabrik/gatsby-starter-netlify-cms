@@ -17,7 +17,7 @@ sections:
     template: SliderHero
     type: image
   - body: Salut tout le monde
-    container: full
+    container: container
     header: Spotlight
     template: Spotlight
     text: Hello World
