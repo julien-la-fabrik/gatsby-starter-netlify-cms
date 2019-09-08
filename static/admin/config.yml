@@ -64,7 +64,7 @@ collections:
               - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - {label: Identifiant css, name: cssid, widget: "string", required: false}
               - {label: Class css, name: cssclass, widget: "string", required: false}
-              - {label: Formulaire, name: formitem, widget: "relation", collection: "forms", searchFields: ["title"], valueField:"slug"}
+              - {label: Formulaire, name: formitem, widget: "relation", collection: forms, searchFields: title, valueField: title}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
