@@ -6,8 +6,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Pages"
-    name: "pagebuild"
+  - label: "Page"
+    name: "page"
     create: true
     slug: "{{slug}}"
     folder: "src/pages"
@@ -26,10 +26,12 @@ collections:
               - {label: Header, name: header, widget: string, default: "Image Gallery"}
               - {label: Template, name: template,widget: "select", options: ["Carousel", "SliderHero", "Slider", "Gallery"]}
               - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
               - label: Images
                 name: images
                 widget: list
-                fields: [{label: "Title", name: "title", widget: "string", required: false},{label: Image, name: image, widget: image, required: false},{label: "Body", name: "body", widget: "markdown", required: false}]
+                fields: [{label: "Title", name: "title", widget: "string", required: false},{label: Image, name: image, widget: image},{label: "Body", name: "body", widget: "markdown", required: false}]
           - label: "cards"
             name: "cards"
             widget: object
@@ -37,6 +39,8 @@ collections:
               - {label: Header, name: header, widget: string, default: "Image Gallery"}
               - {label: Template, name: template,widget: "select", options: ["Columns", "Masonry", "Accordion"]}
               - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
               - label: Cards
                 name: cards
                 widget: list
@@ -49,6 +53,18 @@ collections:
               - {label: Template, name: template, widget: hidden, default: "Spotlight"}
               - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - {label: "Body", name: "body", widget: "markdown"}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
+          - label: "Form"
+            name: "form"
+            widget: object
+            fields:
+              - {label: Header, name: header, widget: string, default: "Form", required: false}
+              - {label: Template, name: template, widget: hidden, default: "form"}
+              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
+              - {label: Formulaire, name: formitem, widget: "relation",collection:form,searchFields:title,valueField:slug}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -63,8 +79,8 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Location", name: "location", widget: "map" }
       - {label: Mainpitch, name: mainpitch, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-  - name: "pages"
-    label: "Pages Custom"
+  - name: "custompage"
+    label: "Custom Page"
     files:
       - file: "src/pages/old/index.md"
         label: "Landing Page"
@@ -102,6 +118,8 @@ collections:
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
   - name: "settings"
     label: "Settings"
+    editor:
+      preview: false
     files:
       - file: "src/settings/index.json"
         extention: "json"
@@ -141,3 +159,60 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: Google Analitics code, name: gacode, widget: string}
           - {label: Logo, name: logo, widget: image}
+  - label: "Form"
+    name: "forms"
+    create: true
+    extention: "json"
+    slug: "{{slug}}"
+    folder: "src/forms"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "Form"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - label: "Elements"
+        name: "elements"
+        widget: "list"
+        types:
+          - label: "Texte Court"
+            name: "text"
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string, default: "Label", required: false}
+              - {label: Template, name: template,widget: "select", options: [{label:"Texte court" value:"Text"}, {label:"Texte Long" value:"TextArea"}, {label:"Email" value:"Email"},{label:"Mot de passe" value:"Password"}]}
+              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}}
+              - {label: Description Type, name: description,widget: string, default: "Description", required: false}}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
+          - label: "Texte Long"
+            name: "textarea"
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string, default: "Label", required: false}
+              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}}
+              - {label: Description Type, name: description,widget: string, default: "Description", required: false}}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
+          - label: "Liste"
+            name: "list"
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string, default: "Label", required: false}
+              - {label: Template, name: template,widget: "select", options: ["Select", "Radio", "Checkbox"]}
+              - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}}
+              - {label: Description Type, name: description,widget: string, default: "Description", required: false}}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
+              - label: Valeurs
+                name: values
+                widget: list
+                fields: [{label: "Valeur", name: "value", widget: "string"},{label: "Label", name: "label", widget: "string"}
+          - label: "Spotlight"
+            name: "spotlight"
+            widget: object
+            fields:
+              - {label: Header, name: header, widget: string, default: "Spotlight", required: false}
+              - {label: Template, name: template, widget: hidden, default: "Spotlight"}
+              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
+              - {label: "Body", name: "body", widget: "markdown"}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
