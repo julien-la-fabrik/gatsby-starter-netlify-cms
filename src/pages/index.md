@@ -36,5 +36,10 @@ sections:
     header: Quelques chiffres
     template: Columns
     type: cards
+  - container: container
+    formitem: Contact
+    header: Contact
+    template: form
+    type: form
 ---
 ma nouvelle page
