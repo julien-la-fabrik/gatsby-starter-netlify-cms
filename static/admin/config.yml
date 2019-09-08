@@ -14,7 +14,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
       - label: "Sections"
         name: "sections"
         widget: "list"
@@ -29,7 +29,7 @@ collections:
               - label: Images
                 name: images
                 widget: list
-                fields: [{label: "Title", name: "title", widget: "string"},{label: Image, name: image, widget: image},{label: "Body", name: "body", widget: "markdown"}]
+                fields: [{label: "Title", name: "title", widget: "string", required: false},{label: Image, name: image, widget: image, required: false},{label: "Body", name: "body", widget: "markdown", required: false}]
           - label: "cards"
             name: "cards"
             widget: object
@@ -40,12 +40,12 @@ collections:
               - label: Cards
                 name: cards
                 widget: list
-                fields: [{label: "Title", name: "title", widget: "string"},{label: Image, name: image, widget: image},{label: "Body", name: "body", widget: "markdown"}]
+                fields: [{label: "Title", name: "title", widget: "string", required: false},{label: Image, name: image, widget: image, required: false},{label: "Body", name: "body", widget: "markdown", required: false}]
           - label: "Spotlight"
             name: "spotlight"
             widget: object
             fields:
-              - {label: Header, name: header, widget: string, default: "Spotlight"}
+              - {label: Header, name: header, widget: string, default: "Spotlight", required: false}
               - {label: Template, name: template, widget: hidden, default: "Spotlight"}
               - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - {label: "Body", name: "body", widget: "markdown"}
@@ -72,7 +72,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
           - label: "Home Section"
             name: "sections"
             widget: "list"
