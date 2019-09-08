@@ -1,8 +1,7 @@
 import React from 'react'
-import FormElements from './Form'
+import FormElements from './form'
 
 export const FormElement = ({ type, content }) => {
-  // console.log(FormElements);
   const FormElement = FormElements[type];
 
   if (FormElement) {
