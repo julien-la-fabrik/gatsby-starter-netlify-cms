@@ -2,17 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import  { HTMLContent } from '../components/Content'
-import Section from '../components/Section'
+import { HTMLContent } from '../components/Content'
+import FormElement from '../components/FormElement'
 
-export const FormTemplate = ({ title, content, contentComponent, sections }) => {
+export const FormTemplate = ({ title, body, elements }) => {
   // const FormContent = contentComponent || Content
-  sections = sections || []
+  elements = elements || []
   return (
     <div className="uk-width-1-1">
       {
-        sections.map((section, index) => (
-          <Section key={"section-" + index} type={section.template} content={section} />
+        elements.map((element, index) => (
+          <FormElement key={"section-" + index} type={element.template} content={element} />
         ))
       }
     </div>
@@ -48,33 +48,11 @@ export const FormQuery = graphql`
       html
       frontmatter {
         title
-        sections {
-          header
+        elements {
+          title
           template
-          type
-          body
-          container
-          cards{
-            title
-            body
-            image{
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          images{
-            image{
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-
-          }
+          description
+          placeholder
         }
       }
     }

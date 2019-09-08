@@ -60,7 +60,7 @@ collections:
             widget: object
             fields:
               - {label: Header, name: header, widget: string, default: "Form", required: false}
-              - {label: Template, name: template, widget: hidden, default: "form"}
+              - {label: Template, name: template, widget: hidden, default: "FormSection"}
               - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
               - {label: Identifiant css, name: cssid, widget: "string", required: false}
               - {label: Class css, name: cssclass, widget: "string", required: false}
@@ -169,6 +169,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "Form"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Bouton Envoi", name: "submitbtn", widget: "string", default: Envoyer}
       - label: "Elements"
         name: "elements"
         widget: "list"
@@ -181,8 +182,8 @@ collections:
               - {label: Template, name: template,widget: "select", options:[Text,TextArea,Email,Password]}
               - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
               - {label: Description Type, name: description,widget: string, default: "Description", required: false}
-              - {label: Identifiant css, name: cssid, widget: "string", required: false}
-              - {label: Class css, name: cssclass, widget: "string", required: false}
+              - {label: "Identifiant css", name: cssid, widget: "string", required: false}
+              - {label: "Class css", name: cssclass, widget: "string", required: false}
           - label: "Liste"
             name: "list"
             widget: object
@@ -191,8 +192,8 @@ collections:
               - {label: Template, name: template,widget: "select", options: ["Select", "Radio", "Checkbox"]}
               - {label: Placeholder Type, name: placeholder,widget: string, default: "Label", required: false}
               - {label: Description Type, name: description,widget: string, default: "Description", required: false}
-              - {label: Identifiant css, name: cssid, widget: "string", required: false}
-              - {label: Class css, name: cssclass, widget: "string", required: false}
+              - {label: "Identifiant css", name: cssid, widget: "string", required: false}
+              - {label: "Class css", name: cssclass, widget: "string", required: false}
               - label: Valeurs
                 name: values
                 widget: list

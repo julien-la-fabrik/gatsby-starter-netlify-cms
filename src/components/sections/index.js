@@ -5,7 +5,8 @@ import Slider from './Slider'
 import Gallery from './Gallery'
 import Columns from './Columns'
 import Accordion from './Accordion'
+import FormSection from './FormSection'
 
 export default {
-  Carousel, SliderHero, Spotlight, Slider, Gallery, Columns,Accordion
+  Carousel, SliderHero, Spotlight, Slider, Gallery, Columns, Accordion, FormSection
 }

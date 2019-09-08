@@ -1,6 +1,7 @@
 ---
 templateKey: Form
 title: Contact
+submitbtn: Envoyer
 elements:
   - description: ''
     placeholder: Votre nom

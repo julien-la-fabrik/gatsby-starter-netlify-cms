@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import  { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
 export const PageTemplate = ({ title, content, contentComponent, sections }) => {
   // const PageContent = contentComponent || Content
   sections = sections || []
+  // console.log(sections);
   return (
     <div className="uk-width-1-1">
       {
@@ -50,6 +51,7 @@ export const PageQuery = graphql`
         title
         sections {
           header
+          formitem
           template
           type
           body

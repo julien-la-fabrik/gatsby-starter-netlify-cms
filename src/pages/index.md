@@ -39,7 +39,7 @@ sections:
   - container: container
     formitem: Contact
     header: Contact
-    template: form
+    template: FormSection
     type: form
 ---
 ma nouvelle page
