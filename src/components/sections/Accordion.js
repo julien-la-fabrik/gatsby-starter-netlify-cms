@@ -1,5 +1,4 @@
 import React from 'react'
-/* eslint-disable */
 export const Accordion = ({ content }) => {
   return (
     <section className="uk-section" id={content.cssid}>
@@ -10,6 +9,7 @@ export const Accordion = ({ content }) => {
           {
             content.cards.map((card, index) => (
               <li key={"section-img-" + index}>
+              {/* eslint-disable-next-line */}
                 <a className="uk-accordion-title" href="#">{card.title}</a>
                 <div className="uk-accordion-content">
                   <p>

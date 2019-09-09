@@ -1,22 +1,22 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
-  const { alt = '', childImageSharp, image } = imageInfo
-
-  if (!!image && !!image.childImageSharp) {
-    return <img uk-cover="" src={image.childImageSharp.fluid.src} alt={alt} />
-  }
-
-  if (!!childImageSharp) {
-    return <img uk-cover="" src={childImageSharp.fluid.src} alt={alt} />
-  }
-
-  if (!!image && typeof image === 'string')
-    return <img uk-cover="" src={image} alt={alt} />
-
-  return null
-}
+// const PreviewCompatibleImage = ({ imageInfo }) => {
+//   const { alt = '', childImageSharp, image } = imageInfo
+//
+//   if (!!image && !!image.childImageSharp) {
+//     return <img uk-cover="" src={image.childImageSharp.fluid.src} alt={alt} />
+//   }
+//
+//   if (!!childImageSharp) {
+//     return <img uk-cover="" src={childImageSharp.fluid.src} alt={alt} />
+//   }
+//
+//   if (!!image && typeof image === 'string')
+//     return <img uk-cover="" src={image} alt={alt} />
+//
+//   return null
+// }
 
 
 const PreviewCompatibleImage2 = ({ imageInfo }) => {
