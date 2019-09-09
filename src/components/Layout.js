@@ -8,11 +8,13 @@ import Footer from '../components/Footer'
 import './uikit.scss';
 
 class TemplateWrapper extends Component {
+  state = { currentPath: false };
   componentDidMount = () => {
     if (typeof window !== 'undefined') {
       const uikit = require('uikit');
       const icons = require('uikit/dist/js/uikit-icons.min');
       uikit.use(icons);
+      this.setState({ currentPath: window.location.pathname });
     }
   };
 
@@ -70,10 +72,10 @@ class TemplateWrapper extends Component {
                   <meta property="og:url" content="/" />
                   <meta property="og:image" content="/img/og-image.jpg" />
                 </Helmet>
-                <Navbar />
+                <Navbar currentPath={this.state.currentPath}/>
                 <div>{this.props.children}</div>
 <Footer />
-                <Offcanvas />
+                <Offcanvas currentPath={this.state.currentPath} />
 
               </div>
             )}

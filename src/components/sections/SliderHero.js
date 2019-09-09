@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const { alt = '', childImageSharp, image } = imageInfo
@@ -17,6 +18,26 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   return null
 }
 
+
+const PreviewCompatibleImage2 = ({ imageInfo }) => {
+  const { alt = '', childImageSharp, image } = imageInfo
+
+  if (!!image && !!image.childImageSharp) {
+    return (
+      <Img uk-cover="" fluid={image.childImageSharp.fluid} alt={alt} />
+    )
+  }
+
+  if (!!childImageSharp) {
+    return <Img uk-cover="" fluid={childImageSharp.fluid} alt={alt} />
+  }
+
+  if (!!image && typeof image === 'string')
+    return <img uk-cover=""  src={image} alt={alt} />
+
+  return null
+}
+
 export const SliderHero = ({ content }) => {
   return (
 
@@ -27,7 +48,7 @@ export const SliderHero = ({ content }) => {
           {
             content.images.map((image, index) => (
               <li key={"section-img-" + index}>
-                <PreviewCompatibleImage imageInfo={image} className="uk-height-1-1" />
+                <PreviewCompatibleImage2 imageInfo={image} className="uk-height-1-1" />
               </li>
             ))
           }

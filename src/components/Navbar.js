@@ -4,6 +4,7 @@ import settings from '../settings';
 /* eslint-disable */
 const Navbar = class extends React.Component {
   render() {
+    console.log(this.props)
     return (
       <nav className="uk-navbar-container" >
         <div className="uk-container">
@@ -20,7 +21,7 @@ const Navbar = class extends React.Component {
         <ul className="uk-navbar-nav">
         {
           settings.menus.mainmenu.map((links, index) => (
-            <li className="uk-visible@s" key={"main-menu-" + index}>
+            <li className={this.props.currentPath == links.path ? "uk-active uk-visible@s":"uk-visible@s"} key={"main-menu-" + index}>
             <Link className="navbar-item" to={links.path}>
               {links.title}
             </Link>
