@@ -43,7 +43,7 @@ class FormTemplate extends React.Component {
     let form = this.props.post;
     console.log(this.props);
     return (
-      <div className="uk-width-1-1">
+      <div className="uk-container">
         <div className="uk-margin">
           <form
             name={form.frontmatter.formid}
@@ -59,6 +59,9 @@ class FormTemplate extends React.Component {
                 <FormElement key={"section-" + index} type={element.template} content={element} onChange={this.handleChange} />
               ))
             }
+            <div className="uk-margin">
+              <button type="submit" className="uk-button uk-button-primary">{form.frontmatter.submitbtn}</button>
+            </div>
           </form>
         </div>
       </div>
@@ -98,6 +101,7 @@ export const FormQuery = graphql`
       frontmatter {
         title
         formid
+        submitbtn
         elements {
           title
           name
