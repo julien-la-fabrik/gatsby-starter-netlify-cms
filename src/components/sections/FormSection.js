@@ -6,7 +6,7 @@ export default ({ content }) => {
 
   // console.log(content);
   return (
-    <section className="uk-section">
+    <section className="uk-section" id={content.cssid}>
       <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
         <h2>{content.header}</h2>
         <StaticQuery
@@ -26,6 +26,9 @@ export default ({ content }) => {
                       template
                       title
                       type
+                      cssid
+                      cssclass
+                      name
                     }
                   }
                 }

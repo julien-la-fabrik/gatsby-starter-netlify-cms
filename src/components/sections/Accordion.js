@@ -2,25 +2,25 @@ import React from 'react'
 
 export const Accordion = ({ content }) => {
   return (
-    <section className="uk-section">
-      <div className={content.container ==="full" ? 'uk-width-1-1':"uk-container"}>
+    <section className="uk-section" id={content.cssid}>
+      <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
         <h2>{content.header}</h2>
 
-          <ul uk-accordion="">
-            {
-              content.cards.map((card, index) => (
-                <li key={"section-img-" + index}>
+        <ul uk-accordion="">
+          {
+            content.cards.map((card, index) => (
+              <li key={"section-img-" + index}>
                 <a className="uk-accordion-title" href="#">{card.title}</a>
                 <div className="uk-accordion-content">
-                    <p>
+                  <p>
                     {card.body}
-                    </p>
+                  </p>
                 </div>
-                </li>
-              ))
-            }
+              </li>
+            ))
+          }
 
-          </ul>
+        </ul>
 
       </div>
     </section>

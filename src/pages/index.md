@@ -16,12 +16,16 @@ sections:
         body: café
     template: SliderHero
     type: image
+    cssid: ''
+    cssclass: ''
   - body: Salut tout le monde
     container: container
     header: Spotlight
     template: Spotlight
     text: Hello World
     type: spotlight
+    cssid: ''
+    cssclass: ''
   - cards:
       - title: '4303'
         body: requetes
@@ -36,10 +40,14 @@ sections:
     header: Quelques chiffres
     template: Columns
     type: cards
+    cssid: chiffres
+    cssclass: ''
   - container: container
     formitem: Contact
     header: Contact
     template: FormSection
     type: form
+    cssid: ''
+    cssclass: ''
 ---
 ma nouvelle page

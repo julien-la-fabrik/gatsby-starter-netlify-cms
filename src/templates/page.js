@@ -56,6 +56,8 @@ export const PageQuery = graphql`
           type
           body
           container
+          cssid
+          cssclass
           cards{
             title
             body
