@@ -169,6 +169,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "Form"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Identifiant", name: "formid", widget: "string"}
       - {label: "Bouton Envoi", name: "submitbtn", widget: "string", default: Envoyer}
       - label: "Elements"
         name: "elements"

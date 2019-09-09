@@ -19,6 +19,7 @@ export default ({ content }) => {
                   frontmatter{
                     title
                     submitbtn
+                    formid
                     elements {
                       description
                       placeholder
@@ -35,15 +36,18 @@ export default ({ content }) => {
           render={data => {
             let form = data.allMarkdownRemark.edges.find(forms => forms.node.frontmatter.title === content.formitem).node;
             return (
-              <div>
-                {
-                  form.frontmatter.elements.map((element, index) => (
-                    <FormElement key={"formitem-" + index} type={element.template} content={element} />
-                  ))
-                }
-                <div className="uk-margin">
-                  <button type="submit" className="uk-button uk-button-primary">{form.frontmatter.submitbtn}</button>
-                </div>
+              <div className="uk-margin">
+                <form name={form.frontmatter.formid} method="post" action="/contact/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+                  <input type="hidden" name="form-name" value={form.frontmatter.formid} />
+                  {
+                    form.frontmatter.elements.map((element, index) => (
+                      <FormElement key={"formitem-" + index} type={element.template} content={element} />
+                    ))
+                  }
+                  <div className="uk-margin">
+                    <button type="submit" className="uk-button uk-button-primary">{form.frontmatter.submitbtn}</button>
+                  </div>
+                </form>
               </div>
             )
           }}
