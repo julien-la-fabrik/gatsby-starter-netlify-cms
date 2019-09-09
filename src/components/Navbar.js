@@ -2,6 +2,12 @@ import React from 'react'
 import {Link} from 'gatsby'
 import settings from '../settings';
 
+function ukScroll(path){
+  if(path.indexOf("#")===0){
+    return {'uk-scroll':'true'};
+  }
+  return {}
+}
 const Navbar = class extends React.Component {
   render() {
     return (
@@ -21,7 +27,7 @@ const Navbar = class extends React.Component {
         {
           settings.menus.mainmenu.map((links, index) => (
             <li className={this.props.currentPath === links.path ? "uk-active uk-visible@s":"uk-visible@s"} key={"main-menu-" + index}>
-            <Link className="navbar-item" to={links.path}>
+            <Link className="navbar-item" to={links.path} {...ukScroll(links.path)}>
               {links.title}
             </Link>
             </li>

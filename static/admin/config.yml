@@ -45,6 +45,16 @@ collections:
                 name: cards
                 widget: list
                 fields: [{label: "Title", name: "title", widget: "string", required: false},{label: Image, name: image, widget: image, required: false},{label: "Body", name: "body", widget: "markdown", required: false}]
+          - label: "views"
+            name: "views"
+            widget: object
+            fields:
+              - {label: Header, name: header, widget: string, default: "View"}
+              - {label: Template, name: template,widget: "select", options: ["Columns", "Masonry", "Accordion"]}
+              - {label: Container Type, name: container, widget: "select", options: ["full", "container"]}
+              - {label: Identifiant css, name: cssid, widget: "string", required: false}
+              - {label: Class css, name: cssclass, widget: "string", required: false}
+              - {label: Tite de contenu, name: contenttype, widget: "select", options: ["blog-post"]}
           - label: "Spotlight"
             name: "spotlight"
             widget: object

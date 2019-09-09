@@ -2,9 +2,10 @@ import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const Carousel = ({ content }) => {
-
+  content.cssclass=content.cssclass||'';
+  content.cssclass=content.cssclass+' uk-section'
   return (
-    <section className="uk-section" id={content.cssid}>
+    <section className={content.cssclass} id={content.cssid}>
       <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
         <h2>{content.header}</h2>
         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull">
@@ -14,6 +15,10 @@ export const Carousel = ({ content }) => {
               content.images.map((image, index) => (
                 <li key={"section-img-" + index}>
                   <PreviewCompatibleImage imageInfo={image} />
+                  <div className="uk-position-center uk-panel">
+                  <h2 className="uk-margin-remove">{image.title}</h2>
+                  <p className="uk-margin-remove">{image.body}</p>
+                  </div>
                 </li>
               ))
             }

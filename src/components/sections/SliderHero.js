@@ -1,44 +1,45 @@
 import React from 'react'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
-// const PreviewCompatibleImage = ({ imageInfo }) => {
-//   const { alt = '', childImageSharp, image } = imageInfo
-//
-//   if (!!image && !!image.childImageSharp) {
-//     return <img uk-cover="" src={image.childImageSharp.fluid.src} alt={alt} />
-//   }
-//
-//   if (!!childImageSharp) {
-//     return <img uk-cover="" src={childImageSharp.fluid.src} alt={alt} />
-//   }
-//
-//   if (!!image && typeof image === 'string')
-//     return <img uk-cover="" src={image} alt={alt} />
-//
-//   return null
-// }
-
-
-const PreviewCompatibleImage2 = ({ imageInfo }) => {
+const PreviewCompatibleImage = ({ imageInfo }) => {
   const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
-    return (
-      <Img uk-cover="" fluid={image.childImageSharp.fluid} alt={alt} />
-    )
+    return <img uk-cover="" src={image.childImageSharp.fluid.src} alt={alt} />
   }
 
   if (!!childImageSharp) {
-    return <Img uk-cover="" fluid={childImageSharp.fluid} alt={alt} />
+    return <img uk-cover="" src={childImageSharp.fluid.src} alt={alt} />
   }
 
   if (!!image && typeof image === 'string')
-    return <img uk-cover=""  src={image} alt={alt} />
+    return <img uk-cover="" src={image} alt={alt} />
 
   return null
 }
 
+
+// const PreviewCompatibleImage2 = ({ imageInfo }) => {
+//   const { alt = '', childImageSharp, image } = imageInfo
+//
+//   if (!!image && !!image.childImageSharp) {
+//     return (
+//       <Img uk-cover="" fluid={image.childImageSharp.fluid} alt={alt} />
+//     )
+//   }
+//
+//   if (!!childImageSharp) {
+//     return <Img uk-cover="" fluid={childImageSharp.fluid} alt={alt} />
+//   }
+//
+//   if (!!image && typeof image === 'string')
+//     return <img uk-cover=""  src={image} alt={alt} />
+//
+//   return null
+// }
+
 export const SliderHero = ({ content }) => {
+  // console.log(content);
   return (
 
     <div className="uk-width-1-1" id={content.cssid}>
@@ -48,7 +49,13 @@ export const SliderHero = ({ content }) => {
           {
             content.images.map((image, index) => (
               <li key={"section-img-" + index}>
-                <PreviewCompatibleImage2 imageInfo={image} className="uk-height-1-1" />
+                <PreviewCompatibleImage imageInfo={image} className="uk-height-1-1" />
+                                  <div className="uk-overlay-primary uk-position-cover">
+                <div className="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 className="uk-margin-remove">{image.title}</h2>
+                <p className="uk-margin-remove">{image.body}</p>
+            </div>
+            </div>
               </li>
             ))
           }

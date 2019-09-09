@@ -18,8 +18,12 @@
       "path": "/contact"
     },
     {
-      "title": "page exemple",
-      "path": "/nouvelle-page"
+      "title": "Cards",
+      "path": "/exemples/cards"
+    },
+    {
+      "title": "Images",
+      "path": "/exemples/images"
     }
   ],
   "footermenu": [

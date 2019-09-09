@@ -21,16 +21,17 @@ const GetimgUrl = (imageInfo) => {
 
 export const Gallery = ({ content }) => {
   // console.log(content.images);
-
+  content.cssclass=content.cssclass||'';
+  content.cssclass=content.cssclass+' uk-section'
   return (
-    <section className="uk-section" id={content.cssid}>
+    <section className={content.cssclass} id={content.cssid}>
       <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
         <h2>{content.header}</h2>
         <div uk-grid="" className="uk-grid-medium" uk-lightbox="animation: slide">
           {
             content.images.map((image, index) => (
-              <div className="uk-width-1-2@s uk-width-1-3@m  " key={"section-img-" + index}>
-                <a href={GetimgUrl(image)}>
+              <div className="uk-width-1-2@s uk-width-1-3@m" key={"section-img-" + index}>
+                <a href={GetimgUrl(image)} data-caption={image.title}>
                   <PreviewCompatibleImage imageInfo={image} />
                 </a>
               </div>

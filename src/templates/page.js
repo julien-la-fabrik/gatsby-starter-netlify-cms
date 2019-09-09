@@ -13,7 +13,7 @@ export const PageTemplate = ({ title, content, contentComponent, sections }) => 
     <div className="uk-width-1-1">
       {
         sections.map((section, index) => (
-          <Section key={"section-" + index} type={section.template} content={section} />
+          <Section key={"section-" + index} template={section.template} content={section} />
         ))
       }
     </div>
@@ -70,6 +70,8 @@ export const PageQuery = graphql`
             }
           }
           images{
+            title
+            body
             image{
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
