@@ -14,7 +14,6 @@ export default class FormSection extends React.Component {
   }
 
   handleChange = e => {
-    console.log('change')
     this.setState({ [e.target.name]: e.target.value })
   }
 

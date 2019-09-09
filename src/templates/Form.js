@@ -18,7 +18,6 @@ class FormTemplate extends React.Component {
   }
 
   handleChange = e => {
-    console.log('change')
     this.setState({ [e.target.name]: e.target.value })
   }
 
@@ -41,7 +40,6 @@ class FormTemplate extends React.Component {
     // const FormContent = contentComponent || Content
     let elements = this.props.elements || [];
     let form = this.props.post;
-    console.log(this.props);
     return (
       <div className="uk-container">
         <div className="uk-margin">
