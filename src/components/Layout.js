@@ -8,20 +8,17 @@ import Footer from '../components/Footer'
 import './uikit.scss';
 
 class TemplateWrapper extends Component {
-  state = { ready: false };
   componentDidMount = () => {
     if (typeof window !== 'undefined') {
       const uikit = require('uikit');
       const icons = require('uikit/dist/js/uikit-icons.min');
       uikit.use(icons);
-      this.setState({ ready: true });
     }
   };
 
   render() {
     return (
       <div>
-        {this.state.ready && (
           <StaticQuery
             query={graphql`
               query HeadingQuery {
@@ -81,7 +78,6 @@ class TemplateWrapper extends Component {
               </div>
             )}
           />
-        )}
       </div>
     );
   }

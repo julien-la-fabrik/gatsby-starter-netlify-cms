@@ -1,5 +1,5 @@
 import React from 'react'
-
+/* eslint-disable */
 export const Accordion = ({ content }) => {
   return (
     <section className="uk-section" id={content.cssid}>
