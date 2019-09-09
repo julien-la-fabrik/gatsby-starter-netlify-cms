@@ -2,7 +2,7 @@
 templateKey: Form
 title: Contact
 submitbtn: Envoyer
-formid: contact
+formid: contactcustom
 elements:
   - description: ''
     placeholder: Votre nom
