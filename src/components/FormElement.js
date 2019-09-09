@@ -1,11 +1,11 @@
 import React from 'react'
 import FormElements from './form'
 
-export const FormElement = ({ type, content }) => {
+export const FormElement = ({ type, content, onChange }) => {
   const FormElement = FormElements[type];
 
   if (FormElement) {
-    return <FormElement content={content} />;
+    return <FormElement content={content} onChange={onChange} />;
   }
   else {
     return (
