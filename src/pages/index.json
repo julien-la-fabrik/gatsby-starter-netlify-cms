@@ -1,0 +1,53 @@
+{
+  "templateKey": "page",
+  "title": "index",
+  "description": "this is home",
+  "body": "Welcome",
+  "sections": [
+    {
+      "type": "blockcards",
+      "title": "Cards",
+      "template": "Columns",
+      "Cards": [
+        {
+          "type": "cards",
+          "title": "card 1",
+          "button": {
+            "label": "Click!"
+          },
+          "image": "/img/2016-concert-december-31-3867.jpg"
+        },
+        {
+          "type": "form",
+          "formitem": "Contact"
+        }
+      ],
+      "style": {
+        "Cards": "uk-container"
+      }
+    },
+    {
+      "type": "blockimages",
+      "template": "SliderHero",
+      "images": [
+        {
+          "image": "/img/aerial-shot-beach-daytime-995939.jpg",
+          "alt": "aerial",
+          "button": {
+            "label": "click"
+          }
+        },
+        {
+          "image": "/img/jumbotron.jpg",
+          "alt": "brew",
+          "button": {
+            "label": "button"
+          }
+        }
+      ],
+      "style": {
+        "Cards": "uk-width-1-1"
+      }
+    }
+  ]
+}
