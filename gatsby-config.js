@@ -31,6 +31,7 @@ module.exports = {
         include_favicon: true, // Include favicon
       },
     },
+    `gatsby-transformer-json`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
