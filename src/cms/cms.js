@@ -3,6 +3,7 @@ import { blog } from './collections/blog';
 import { page } from './collections/page';
 import { form } from './collections/form';
 import { settings } from './collections/settings';
+const customCollections = require('../settings/customcollections.json');
 
 // import AboutPagePreview from './preview-templates/AboutPagePreview'
 // import LandingPagePreview from './preview-templates/LandingPagePreview'
@@ -23,7 +24,7 @@ CMS.init({
     publish_mode: 'editorial_workflow',
     media_folder: 'static/img',
     public_folder: '/img',
-    collections: [page,blog,form,settings],
+    collections: [page,blog,form,settings,...customCollections.collections],
   },
 });
 
