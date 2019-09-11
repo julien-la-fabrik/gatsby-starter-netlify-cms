@@ -75,9 +75,7 @@
           ],
           "label": "select label",
           "name": "select-label",
-          "default": [
-            "non"
-          ]
+          "default": "non"
         }
       ]
     }
