@@ -26,6 +26,94 @@ const commonFields = [{
 }
 ];
 
+function createField(name,obj,defaultToUse){
+  obj=obj||[];
+
+  let defaultField = {
+    label: 'Default',
+    name: "default",
+    widget: name,
+    required: false
+  };
+
+  defaultToUse = defaultToUse || defaultField;
+  obj.push(defaultToUse);
+  return {
+    label: name,
+    name: name,
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: name,
+      },
+      ...obj
+    ]
+  };
+}
+
+var fieldTypes = [];
+
+fieldTypes.push(createField('string'));
+fieldTypes.push(createField('boolean'));
+fieldTypes.push(createField('text'));
+fieldTypes.push(createField('hidden'));
+fieldTypes.push(createField('markdown'));
+
+fieldTypes.push(createField('select',[{
+  label: 'Options',
+  name: "options",
+  widget: "list",
+  fields:[
+    {
+      label: 'label',
+    name: 'label',
+    widget: 'string',
+  },
+  {
+    label: 'Value',
+  name: 'value',
+  widget: 'string',
+}
+  ]
+}],{
+  label: 'Default',
+  name: "default",
+  widget: "list",
+  required: false
+}));
+
+fieldTypes.push(createField('number',[{
+  label: 'ValueType',
+  name: "valueType",
+  widget: "select",
+  options:['int','float'],
+  required: false
+},
+{
+  label: 'Min',
+  name: "min",
+  widget: "number",
+  required: false
+},
+{
+  label: 'Max',
+  name: "max",
+  widget: "number",
+  required: false
+},
+{
+  label: 'Step',
+  name: "step",
+  widget: "number",
+  required: false
+}]));
+
+
+
+
 const customCollections = {
   file: "src/settings/customcollections.json",
   extention: "json",
@@ -87,188 +175,191 @@ const customCollections = {
           label: "Fields",
           name: "fields",
           widget: "list",
-          types: [
-            {
-              label: 'String',
-              name: 'string',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "string",
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "string",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: 'Text',
-              name: 'text',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "text",
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "string",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: 'Boolean',
-              name: 'boolean',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "boolean",
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "boolean",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: 'Hidden',
-              name: 'hidden',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "hidden",
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "string",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: 'Markdown',
-              name: 'markdown',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "markdown",
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "markdown",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: 'Select',
-              name: 'select',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "select",
-                },
-                {
-                  label: 'Options',
-                  name: "options",
-                  widget: "list",
-                  fields:[
-                    {
-                      label: 'label',
-                    name: 'label',
-                    widget: 'string',
-                  },
-                  {
-                    label: 'Value',
-                  name: 'value',
-                  widget: 'string',
-                }
-                  ]
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "list",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: 'Number',
-              name: 'number',
-              widget: 'object',
-              fields: [
-                ...commonFields,
-                {
-                  name: "widget",
-                  widget: "hidden",
-                  default: "number",
-                },
-                {
-                  label: 'ValueType',
-                  name: "valueType",
-                  widget: "select",
-                  options:['int','float'],
-                  required: false
-                },
-                {
-                  label: 'Min',
-                  name: "min",
-                  widget: "number",
-                  required: false
-                },
-                {
-                  label: 'Max',
-                  name: "max",
-                  widget: "number",
-                  required: false
-                },
-                {
-                  label: 'Step',
-                  name: "step",
-                  widget: "number",
-                  required: false
-                },
-                {
-                  label: 'Default',
-                  name: "default",
-                  widget: "number",
-                  required: false
-                }
-              ]
-            },
-          ]
+          types:fieldTypes
         }
       ]
     }
   ]
 };
+
+
+const typesOld = [
+  {
+    label: 'String',
+    name: 'string',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "string",
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "string",
+        required: false
+      }
+    ]
+  },
+  {
+    label: 'Text',
+    name: 'text',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "text",
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "string",
+        required: false
+      }
+    ]
+  },
+  {
+    label: 'Boolean',
+    name: 'boolean',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "boolean",
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "boolean",
+        required: false
+      }
+    ]
+  },
+  {
+    label: 'Hidden',
+    name: 'hidden',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "hidden",
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "string",
+        required: false
+      }
+    ]
+  },
+  {
+    label: 'Markdown',
+    name: 'markdown',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "markdown",
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "markdown",
+        required: false
+      }
+    ]
+  },
+  {
+    label: 'Select',
+    name: 'select',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "select",
+      },
+      {
+        label: 'Options',
+        name: "options",
+        widget: "list",
+        fields:[
+          {
+            label: 'label',
+          name: 'label',
+          widget: 'string',
+        },
+        {
+          label: 'Value',
+        name: 'value',
+        widget: 'string',
+      }
+        ]
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "list",
+        required: false
+      }
+    ]
+  },
+  {
+    label: 'Number',
+    name: 'number',
+    widget: 'object',
+    fields: [
+      ...commonFields,
+      {
+        name: "widget",
+        widget: "hidden",
+        default: "number",
+      },
+      {
+        label: 'ValueType',
+        name: "valueType",
+        widget: "select",
+        options:['int','float'],
+        required: false
+      },
+      {
+        label: 'Min',
+        name: "min",
+        widget: "number",
+        required: false
+      },
+      {
+        label: 'Max',
+        name: "max",
+        widget: "number",
+        required: false
+      },
+      {
+        label: 'Step',
+        name: "step",
+        widget: "number",
+        required: false
+      },
+      {
+        label: 'Default',
+        name: "default",
+        widget: "number",
+        required: false
+      }
+    ]
+  },
+];
 
 export const settings = {
   label: 'Settings',
