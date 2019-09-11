@@ -14,14 +14,14 @@
           "widget": "string",
           "name": "title"
         },
-          {
-            "type": "hidden",
-            "required": true,
-            "label": "templateKey",
-            "widget": "hidden",
-            "name": "templateKey",
-            "default":"page"
-          },
+        {
+          "type": "hidden",
+          "required": true,
+          "label": "templateKey",
+          "widget": "hidden",
+          "name": "templateKey",
+          "default": "page"
+        },
         {
           "type": "text",
           "required": false,
@@ -54,6 +54,30 @@
           "label": "Price",
           "type": "number",
           "required": false
+        },
+        {
+          "type": "select",
+          "required": false,
+          "widget": "select",
+          "options": [
+            {
+              "Label": "oui",
+              "value": "oui"
+            },
+            {
+              "Label": "non",
+              "value": "non"
+            },
+            {
+              "Label": "Peut-etre",
+              "value": "peut-etre"
+            }
+          ],
+          "label": "select label",
+          "name": "select-label",
+          "default": [
+            "non"
+          ]
         }
       ]
     }
