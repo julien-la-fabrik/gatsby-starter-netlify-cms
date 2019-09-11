@@ -1,7 +1,0 @@
-{
-  "title": "Titre",
-  "text": "Contentu de texte",
-  "body": "**Hello World**\n\n![café](/img/chemex.jpg \"Café\")",
-  "trueornot": true,
-  "price": 250
-}

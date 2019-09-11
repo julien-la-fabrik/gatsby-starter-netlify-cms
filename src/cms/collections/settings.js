@@ -30,7 +30,7 @@ const customCollections = {
   file: "src/settings/customcollections.json",
   extention: "json",
   name: "customcollections",
-  label: 'collections',
+  label: 'Collections',
   fields: [
     {
       label: "Collections",
