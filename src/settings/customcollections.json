@@ -20,6 +20,32 @@
           "required": false,
           "label": "Texte",
           "name": "text"
+        },
+        {
+          "type": "markdown",
+          "required": false,
+          "widget": "markdown",
+          "label": "Body",
+          "name": "body",
+          "default": "Hello World"
+        },
+        {
+          "type": "boolean",
+          "required": false,
+          "widget": "boolean",
+          "label": "Vrai ou faux?",
+          "name": "trueornot"
+        },
+        {
+          "default": 350,
+          "max": 394,
+          "widget": "number",
+          "name": "price",
+          "step": 1,
+          "min": 0,
+          "label": "Price",
+          "type": "number",
+          "required": false
         }
       ]
     }
