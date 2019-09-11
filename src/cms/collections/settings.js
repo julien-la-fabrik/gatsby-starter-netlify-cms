@@ -29,8 +29,8 @@ const commonFields = [{
 const customCollections = {
   file: "src/settings/customcollections.json",
   extention: "json",
-  name: "Collections",
-  label: 'customcollections',
+  name: "customcollections",
+  label: 'collections',
   fields: [
     {
       label: "Collections",

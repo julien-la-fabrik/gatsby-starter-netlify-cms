@@ -24,7 +24,7 @@ CMS.init({
     // publish_mode: 'editorial_workflow',
     media_folder: 'static/img',
     public_folder: '/img',
-    collections: [page,blog,form,settings,...customCollections.collections],
+    collections: [page,blog,form,settings,...customCollections.customcollections],
   },
 });
 
