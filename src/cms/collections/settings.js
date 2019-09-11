@@ -31,7 +31,6 @@ const customCollections = {
   extention: "json",
   name: "Collections",
   label: 'customcollections',
-
   fields: [
     {
       label: "Collections",
@@ -96,6 +95,11 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  widget: "hidden",
+                  default: "string",
+                  name: "widget"
+                },
+                {
                   label: 'Default',
                   name: "default",
                   widget: "string",
@@ -110,9 +114,134 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  widget: "hidden",
+                  default: "text",
+                  name: "widget"
+                },
+                {
                   label: 'Default',
                   name: "default",
                   widget: "string",
+                  required: false
+                }
+              ]
+            },
+            {
+              label: 'Boolean',
+              name: 'boolean',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  widget: "hidden",
+                  default: "boolean",
+                  name: "widget"
+                },
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "boolean",
+                  required: false
+                }
+              ]
+            },
+            {
+              label: 'Hidden',
+              name: 'hidden',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  widget: "hidden",
+                  default: "hidden",
+                  name: "widget"
+                },
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "string",
+                  required: false
+                }
+              ]
+            },
+            {
+              label: 'Markdown',
+              name: 'markdown',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  widget: "hidden",
+                  default: "markdown",
+                  name: "widget"
+                },
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "markdown",
+                  required: false
+                }
+              ]
+            },
+            {
+              label: 'Select',
+              name: 'select',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  widget: "hidden",
+                  default: "select",
+                  name: "widget"
+                },
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "string",
+                  required: false
+                }
+              ]
+            },
+            {
+              label: 'Number',
+              name: 'number',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  widget: "hidden",
+                  default: "number",
+                  name: "widget"
+                },
+                {
+                  label: 'ValueType',
+                  name: "valueType",
+                  widget: "list",
+                  options:['int','float'],
+                  required: false
+                },
+                {
+                  label: 'Min',
+                  name: "min",
+                  widget: "number",
+                  required: false
+                },
+                {
+                  label: 'Max',
+                  name: "max",
+                  widget: "number",
+                  required: false
+                },
+                {
+                  label: 'Step',
+                  name: "step",
+                  widget: "number",
+                  required: false
+                },
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "number",
                   required: false
                 }
               ]
