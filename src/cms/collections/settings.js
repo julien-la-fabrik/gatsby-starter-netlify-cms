@@ -95,9 +95,9 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "string",
-                  name: "widget"
                 },
                 {
                   label: 'Default',
@@ -114,9 +114,9 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "text",
-                  name: "widget"
                 },
                 {
                   label: 'Default',
@@ -133,9 +133,9 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "boolean",
-                  name: "widget"
                 },
                 {
                   label: 'Default',
@@ -152,9 +152,9 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "hidden",
-                  name: "widget"
                 },
                 {
                   label: 'Default',
@@ -171,9 +171,9 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "markdown",
-                  name: "widget"
                 },
                 {
                   label: 'Default',
@@ -190,14 +190,31 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "select",
-                  name: "widget"
+                },
+                {
+                  label: 'Options',
+                  name: "options",
+                  widget: "list",
+                  fields:[
+                    {
+                      label: 'label',
+                    name: 'Label',
+                    widget: 'string',
+                  },
+                  {
+                    label: 'Value',
+                  name: 'value',
+                  widget: 'string',
+                }
+                  ]
                 },
                 {
                   label: 'Default',
                   name: "default",
-                  widget: "string",
+                  widget: "list",
                   required: false
                 }
               ]
@@ -209,9 +226,9 @@ const customCollections = {
               fields: [
                 ...commonFields,
                 {
+                  name: "widget",
                   widget: "hidden",
                   default: "number",
-                  name: "widget"
                 },
                 {
                   label: 'ValueType',
