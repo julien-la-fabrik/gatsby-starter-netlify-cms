@@ -31,6 +31,7 @@ const customCollections = {
   extention: "json",
   name: "Collections",
   label: 'customcollections',
+
   fields: [
     {
       label: "Collections",
@@ -46,6 +47,37 @@ const customCollections = {
           label: 'Name',
           name: "name",
           widget: "string",
+        },
+        {
+          label: 'Description',
+          name: "description",
+          widget: "text",
+          required: false
+        },
+        {
+          label: 'Slug',
+          name: "slug",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: 'Folder',
+          name: "folder",
+          widget: "string",
+        },
+        {
+          label: 'Extension',
+          name: "extension",
+          widget: "select",
+          options: ['yml', 'yaml', 'toml', 'json', 'md', 'markdown', 'html'],
+          required: false
+        },
+        {
+          label: 'Format',
+          name: "format",
+          widget: "select",
+          options: ['yml', 'yaml', 'toml', 'json', 'frontmatter', 'yaml-frontmatter', 'toml-frontmatter', 'json-frontmatter'],
+          required: false
         },
         {
           label: 'Create',
@@ -95,6 +127,7 @@ const customCollections = {
 export const settings = {
   label: 'Settings',
   name: 'settings',
+  editor: { preview: false },
   files: [
     customCollections,
     {
