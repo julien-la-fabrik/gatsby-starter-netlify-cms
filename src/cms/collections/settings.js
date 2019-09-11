@@ -17,7 +17,14 @@ const commonFields = [{
   label: 'Name',
   name: "name",
   widget: "string",
-}];
+},
+{
+  label: 'Required',
+  name: "required",
+  widget: "boolean",
+  default: false,
+}
+];
 
 const customCollections = {
   file: "src/settings/customcollections.json",
@@ -30,7 +37,16 @@ const customCollections = {
       name: "collections",
       widget: "list",
       fields: [
-        ...commonFields,
+        {
+          label: 'Label',
+          name: "label",
+          widget: "string",
+        },
+        {
+          label: 'Name',
+          name: "name",
+          widget: "string",
+        },
         {
           label: 'Create',
           name: "create",
@@ -51,9 +67,24 @@ const customCollections = {
                   label: 'Default',
                   name: "default",
                   widget: "string",
+                  required: false
                 }
               ]
-            }
+            },
+            {
+              label: 'Text',
+              name: 'text',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "string",
+                  required: false
+                }
+              ]
+            },
           ]
         }
       ]
