@@ -1,0 +1,17 @@
+{
+  "collections": [
+    {
+      "label": "page custom",
+      "name": "pagecustom",
+      "create": true,
+      "fields": [
+        {
+          "type": "text",
+          "required": true,
+          "label": "Title",
+          "name": "title"
+        }
+      ]
+    }
+  ]
+}
