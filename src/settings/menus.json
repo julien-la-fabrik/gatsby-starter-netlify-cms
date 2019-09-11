@@ -24,6 +24,10 @@
     {
       "title": "Images",
       "path": "/exemples/images"
+    },
+    {
+      "title": "Custom Page",
+      "path": "/pagescustom/page-custom"
     }
   ],
   "footermenu": [
