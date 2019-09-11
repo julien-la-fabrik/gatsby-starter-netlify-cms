@@ -8,74 +8,129 @@ const menuFields = [{
   widget: "string"
 }];
 
+const commonFields = [{
+  label: 'Label',
+  name: "label",
+  widget: "string",
+},
+{
+  label: 'Name',
+  name: "name",
+  widget: "string",
+}];
+
+const customCollections = {
+  file: "src/settings/customcollections.json",
+  extention: "json",
+  name: "Collections",
+  label: 'customcollections',
+  fields: [
+    {
+      label: "Collections",
+      name: "collections",
+      widget: "list",
+      fields: [
+        ...commonFields,
+        {
+          label: 'Create',
+          name: "create",
+          widget: "boolean",
+        },
+        {
+          label: "Fields",
+          name: "fields",
+          widget: "list",
+          types: [
+            {
+              label: 'String',
+              name: 'string',
+              widget: 'object',
+              fields: [
+                ...commonFields,
+                {
+                  label: 'Default',
+                  name: "default",
+                  widget: "string",
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
 export const settings = {
   label: 'Settings',
   name: 'settings',
-  files: [{
+  files: [
+    customCollections,
+    {
       file: "src/settings/theme.json",
       extention: "json",
       name: "theme",
       label: 'Theme',
       fields: [{
-          label: "Title",
-          name: "title",
-          widget: "hidden",
-          default: "theme"
-        },
-        {
-          label: "Logo",
-          name: "logo",
-          widget: "image"
-        },
-        {
-          label: "Primary Brand Color",
-          name: "brandcolorprimary",
-          widget: "string",
-          default: "#ff4400"
-        },
-        {
-          label: "Secondary Brand Color",
-          name: "brandcolorsecondary",
-          widget: "string",
-          default: "#ff4400"
-        },
-        {
-          label: "Menu top Type",
-          name: "menutopbartype",
-          widget: "select",
-          options: ["normal", "sticky"]
-        },
+        label: "Title",
+        name: "title",
+        widget: "hidden",
+        default: "theme"
+      },
+      {
+        label: "Logo",
+        name: "logo",
+        widget: "image"
+      },
+      {
+        label: "Primary Brand Color",
+        name: "brandcolorprimary",
+        widget: "string",
+        default: "#ff4400"
+      },
+      {
+        label: "Secondary Brand Color",
+        name: "brandcolorsecondary",
+        widget: "string",
+        default: "#ff4400"
+      },
+      {
+        label: "Menu top Type",
+        name: "menutopbartype",
+        widget: "select",
+        options: ["normal", "sticky"]
+      },
       ]
     },
     {
       file: "src/settings/menus.json",
       extention: "json",
       name: "menus",
-      label:"Menus",
+      label: "Menus",
       fields: [{
-          label: "Title",
-          name: "title",
-          widget: "hidden",
-          default: "menus"
-        },
-        {
-          label: "Main Menu Top",
-          name: "mainmenu",
-          widget: "list",
-          fields:menuFields
-        },
-        {
-          label: "Menu Footer",
-          name: "footermenu",
-          widget: "list",
-          fields:menuFields
-        },
+        label: "Title",
+        name: "title",
+        widget: "hidden",
+        default: "menus"
+      },
+      {
+        label: "Main Menu Top",
+        name: "mainmenu",
+        widget: "list",
+        fields: menuFields
+      },
+      {
+        label: "Menu Footer",
+        name: "footermenu",
+        widget: "list",
+        fields: menuFields
+      },
       ]
     },
     {
       file: "src/settings/siteinfos.json",
       extention: "json",
-      label:"Site Informations",
+      label: "Site Informations",
       name: "siteinfos",
       fields: [
         {
