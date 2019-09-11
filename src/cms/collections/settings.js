@@ -201,7 +201,7 @@ const customCollections = {
                   fields:[
                     {
                       label: 'label',
-                    name: 'Label',
+                    name: 'label',
                     widget: 'string',
                   },
                   {

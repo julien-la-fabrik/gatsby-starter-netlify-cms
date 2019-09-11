@@ -61,15 +61,15 @@
           "widget": "select",
           "options": [
             {
-              "Label": "oui",
+              "label": "oui",
               "value": "oui"
             },
             {
-              "Label": "non",
+              "label": "non",
               "value": "non"
             },
             {
-              "Label": "Peut-etre",
+              "label": "Peut-etre",
               "value": "peut-etre"
             }
           ],
