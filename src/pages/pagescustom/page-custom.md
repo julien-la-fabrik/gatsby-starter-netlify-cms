@@ -1,6 +1,6 @@
 ---
 title: Page custom
-templateKey: page
+templateKey: custom-page
 text: text d'intro
 trueornot: true
 price: 200
