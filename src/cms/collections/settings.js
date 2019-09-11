@@ -34,7 +34,7 @@ const customCollections = {
   fields: [
     {
       label: "Collections",
-      name: "collections",
+      name: "customcollections",
       widget: "list",
       fields: [
         {
@@ -216,7 +216,7 @@ const customCollections = {
                 {
                   label: 'ValueType',
                   name: "valueType",
-                  widget: "list",
+                  widget: "select",
                   options:['int','float'],
                   required: false
                 },
