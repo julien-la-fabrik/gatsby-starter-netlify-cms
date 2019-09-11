@@ -3,13 +3,23 @@
     {
       "label": "page custom",
       "name": "pagecustom",
+      "description": "test de page custom",
+      "folder": "src/pages/pagescustom",
+      "extension": "json",
+      "format": "json",
       "create": true,
       "fields": [
         {
-          "type": "text",
+          "type": "string",
           "required": true,
           "label": "Title",
           "name": "title"
+        },
+        {
+          "type": "text",
+          "required": false,
+          "label": "Texte",
+          "name": "text"
         }
       ]
     }
