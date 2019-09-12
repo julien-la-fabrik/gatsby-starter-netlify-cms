@@ -26,8 +26,8 @@ const commonFields = [{
 }
 ];
 
-function createField(name,obj,defaultToUse){
-  obj=obj||[];
+function createField(name, obj, defaultToUse) {
+  obj = obj || [];
 
   let defaultField = {
     label: 'Default',
@@ -37,7 +37,7 @@ function createField(name,obj,defaultToUse){
   };
 
   defaultToUse = defaultToUse || defaultField;
-  obj.push(defaultToUse);
+  obj.push(defaultField);
   return {
     label: name,
     name: name,
@@ -62,34 +62,34 @@ fieldTypes.push(createField('text'));
 fieldTypes.push(createField('hidden'));
 fieldTypes.push(createField('markdown'));
 
-fieldTypes.push(createField('select',[{
+fieldTypes.push(createField('select', [{
   label: 'Options',
   name: "options",
   widget: "list",
-  fields:[
+  fields: [
     {
       label: 'label',
-    name: 'label',
-    widget: 'string',
-  },
-  {
-    label: 'Value',
-  name: 'value',
-  widget: 'string',
-}
+      name: 'label',
+      widget: 'string',
+    },
+    {
+      label: 'Value',
+      name: 'value',
+      widget: 'string',
+    }
   ]
-}],{
-  label: 'Default',
-  name: "default",
-  widget: "list",
-  required: false
-}));
+}], {
+    label: 'Default',
+    name: "default",
+    widget: "list",
+    required: false
+  }));
 
-fieldTypes.push(createField('number',[{
+fieldTypes.push(createField('number', [{
   label: 'ValueType',
   name: "valueType",
   widget: "select",
-  options:['int','float'],
+  options: ['int', 'float'],
   required: false
 },
 {
@@ -175,7 +175,7 @@ const customCollections = {
           label: "Fields",
           name: "fields",
           widget: "list",
-          types:fieldTypes
+          types: fieldTypes
         }
       ]
     }
@@ -294,17 +294,17 @@ const typesOld = [
         label: 'Options',
         name: "options",
         widget: "list",
-        fields:[
+        fields: [
           {
             label: 'label',
-          name: 'label',
-          widget: 'string',
-        },
-        {
-          label: 'Value',
-        name: 'value',
-        widget: 'string',
-      }
+            name: 'label',
+            widget: 'string',
+          },
+          {
+            label: 'Value',
+            name: 'value',
+            widget: 'string',
+          }
         ]
       },
       {
@@ -330,7 +330,7 @@ const typesOld = [
         label: 'ValueType',
         name: "valueType",
         widget: "select",
-        options:['int','float'],
+        options: ['int', 'float'],
         required: false
       },
       {

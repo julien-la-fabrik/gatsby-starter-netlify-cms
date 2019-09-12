@@ -54,28 +54,6 @@
           "label": "Price",
           "type": "number",
           "required": false
-        },
-        {
-          "type": "select",
-          "required": false,
-          "widget": "select",
-          "options": [
-            {
-              "label": "oui",
-              "value": "oui"
-            },
-            {
-              "label": "non",
-              "value": "non"
-            },
-            {
-              "label": "Peut-etre",
-              "value": "peut-etre"
-            }
-          ],
-          "label": "select label",
-          "name": "select-label",
-          "default": "non"
         }
       ]
     }
