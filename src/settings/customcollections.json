@@ -101,6 +101,16 @@
           "widget": "markdown",
           "label": "Body",
           "name": "body"
+        },
+        {
+          "type": "list",
+          "required": false,
+          "widget": "list",
+          "label": "Tags",
+          "name": "tags",
+          "default": [
+            ""
+          ]
         }
       ]
     }
