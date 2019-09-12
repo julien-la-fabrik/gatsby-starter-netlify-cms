@@ -1,53 +1,49 @@
 ---
 templateKey: page
-title: index
+title: page test
+description: ceci est une page de test
 sections:
-  - container: full
-    header: Image Gallery
-    images:
-      - image: /img/aerial-shot-beach-daytime-995939.jpg
-        title: titre1
-        body: s
-      - image: /img/boat.jpg
-        title: bateau
-        body: bateau
-      - image: /img/blog-index.jpg
-        title: café
-        body: café
+  - images:
+      - alt: starbuks
+        button:
+          label: Go !
+        image: /img/flavor_wheel.jpg
+      - alt: filtre
+        button:
+          label: ca filtre!
+        image: /img/products-grid3.jpg
+    style:
+      container: uk-container
+      id: uk-container
+      class: uk-width-1-1
     template: SliderHero
-    type: image
-    cssid: ''
-    cssclass: ''
-  - body: Salut tout le monde
-    container: container
-    header: Spotlight
-    template: Spotlight
-    text: Hello World
-    type: spotlight
-    cssid: ''
-    cssclass: ''
-  - cards:
-      - title: '4303'
-        body: requetes
-        image: /img/apple-touch-icon.png
-      - title: '30'
-        body: Pages
-        image: /img/apple-touch-icon.png
-      - title: '300'
-        body: un film
-        image: /img/apple-touch-icon.png
-    container: container
-    header: Quelques chiffres
-    template: Columns
-    type: cards
-    cssid: chiffres
-    cssclass: ''
-  - container: container
-    formitem: Contact
-    header: Contact
-    template: FormSection
-    type: form
-    cssid: ''
-    cssclass: ''
+    type: blockimages
+  - Cards:
+      - title: une card
+        body: >-
+          **Lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        button:
+          label: Y aller
+        image: /img/blog-index.jpg
+        type: cards
+      - formitem: Contact
+        type: form
+      - alt: Vapeur
+        button:
+          label: Chaud!
+        image: /img/products-full-width.jpg
+        title: une Image
+        type: image
+    style:
+      container: uk-container
+    template: Accordion
+    title: Des cartes
+    type: blockcards
 ---
-ma nouvelle page
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

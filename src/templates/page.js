@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+
 import { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
-export const PageTemplate = ({ title, content, contentComponent, sections }) => {
+export const PageTemplate = ({ sections }) => {
   // const PageContent = contentComponent || Content
   sections = sections || []
   // console.log(sections);
@@ -43,46 +44,45 @@ Page.propTypes = {
 
 export default Page
 
+
 export const PageQuery = graphql`
-  query Page($id: String!) {
+  query PageNew($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
-        sections {
-          header
-          formitem
-          template
-          type
-          body
-          container
-          cssid
-          cssclass
-          cards{
-            title
-            body
-            image{
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
+          title
+          templateKey
+          sections {
+            Cards {
+              title
+              body
+              type
+              formitem
+              alt
+            }
+            images {
+              alt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
-            }
-          }
-          images{
-            title
-            body
-            image{
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+              button {
+                label
               }
             }
-
+            style {
+              container
+              id
+              class
+            }
+            type
+            title
+            template
           }
         }
-      }
     }
   }
 `

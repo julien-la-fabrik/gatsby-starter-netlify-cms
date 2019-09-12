@@ -21,11 +21,11 @@ const GetimgUrl = (imageInfo) => {
 
 export const Gallery = ({ content }) => {
   // console.log(content.images);
-  content.cssclass=content.cssclass||'';
+  content.cssclass = '';
   content.cssclass=content.cssclass+' uk-section'
   return (
-    <section className={content.cssclass} id={content.cssid}>
-      <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
+    <section className="uk-section" id={content.style.id}>
+      <div className={content.style.container}>
         <h2>{content.header}</h2>
         <div uk-grid="" className="uk-grid-medium" uk-lightbox="animation: slide">
           {

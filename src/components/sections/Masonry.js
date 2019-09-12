@@ -3,8 +3,8 @@ import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const Carousel = ({ content }) => {
   return (
-    <section className="uk-section" id={content.cssid}>
-      <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
+    <section className="uk-section" id={content.style.id}>
+      <div className={content.style.container}>
         <h2 className="">
           Carousel
       </h2>

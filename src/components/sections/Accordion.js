@@ -1,15 +1,15 @@
 import React from 'react'
 export const Accordion = ({ content }) => {
-  content.cssclass=content.cssclass||'';
+  content.cssclass = '';
   content.cssclass=content.cssclass+' uk-section'
   return (
-    <section className={content.cssclass} id={content.cssid}>
-      <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
+    <section className="uk-section" id={content.style.id}>
+      <div className={content.style.container}>
         <h2>{content.header}</h2>
 
         <ul uk-accordion="">
           {
-            content.cards.map((card, index) => (
+            content.Cards.map((card, index) => (
               <li key={"section-img-" + index}>
               {/* eslint-disable-next-line */}
                 <a className="uk-accordion-title" href="#">{card.title}</a>

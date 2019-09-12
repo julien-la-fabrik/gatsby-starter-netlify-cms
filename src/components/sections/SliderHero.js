@@ -42,7 +42,7 @@ export const SliderHero = ({ content }) => {
   // console.log(content);
   return (
 
-    <div className="uk-width-1-1" id={content.cssid}>
+    <div className="uk-width-1-1" id={content.style.id}>
       <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull,ratio: false">
 
         <ul className="uk-slideshow-items" uk-height-viewport="offset-top: true">

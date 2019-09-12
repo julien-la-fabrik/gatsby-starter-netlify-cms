@@ -38,11 +38,11 @@ export default class FormSection extends React.Component {
   render() {
     let content = this.props.content;
     let that = this;
-    content.cssclass=content.cssclass||'';
+    content.cssclass = '';
     content.cssclass=content.cssclass+' uk-section';
     return (
-      <section className={content.cssclass} id={content.cssid}>
-        <div className={content.container === "full" ? 'uk-width-1-1' : "uk-container"}>
+      <section className="uk-section" id={content.style.id}>
+        <div className={content.style.container}>
           <h2>{content.header}</h2>
           <StaticQuery
             query={graphql`

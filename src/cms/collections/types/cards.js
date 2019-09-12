@@ -22,6 +22,7 @@ export const cards = {
       label: 'Image',
       name: 'image',
       widget: 'image',
+      required: false
     },
   ],
 };

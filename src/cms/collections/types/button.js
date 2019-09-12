@@ -8,6 +8,7 @@ export const button = {
       label: 'Label',
       name: 'label',
       widget: 'string',
+      required: false
     },
     {
       label: 'Link',
