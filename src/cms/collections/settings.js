@@ -192,6 +192,7 @@ fieldTypes.push(createField('datetime', 'Date Time', [
   }]));
 fieldTypes.push(createField('file', 'File'));
 fieldTypes.push(createField('image', 'Image'));
+fieldTypes.push(createField('list', 'Tag List'));
 
 var mapTypes = ['Point', 'LineString', 'Polygon'];
 for (var mapType in mapTypes) {
