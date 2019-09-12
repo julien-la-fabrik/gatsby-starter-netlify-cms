@@ -56,6 +56,53 @@
           "required": false
         }
       ]
+    },
+    {
+      "label": "Blog New",
+      "name": "blog-new",
+      "description": "Nouvelle collection de blog",
+      "folder": "src/pages/blog-new",
+      "create": true,
+      "fields": [
+        {
+          "type": "hidden",
+          "required": true,
+          "widget": "hidden",
+          "label": "TemplateKey",
+          "name": "templateKey",
+          "default": "blog-post"
+        },
+        {
+          "type": "string",
+          "required": true,
+          "widget": "string",
+          "label": "Title",
+          "name": "title"
+        },
+        {
+          "type": "datetime",
+          "required": true,
+          "widget": "datetime",
+          "default": "2019-09-12T03:12:50.887Z",
+          "label": "Date",
+          "name": "date"
+        },
+        {
+          "type": "text",
+          "required": true,
+          "widget": "text",
+          "label": "Description",
+          "name": "description",
+          "default": "Courte description du post"
+        },
+        {
+          "type": "markdown",
+          "required": true,
+          "widget": "markdown",
+          "label": "Body",
+          "name": "body"
+        }
+      ]
     }
   ]
 }
