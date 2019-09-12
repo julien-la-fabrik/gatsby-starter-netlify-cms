@@ -26,10 +26,10 @@ const commonFields = [{
 }
 ];
 
-function createField(name, obj, defaultToUse) {
+function createField(name, label, obj, defaultToUse) {
   obj = obj || [];
 
-  let defaultField = {
+  var defaultField = {
     label: 'Default',
     name: "default",
     widget: name,
@@ -37,13 +37,14 @@ function createField(name, obj, defaultToUse) {
   };
 
   defaultToUse = defaultToUse || defaultField;
-  obj.push(defaultField);
+  console.log(defaultToUse);
   return {
-    label: name,
+    label: label,
     name: name,
     widget: 'object',
     fields: [
       ...commonFields,
+      defaultToUse,
       {
         name: "widget",
         widget: "hidden",
@@ -56,36 +57,67 @@ function createField(name, obj, defaultToUse) {
 
 var fieldTypes = [];
 
-fieldTypes.push(createField('string'));
-fieldTypes.push(createField('boolean'));
-fieldTypes.push(createField('text'));
-fieldTypes.push(createField('hidden'));
-fieldTypes.push(createField('markdown'));
+fieldTypes.push(createField('string', 'String'));
+fieldTypes.push(createField('boolean', 'Boolean'));
+fieldTypes.push(createField('text', 'Text'));
+fieldTypes.push(createField('hidden', 'Hidden'));
+fieldTypes.push(createField('markdown', 'Markdown'));
 
-fieldTypes.push(createField('select', [{
-  label: 'Options',
-  name: "options",
-  widget: "list",
-  fields: [
-    {
-      label: 'label',
-      name: 'label',
-      widget: 'string',
-    },
-    {
-      label: 'Value',
-      name: 'value',
-      widget: 'string',
-    }
-  ]
-}], {
+fieldTypes.push(createField('select', 'Select', [
+  {
+    label: 'Options',
+    name: "options",
+    widget: "list",
+
+    fields: [
+      {
+        label: 'label',
+        name: 'label',
+        widget: 'string',
+      },
+      {
+        label: 'Value',
+        name: 'value',
+        widget: 'string',
+      }
+    ]
+  }], {
+    label: 'Default',
+    name: "default",
+    widget: "string",
+    required: false
+  }));
+fieldTypes.push(createField('select', 'Select Multiple', [
+  {
+    name: "multiple",
+    widget: "hidden",
+    default: true,
+  },
+  {
+    label: 'Options',
+    name: "options",
+    widget: "list",
+
+    fields: [
+      {
+        label: 'label',
+        name: 'label',
+        widget: 'string',
+      },
+      {
+        label: 'Value',
+        name: 'value',
+        widget: 'string',
+      }
+    ]
+  }], {
     label: 'Default',
     name: "default",
     widget: "list",
     required: false
   }));
 
-fieldTypes.push(createField('number', [{
+fieldTypes.push(createField('number', 'Number', [{
   label: 'ValueType',
   name: "valueType",
   widget: "select",
@@ -111,6 +143,68 @@ fieldTypes.push(createField('number', [{
   required: false
 }]));
 
+
+
+fieldTypes.push(createField('date', 'Date', [
+  {
+    label: 'Format',
+    name: "format",
+    widget: "string",
+    hint: 'accepts Moment.js tokens (https://momentjs.com/docs/#/parsing/string-format/); defaults to raw Date object.',
+    required: false
+  },
+  {
+    label: 'DateFormat',
+    name: "dateFormat",
+    widget: "string",
+    required: false
+  },
+  {
+    label: 'TimeFormat',
+    name: "timeFormat",
+    widget: "string",
+    required: false
+  }]));
+fieldTypes.push(createField('datetime', 'Date Time', [
+  {
+    label: 'Format',
+    name: "format",
+    widget: "string",
+    hint: 'accepts Moment.js tokens (https://momentjs.com/docs/#/parsing/string-format/); defaults to raw Date object.',
+    required: false
+  },
+  {
+    label: 'DateFormat',
+    name: "dateFormat",
+    widget: "string",
+    required: false
+  },
+  {
+    label: 'TimeFormat',
+    name: "timeFormat",
+    widget: "string",
+    required: false
+  }]));
+fieldTypes.push(createField('file', 'File'));
+fieldTypes.push(createField('image', 'Image'));
+
+var mapTypes = ['Point', 'LineString', 'Polygon'];
+for (var mapType in mapTypes) {
+  fieldTypes.push(createField('map', 'Map (' + mapTypes[mapType] + ')', [
+    {
+      label: 'Decimals',
+      name: "decimals",
+      widget: "number",
+      required: false,
+    }], {
+      label: 'Default',
+      name: "default",
+      widget: "map",
+      type: mapTypes[mapType],
+      required: false
+    }
+  ));
+}
 
 
 
@@ -182,184 +276,6 @@ const customCollections = {
   ]
 };
 
-
-const typesOld = [
-  {
-    label: 'String',
-    name: 'string',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "string",
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "string",
-        required: false
-      }
-    ]
-  },
-  {
-    label: 'Text',
-    name: 'text',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "text",
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "string",
-        required: false
-      }
-    ]
-  },
-  {
-    label: 'Boolean',
-    name: 'boolean',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "boolean",
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "boolean",
-        required: false
-      }
-    ]
-  },
-  {
-    label: 'Hidden',
-    name: 'hidden',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "hidden",
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "string",
-        required: false
-      }
-    ]
-  },
-  {
-    label: 'Markdown',
-    name: 'markdown',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "markdown",
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "markdown",
-        required: false
-      }
-    ]
-  },
-  {
-    label: 'Select',
-    name: 'select',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "select",
-      },
-      {
-        label: 'Options',
-        name: "options",
-        widget: "list",
-        fields: [
-          {
-            label: 'label',
-            name: 'label',
-            widget: 'string',
-          },
-          {
-            label: 'Value',
-            name: 'value',
-            widget: 'string',
-          }
-        ]
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "list",
-        required: false
-      }
-    ]
-  },
-  {
-    label: 'Number',
-    name: 'number',
-    widget: 'object',
-    fields: [
-      ...commonFields,
-      {
-        name: "widget",
-        widget: "hidden",
-        default: "number",
-      },
-      {
-        label: 'ValueType',
-        name: "valueType",
-        widget: "select",
-        options: ['int', 'float'],
-        required: false
-      },
-      {
-        label: 'Min',
-        name: "min",
-        widget: "number",
-        required: false
-      },
-      {
-        label: 'Max',
-        name: "max",
-        widget: "number",
-        required: false
-      },
-      {
-        label: 'Step',
-        name: "step",
-        widget: "number",
-        required: false
-      },
-      {
-        label: 'Default',
-        name: "default",
-        widget: "number",
-        required: false
-      }
-    ]
-  },
-];
 
 export const settings = {
   label: 'Settings',
