@@ -2,7 +2,7 @@
 import { button } from './button';
 export const image = {
   label: 'Image',
-  name: 'image',
+  name: 'ImageBlock',
   widget: 'object',
   fields: [
     {

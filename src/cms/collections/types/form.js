@@ -1,7 +1,7 @@
 
 export const form = {
   label: 'Form',
-  name: 'form',
+  name: 'FormBlock',
   widget: 'object',
   fields: [
     {

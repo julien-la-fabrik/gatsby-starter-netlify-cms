@@ -31,18 +31,18 @@ sections:
         button:
           label: Y aller
         image: /img/blog-index.jpg
-        type: cards
+        type: CardBlock
       - formitem: Contact
-        type: form
+        type: FormBlock
       - alt: Vapeur
         button:
           label: Chaud!
         image: /img/products-full-width.jpg
         title: une Image
-        type: image
+        type: ImageBlock
     style:
       container: uk-container
-    template: Accordion
+    template: Columns
     title: Des cartes
     type: blockcards
 ---

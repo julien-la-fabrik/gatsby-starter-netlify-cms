@@ -2,7 +2,7 @@
 import { button } from './button';
 export const cards = {
   label: 'Card',
-  name: 'cards',
+  name: 'CardBlock',
   widget: 'object',
   fields: [
     {

@@ -1,8 +1,26 @@
 import React from 'react'
+import Blocks from '../blocks'
+
+
+const Block = ({ content }) => {
+  console.log(content);
+  const BlockItem = Blocks[content.type];
+
+  if (BlockItem) {
+    return <BlockItem content={content} />;
+  }
+  else {
+    return (
+      <div>
+
+      </div>
+    )
+  }
+}
 
 
 export const Columns = ({ content }) => {
-  console.log(content);
+  // console.log(content);
   content.cssclass = '';
   content.cssclass = content.cssclass + ' uk-section'
   return (
@@ -12,15 +30,7 @@ export const Columns = ({ content }) => {
         <div uk-grid="">
           {
             content.Cards.map((card, index) => (
-              <div className="uk-width-1-2@s uk-width-1-3@m" key={"section-cards-" + index}>
-                <div className="uk-card uk-card-default uk-card-body">
-                  <h3 className="uk-card-title">{card.title}</h3>
-                  <p>
-                    {card.body}
-                  </p>
-
-                </div>
-              </div>
+              <Block content={card} key={"block-item-" + index}/>
             ))
           }
         </div>
