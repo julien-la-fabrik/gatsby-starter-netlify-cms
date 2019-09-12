@@ -5,8 +5,6 @@ export const page = {
   label: 'Page',
   name: 'page',
   folder: 'src/pages',
-  extension:'json',
-  format:'json',
   create: true,
   fields: [
     {

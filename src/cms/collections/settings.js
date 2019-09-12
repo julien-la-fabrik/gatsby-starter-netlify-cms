@@ -60,7 +60,12 @@ var fieldTypes = [];
 fieldTypes.push(createField('string', 'String'));
 fieldTypes.push(createField('boolean', 'Boolean'));
 fieldTypes.push(createField('text', 'Text'));
-fieldTypes.push(createField('hidden', 'Hidden'));
+fieldTypes.push(createField('hidden', 'Hidden',null,{
+  label: 'Default',
+  name: "default",
+  widget: "string",
+  required: false
+}));
 fieldTypes.push(createField('markdown', 'Markdown'));
 
 fieldTypes.push(createField('select', 'Select', [
