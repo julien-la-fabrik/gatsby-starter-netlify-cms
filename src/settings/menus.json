@@ -2,13 +2,23 @@
   "title": "menus",
   "mainmenu": [
     {
-      "title": "About",
-      "path": "/about"
+      "title": "Blog",
+      "path": "/blog"
     },
     {
-      "title": "Products",
-      "path": "/products"
+      "title": "Contact",
+      "path": "/contact"
     },
+    {
+      "title": "Cards",
+      "path": "/exemples/cards"
+    },
+    {
+      "title": "Images",
+      "path": "/exemples/images"
+    }
+  ],
+  "footermenu": [
     {
       "title": "Blog",
       "path": "/blog"
@@ -24,32 +34,6 @@
     {
       "title": "Images",
       "path": "/exemples/images"
-    },
-    {
-      "title": "Custom Page",
-      "path": "/pagescustom/page-custom"
-    }
-  ],
-  "footermenu": [
-    {
-      "title": "About",
-      "path": "/about"
-    },
-    {
-      "title": "Products",
-      "path": "/products"
-    },
-    {
-      "title": "Blog",
-      "path": "/blog"
-    },
-    {
-      "title": "Contact",
-      "path": "/contact"
-    },
-    {
-      "title": "page exemple",
-      "path": "/nouvelle-page"
     }
   ]
 }

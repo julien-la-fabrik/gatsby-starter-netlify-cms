@@ -4,5 +4,7 @@
   "description": "Great coffee with a conscience",
   "brandcolor": "#ff4400",
   "gacode":"GA-",
-  "logo": "/img/logo.svg"
+  "logo": "/img/logo.svg",
+  "title404":"PAGE 404!",
+  "message404": "Désolé, cette page n'existe pas, enfin, la 404 oui, mais pas celle que vous avez appelé..."
 }
