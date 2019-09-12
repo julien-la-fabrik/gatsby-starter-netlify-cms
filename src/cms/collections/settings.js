@@ -214,15 +214,15 @@ for (var mapType in mapTypes) {
 
 
 
-const customCollections = {
-  file: "src/settings/customcollections.json",
+const collections = {
+  file: "src/settings/collections.json",
   extention: "json",
-  name: "customcollections",
+  name: "collections",
   label: 'Collections',
   fields: [
     {
       label: "Collections",
-      name: "customcollections",
+      name: "collections",
       widget: "list",
       fields: [
         {
@@ -288,7 +288,7 @@ export const settings = {
   name: 'settings',
   editor: { preview: false },
   files: [
-    customCollections,
+    collections,
     {
       file: "src/settings/theme.json",
       extention: "json",

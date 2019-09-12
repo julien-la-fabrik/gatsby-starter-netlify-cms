@@ -1,5 +1,4 @@
 import CMS from 'netlify-cms-app';
-import { blog } from './collections/blog';
 import { page } from './collections/page';
 import { form } from './collections/form';
 import { settings } from './collections/settings';
@@ -10,7 +9,7 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 // import ProductPagePreview from './preview-templates/ProductPagePreview'
 // import IndexPagePreview from './preview-templates/IndexPagePreview'
 
-const customCollections = require('../settings/customcollections.json');
+const collections = require('../settings/collections.json');
 
 
 
@@ -24,7 +23,7 @@ CMS.init({
     // publish_mode: 'editorial_workflow',
     media_folder: 'static/img',
     public_folder: '/img',
-    collections: [page,blog,form,settings,...customCollections.customcollections],
+    collections: [page,form,...collections.collections,settings],
   },
 });
 
