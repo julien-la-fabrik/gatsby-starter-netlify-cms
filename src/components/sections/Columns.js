@@ -3,7 +3,7 @@ import Blocks from '../blocks'
 
 
 const Block = ({ content }) => {
-  console.log(content);
+  // console.log(content);
   const BlockItem = Blocks[content.type];
 
   if (BlockItem) {
@@ -30,7 +30,9 @@ export const Columns = ({ content }) => {
         <div uk-grid="">
           {
             content.Cards.map((card, index) => (
-              <Block content={card} key={"block-item-" + index}/>
+              <div className="uk-width-1-2@s uk-width-1-3@m" key={"block-item-" + index}>
+              <Block content={card} />
+              </div>
             ))
           }
         </div>

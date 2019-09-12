@@ -40,8 +40,7 @@ export default class FormBlock extends React.Component {
     console.log(content);
     let that = this;
     return (
-        <div className="uk-width-1-2@s uk-width-1-3@m">
-          <h2>{content.header}</h2>
+        <div className="">
           <StaticQuery
             query={graphql`
             query{
