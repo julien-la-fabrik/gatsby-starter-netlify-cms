@@ -3,14 +3,14 @@ import { blog } from './collections/blog';
 import { page } from './collections/page';
 import { form } from './collections/form';
 import { settings } from './collections/settings';
-const customCollections = require('../settings/customcollections.json');
 
 // import AboutPagePreview from './preview-templates/AboutPagePreview'
 // import LandingPagePreview from './preview-templates/LandingPagePreview'
-// import BlogPostPreview from './preview-templates/BlogPostPreview'
+import BlogPostPreview from './preview-templates/BlogPostPreview'
 // import ProductPagePreview from './preview-templates/ProductPagePreview'
 // import IndexPagePreview from './preview-templates/IndexPagePreview'
 
+const customCollections = require('../settings/customcollections.json');
 
 
 
@@ -31,6 +31,7 @@ CMS.init({
 // CMS.registerPreviewTemplate('index', IndexPagePreview)
 // CMS.registerPreviewTemplate('about', AboutPagePreview)
 // CMS.registerPreviewTemplate('products', ProductPagePreview)
-// CMS.registerPreviewTemplate('blog', BlogPostPreview)
+ CMS.registerPreviewTemplate('blog', BlogPostPreview)
+ CMS.registerPreviewTemplate('blog-new', BlogPostPreview)
 // CMS.registerPreviewTemplate('landing', LandingPagePreview)
 // CMS.registerPreviewStyle('../components/uikit.scss')
