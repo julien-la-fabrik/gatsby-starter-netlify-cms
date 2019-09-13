@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { PageTemplate } from '../../templates/page'
+import '../../components/uikit.scss';
+
 
 
 function getItemsFromSection(raw){
@@ -8,7 +10,7 @@ function getItemsFromSection(raw){
   if(raw.hasOwnProperty('_tail')){
     for (var i in raw._tail.array){
       var obj = {};
-      for (var key in raw._tail.array[i]._root.entries) {
+      for (let key in raw._tail.array[i]._root.entries) {
         let item =raw._tail.array[i]._root.entries[key];
         if(typeof item[1]==="object"){
           obj[item[0]]=getItemsFromSection(item[1]);
@@ -21,7 +23,7 @@ function getItemsFromSection(raw){
   }
   else if(raw.hasOwnProperty('_root')){
     output = {};
-    for (var key in raw._root.entries) {
+    for (let key in raw._root.entries) {
       let item =raw._root.entries[key];
       if(typeof item[1]==="object"){
         output[item[0]]=getItemsFromSection(item[1]);
@@ -33,8 +35,13 @@ function getItemsFromSection(raw){
   return output;
 }
 
-const PagePreview = ({ entry, getAsset }) => {
-var rawSections  =entry.getIn(['data', 'sections']);
+const PagePreview = ({ entry }) => {
+  if (typeof window !== 'undefined') {
+    const uikit = require('uikit');
+    const icons = require('uikit/dist/js/uikit-icons.min');
+    uikit.use(icons);
+  }
+var rawSections = entry.getIn(['data', 'sections']);
 const sections = getItemsFromSection(rawSections);
 
   return (
