@@ -32,6 +32,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.0",
+    "react-markdown": "^4.2.2",
     "uikit": "^3.1.7",
     "uuid": "^3.2.1"
   },

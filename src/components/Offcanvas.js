@@ -6,7 +6,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <div id="offcanvas-usage" uk-offcanvas="">
+      <div id="offcanvas-usage" uk-offcanvas="flip: true">
     <div className="uk-offcanvas-bar">
 
         <button className="uk-offcanvas-close" type="button" uk-close=""></button>

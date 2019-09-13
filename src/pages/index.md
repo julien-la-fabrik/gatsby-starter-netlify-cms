@@ -13,6 +13,7 @@ sections:
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
+          ![flavor wheel](/img/boat.jpg)
         button:
           label: Y aller
         image: /img/blog-index.jpg

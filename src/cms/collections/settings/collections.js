@@ -10,7 +10,7 @@ function createField(name, label, obj, defaultToUse) {
   };
 
   defaultToUse = defaultToUse || defaultField;
-  console.log(defaultToUse);
+  // console.log(defaultToUse);
   return {
     label: label,
     name: name,

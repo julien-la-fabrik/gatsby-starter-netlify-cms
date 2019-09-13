@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ReactMarkdown from 'react-markdown';
 
 export const CardBlock = ({ content }) => {
   // console.log(content);
@@ -11,9 +11,9 @@ export const CardBlock = ({ content }) => {
       {content.title && (
         <h3 className="uk-card-title">{content.title}</h3>
       )}
-      <p>
-        {content.body}
-      </p>
+      <div>
+      <ReactMarkdown source={content.body} />
+      </div>
 
       {//</div>
       }

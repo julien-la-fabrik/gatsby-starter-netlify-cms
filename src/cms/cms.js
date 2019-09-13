@@ -7,11 +7,17 @@ import { settings } from './collections/settings';
 // import LandingPagePreview from './preview-templates/LandingPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 // import ProductPagePreview from './preview-templates/ProductPagePreview'
-// import IndexPagePreview from './preview-templates/IndexPagePreview'
+import PagePreview from './preview-templates/PagePreview'
+
+import '../components/uikit.scss';
 
 const collections = require('../settings/collections.json');
 
-
+if (typeof window !== 'undefined') {
+  const uikit = require('uikit');
+  const icons = require('uikit/dist/js/uikit-icons.min');
+  uikit.use(icons);
+}
 
 CMS.init({
   config: {
@@ -27,7 +33,7 @@ CMS.init({
   },
 });
 
-// CMS.registerPreviewTemplate('index', IndexPagePreview)
+CMS.registerPreviewTemplate('page', PagePreview)
 // CMS.registerPreviewTemplate('about', AboutPagePreview)
 // CMS.registerPreviewTemplate('products', ProductPagePreview)
  CMS.registerPreviewTemplate('blog', BlogPostPreview)
