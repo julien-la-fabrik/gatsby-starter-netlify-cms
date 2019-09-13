@@ -7,6 +7,10 @@ import '../../components/uikit.scss';
 
 function getItemsFromSection(raw){
   var output = [];
+  // console.log(raw);
+  if(typeof raw !=="object"){
+    return [];
+  }
   if(raw.hasOwnProperty('_tail')){
     for (var i in raw._tail.array){
       var obj = {};
@@ -41,7 +45,7 @@ const PagePreview = ({ entry }) => {
     const icons = require('uikit/dist/js/uikit-icons.min');
     uikit.use(icons);
   }
-var rawSections = entry.getIn(['data', 'sections']);
+var rawSections = entry.getIn(['sections']);
 const sections = getItemsFromSection(rawSections);
 
   return (
