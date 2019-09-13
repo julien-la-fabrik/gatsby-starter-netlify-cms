@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { PageTemplate } from '../../templates/page'
 import '../../components/uikit.scss';
@@ -39,25 +39,25 @@ function getItemsFromSection(raw){
   return output;
 }
 
-const PagePreview = ({ entry }) => {
-  if (typeof window !== 'undefined') {
-    const uikit = require('uikit');
-    const icons = require('uikit/dist/js/uikit-icons.min');
-    uikit.use(icons);
-  }
-var rawSections = entry.getIn(['data','sections']);
-const sections = getItemsFromSection(rawSections);
+class PagePreview extends Component {
+  componentDidMount = () => {
+    console.log('componentDidMount');
+    if (typeof window !== 'undefined') {
+      const uikit = require('uikit');
+      const icons = require('uikit/dist/js/uikit-icons.min');
+      uikit.use(icons);
+    }
+  };
+  render() {
 
-  return (
-  <PageTemplate sections={sections}/>
-  )
+    const rawSections = this.props.entry.getIn(['data','sections']);
+    const sections = getItemsFromSection(rawSections);
+
+    return (
+      <PageTemplate sections={sections}/>
+    )
+}
 }
 
-PagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  getAsset: PropTypes.func,
-}
 
 export default PagePreview
