@@ -69,6 +69,7 @@ export const PageQuery = graphql`
             }
             images {
               alt
+              title
               image {
                 childImageSharp {
                   fluid(maxWidth: 2048, quality: 100) {

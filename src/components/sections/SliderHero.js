@@ -50,12 +50,12 @@ export const SliderHero = ({ content }) => {
             content.images.map((image, index) => (
               <li key={"section-img-" + index}>
                 <PreviewCompatibleImage imageInfo={image} className="uk-height-1-1" />
-                                  <div className="uk-overlay-primary uk-position-cover">
-                <div className="uk-position-center uk-position-small uk-text-center uk-light">
-                <h2 className="uk-margin-remove">{image.title}</h2>
-                <p className="uk-margin-remove">{image.body}</p>
-            </div>
-            </div>
+                <div className="uk-overlay-primary uk-position-cover">
+                  <div className="uk-position-center uk-position-small uk-text-center uk-light">
+                    <h2 className="uk-margin-remove">{image.title}</h2>
+                    <p className="uk-margin-remove">{image.body}</p>
+                  </div>
+                </div>
               </li>
             ))
           }

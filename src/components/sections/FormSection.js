@@ -39,11 +39,13 @@ export default class FormSection extends React.Component {
     let content = this.props.content;
     let that = this;
     content.cssclass = '';
-    content.cssclass=content.cssclass+' uk-section';
+    content.cssclass = content.cssclass + ' uk-section';
     return (
       <section className="uk-section" id={content.style.id}>
         <div className={content.style.container}>
-          <h2>{content.header}</h2>
+          {content.title && (
+            <h2>{content.title}</h2>
+          )}
           <StaticQuery
             query={graphql`
             query{
@@ -78,7 +80,7 @@ export default class FormSection extends React.Component {
                   <form
                     name={form.frontmatter.formid}
                     method="post"
-                    action="/contact/thanks/"
+                    action="/contact/thanks"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={this.handleSubmit}

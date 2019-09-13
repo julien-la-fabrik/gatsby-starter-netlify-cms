@@ -23,15 +23,18 @@ export const Columns = ({ content }) => {
   // console.log(content);
   content.cssclass = '';
   content.cssclass = content.cssclass + ' uk-section'
+  // uk-width-1-2@s uk-width-1-3@m
   return (
     <section className="uk-section" id={content.style.id}>
       <div className={content.style.container}>
-        <h2>{content.header}</h2>
-        <div uk-grid="">
+        {content.title && (
+          <h2>{content.title}</h2>
+        )}
+        <div uk-grid="" className="uk-child-width-expand@s">
           {
             content.Cards.map((card, index) => (
-              <div className="uk-width-1-2@s uk-width-1-3@m" key={"block-item-" + index}>
-              <Block content={card} />
+              <div className="" key={"block-item-" + index}>
+                <Block content={card} />
               </div>
             ))
           }

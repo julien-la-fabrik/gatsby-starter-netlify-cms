@@ -1,37 +1,40 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
+import settings from '../settings';
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
+function ukScroll(path) {
+  if (path.indexOf("#") === 0) {
+    return { 'uk-scroll': 'true' };
+  }
+  return {}
+}
 const Footer = class extends React.Component {
   render() {
     return (
       <footer className="uk-background-secondary uk-section">
         <img
           className="uk-align-center uk-margin-bottom"
-          src={logo}
-          alt="Kaldi"
-          style={{ width: '14em', height: '10em' }}
+          src={settings.siteinfos.logo} alt={settings.siteinfos.sitename}
+          style={{ width: '14em' }}
         />
         <div className="uk-container">
           <div uk-grid="" className=" uk-child-width-expand@s">
             <section className="">
               <ul className="uk-nav uk-background-secondary">
-                <li><Link to="/" className="">Home</Link></li>
-                <li><Link className="" to="/about">About</Link></li>
-                <li><Link className="" to="/products">
-                  Products
+                {
+                  settings.menus.footermenu.map((links, index) => (
+                    <li className={this.props.currentPath === links.path ? "uk-active" : ""} key={"footer-menu-" + index}>
+                      <Link className="" to={links.path} {...ukScroll(links.path)}>
+                        {links.title}
                       </Link>
-                </li>
-                <li>
-                  <Link className="" to="/contact/examples">
-                    Form Examples
-                    </Link>
-                </li>
+                    </li>
+                  ))
+                }
                 <li><a
                   className=""
                   href="/admin/"

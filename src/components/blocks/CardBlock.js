@@ -7,10 +7,13 @@ export const CardBlock = ({ content }) => {
     <div className="">
       {//<div className="uk-card uk-card-default uk-card-body">
       }
+
+      {content.title && (
         <h3 className="uk-card-title">{content.title}</h3>
-        <p>
-          {content.body}
-        </p>
+      )}
+      <p>
+        {content.body}
+      </p>
 
       {//</div>
       }

@@ -22,11 +22,13 @@ const GetimgUrl = (imageInfo) => {
 export const Gallery = ({ content }) => {
   // console.log(content.images);
   content.cssclass = '';
-  content.cssclass=content.cssclass+' uk-section'
+  content.cssclass = content.cssclass + ' uk-section'
   return (
     <section className="uk-section" id={content.style.id}>
       <div className={content.style.container}>
-        <h2>{content.header}</h2>
+        {content.title && (
+          <h2>{content.title}</h2>
+        )}
         <div uk-grid="" className="uk-grid-medium" uk-lightbox="animation: slide">
           {
             content.images.map((image, index) => (
