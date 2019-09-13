@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
 import { PageTemplate } from '../../templates/page'
 import '../../components/uikit.scss';
 
