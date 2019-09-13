@@ -3,10 +3,7 @@ import { page } from './collections/page';
 import { form } from './collections/form';
 import { settings } from './collections/settings';
 
-// import AboutPagePreview from './preview-templates/AboutPagePreview'
-// import LandingPagePreview from './preview-templates/LandingPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
-// import ProductPagePreview from './preview-templates/ProductPagePreview'
 import PagePreview from './preview-templates/PagePreview'
 
 import '../components/uikit.scss';
@@ -34,8 +31,4 @@ CMS.init({
 });
 
 CMS.registerPreviewTemplate('page', PagePreview)
-// CMS.registerPreviewTemplate('about', AboutPagePreview)
-// CMS.registerPreviewTemplate('products', ProductPagePreview)
  CMS.registerPreviewTemplate('blog', BlogPostPreview)
-// CMS.registerPreviewTemplate('landing', LandingPagePreview)
-// CMS.registerPreviewStyle('../components/uikit.scss')

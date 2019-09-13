@@ -45,7 +45,7 @@ const PagePreview = ({ entry }) => {
     const icons = require('uikit/dist/js/uikit-icons.min');
     uikit.use(icons);
   }
-var rawSections = entry.getIn(['sections']);
+var rawSections = entry.getIn(['data','sections']);
 const sections = getItemsFromSection(rawSections);
 
   return (
