@@ -25,7 +25,7 @@ export const Columns = ({ content }) => {
   content.cssclass = content.cssclass + ' uk-section'
   // uk-width-1-2@s uk-width-1-3@m
   return (
-    <section className="uk-section" id={content.style.id}>
+    <section className={content.style.class+" uk-section"} id={content.style.id}>
       <div className={content.style.container}>
         {content.title && (
           <h2>{content.title}</h2>

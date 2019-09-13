@@ -6,7 +6,7 @@ export const Slider = ({ content }) => {
   content.cssclass = content.cssclass + ' uk-section';
   console.log(content);
   return (
-    <section className="uk-section" id={content.style.id}>
+    <section className={content.style.class+" uk-section"} id={content.style.id}>
       <div className={content.style.container}>
 
         <div uk-slider="autoplay: true">

@@ -4,7 +4,7 @@ title: page test
 description: ceci est une page de test
 sections:
   - Cards:
-      - title: une card
+      - title: Lorem ipsum
         body: >-
           **Lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -20,7 +20,7 @@ sections:
     style:
       container: uk-container
     template: Columns
-    title: Des cartes
+    title: Welcome!
     type: blockcards
   - images:
       - alt: starbuks
@@ -43,8 +43,8 @@ sections:
     style:
       container: uk-width-1-1
       id: uk-container
-      class: uk-width-1-1
-    template: Slider
+      class: uk-width-1-1 uk-background-secondary
+    template: Gallery
     type: blockimages
   - Cards:
       - title: une card
@@ -71,6 +71,30 @@ sections:
     template: Columns
     title: Des cartes
     type: blockcards
+  - images:
+      - alt: starbuks
+        button:
+          label: Go !
+        image: /img/flavor_wheel.jpg
+      - alt: filtre
+        button:
+          label: ca filtre!
+        image: /img/products-grid3.jpg
+        title: filtre
+      - alt: starbuks
+        button:
+          label: Go !
+        image: /img/flavor_wheel.jpg
+      - alt: filtre
+        button:
+          label: ca filtre!
+        image: /img/products-grid3.jpg
+    style:
+      container: uk-container
+      id: uk-container
+      class: uk-width-1-1 uk-background-primary
+    template: Carousel
+    type: blockimages
   - Cards:
       - formitem: Contact
         type: FormBlock
