@@ -12,8 +12,8 @@ sections:
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-          ![flavor wheel](/img/boat.jpg)
+          culpa qui officia deserunt mollit anim id est laborum. ![flavor
+          wheel](/img/boat.jpg)
         button:
           label: Y aller
         image: /img/blog-index.jpg
@@ -42,9 +42,9 @@ sections:
           label: ca filtre!
         image: /img/products-grid3.jpg
     style:
+      class: uk-width-1-1 uk-background-secondary
       container: uk-width-1-1
       id: uk-container
-      class: uk-width-1-1 uk-background-secondary
     template: Gallery
     type: blockimages
   - Cards:
@@ -91,9 +91,9 @@ sections:
           label: ca filtre!
         image: /img/products-grid3.jpg
     style:
+      class: uk-width-1-1 uk-background-primary
       container: uk-container
       id: uk-container
-      class: uk-width-1-1 uk-background-primary
     template: Carousel
     type: blockimages
   - Cards:
