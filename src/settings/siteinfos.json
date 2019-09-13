@@ -2,9 +2,8 @@
   "title": "siteinfos",
   "sitename": "Nom du site",
   "description": "Great coffee with a conscience",
-  "brandcolor": "#ff4400",
-  "gacode":"GA-",
-  "logo": "/img/logo.svg",
-  "title404":"PAGE 404!",
+  "gacode": "GA-",
+  "logo": "/img/fast-banana.png",
+  "title404": "PAGE 404!",
   "message404": "Désolé, cette page n'existe pas, enfin, la 404 oui, mais pas celle que vous avez appelé..."
 }
