@@ -36,7 +36,7 @@ class TemplateWrapper extends Component {
             <div>
               <Helmet>
                 <html lang="en" />
-                <title>{settings.siteinfos.title}</title>
+                <title>{settings.siteinfos.sitename}</title>
                 <meta
                   name="description"
                   content={settings.siteinfos.description}
@@ -68,7 +68,7 @@ class TemplateWrapper extends Component {
                 <meta name="theme-color" content={settings.siteinfos.brandcolor} />
 
                 <meta property="og:type" content="business.business" />
-                <meta property="og:title" content={settings.siteinfos.title} />
+                <meta property="og:title" content={settings.siteinfos.sitename} />
                 <meta property="og:url" content="/" />
                 <meta property="og:image" content="/img/og-image.jpg" />
               </Helmet>
