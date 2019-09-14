@@ -61,6 +61,7 @@ export const PageQuery = graphql`
               alt
               button {
                 label
+                link
                 style {
                   id
                   class
@@ -90,6 +91,7 @@ export const PageQuery = graphql`
               }
               button {
                 label
+                link
                 style {
                   id
                   class
