@@ -82,12 +82,24 @@ export const PageQuery = graphql`
             images {
               alt
               title
+              body
               image {
                 childImageSharp {
                   fluid(maxWidth: 2048, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
+              }
+              button {
+                label
+                style {
+                  class
+                  id
+                }
+              }
+              style {
+                class
+                id
               }
             }
             style {

@@ -1,5 +1,5 @@
 import React from 'react'
-// import Img from 'gatsby-image'
+import CardBlock from '../Blocks/CardBlock'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const { alt = '', childImageSharp, image } = imageInfo
@@ -39,7 +39,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 // }
 
 export const SliderHero = ({ content }) => {
-  // console.log(content);
+  console.log(content);
   return (
 
     <div className="uk-width-1-1" id={content.style.id}>
@@ -50,12 +50,16 @@ export const SliderHero = ({ content }) => {
             content.images.map((image, index) => (
               <li key={"section-img-" + index}>
                 <PreviewCompatibleImage imageInfo={image} className="uk-height-1-1" />
-                <div className="uk-overlay-primary uk-position-cover">
-                  <div className="uk-position-center uk-position-small uk-text-center uk-light">
-                    <h2 className="uk-margin-remove">{image.title}</h2>
-                    <p className="uk-margin-remove">{image.body}</p>
+                {(image.title || image.body) && (
+                  <div className="uk-overlay-primary uk-position-cover">
+                    <div className="uk-position-center uk-position-small uk-text-center uk-light">
+                    <div className="uk-container">
+                      <CardBlock content={image}/>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
+
               </li>
             ))
           }

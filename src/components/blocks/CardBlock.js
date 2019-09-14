@@ -6,8 +6,6 @@ export const CardBlock = ({ content }) => {
   // console.log(content);
   return (
     <div className="">
-      {//<div className="uk-card uk-card-default uk-card-body">
-      }
 
       {content.title && (
         <h3 className="uk-card-title">{content.title}</h3>
@@ -18,8 +16,6 @@ export const CardBlock = ({ content }) => {
       {content.button && (
         <Button button={content.button}/>
       )}
-      {//</div>
-      }
     </div>
   )
 }

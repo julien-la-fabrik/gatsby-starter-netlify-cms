@@ -59,7 +59,14 @@ class TemplateWrapper extends Component {
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
+        {settings.theme.menutopbartype==="sticky" && (
+          <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+          <Navbar currentPath={this.state.currentPath} />
+          </div>
+        )}
+        {settings.theme.menutopbartype!=="sticky" && (
         <Navbar currentPath={this.state.currentPath} />
+        )}
         <div>{this.props.children}</div>
         <Footer currentPath={this.state.currentPath} />
         <Offcanvas currentPath={this.state.currentPath} />

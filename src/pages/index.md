@@ -3,6 +3,26 @@ templateKey: page
 title: page test
 description: ceci est une page de test
 sections:
+  - images:
+      - alt: filtre
+        button:
+          label: ca filtre!
+        image: /img/products-grid3.jpg
+        title: filtre
+        body: >-
+          **Lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. 
+    style:
+      class: uk-width-1-1 uk-background-primary
+      container: uk-width-1-1
+      id: uk-container
+    template: SliderHero
+    type: blockimages
   - Cards:
       - title: Lorem ipsum
         body: >-
@@ -16,6 +36,7 @@ sections:
           wheel](/img/boat.jpg)
         button:
           label: Y aller
+          link: "#gallery"
           style:
             class: uk-width-1-1
             id: uk-container
@@ -54,9 +75,9 @@ sections:
           class: uk-width-1-1
           id: uk-container
     style:
-      class: uk-width-1-1 uk-background-secondary
+      class: uk-width-1-1 uk-background-secondary uk-height-viewport uk-flex uk-flex-center uk-flex-middle
       container: uk-width-1-1
-      id: uk-container
+      id: gallery
     template: Gallery
     type: blockimages
   - Cards:
@@ -70,8 +91,8 @@ sections:
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         button:
-          label: Y aller
-          link: /contact
+          label: Contactez-nous
+          link: "#contact"
           style:
             class: uk-button-primary
             id: uk-container
@@ -88,6 +109,7 @@ sections:
         type: ImageBlock
     style:
       container: uk-container
+      class: uk-width-1-1 uk-height-viewport uk-flex uk-flex-center uk-flex-middle
     template: Columns
     title: Des cartes
     type: blockcards
@@ -120,6 +142,7 @@ sections:
         type: FormBlock
     style:
       container: uk-container
+      id: contact
     template: Columns
     title: Contactez-nous
     type: blockcards

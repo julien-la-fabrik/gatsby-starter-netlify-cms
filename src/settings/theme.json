@@ -3,5 +3,5 @@
   "logo": "/img/apple-touch-icon.png",
   "brandcolorprimary": "#facd00",
   "brandcolorsecondary": "#ff4400",
-  "menutopbartype": "sticky"
+  "menutopbartype": "normal"
 }

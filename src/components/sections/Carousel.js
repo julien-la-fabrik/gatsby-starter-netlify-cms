@@ -1,5 +1,6 @@
 import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import CardBlock from '../Blocks/CardBlock'
 
 export const Carousel = ({ content }) => {
   content.cssclass = '';
@@ -17,10 +18,12 @@ export const Carousel = ({ content }) => {
               content.images.map((image, index) => (
                 <li key={"section-img-" + index}>
                   <PreviewCompatibleImage imageInfo={image} />
-                  <div className="uk-position-center uk-panel">
-                    <h2 className="uk-margin-remove">{image.title}</h2>
-                    <p className="uk-margin-remove">{image.body}</p>
-                  </div>
+                  {(image.title || image.body) && (
+                    <div className="uk-position-center uk-panel">
+                    <CardBlock content={image}/>
+                    </div>
+                  )}
+
                 </li>
               ))
             }

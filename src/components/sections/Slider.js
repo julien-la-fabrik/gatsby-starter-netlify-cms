@@ -1,5 +1,6 @@
 import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import CardBlock from '../Blocks/CardBlock'
 
 export const Slider = ({ content }) => {
   content.cssclass = '';
@@ -18,12 +19,7 @@ export const Slider = ({ content }) => {
                   {(image.title || image.body) && (
                     <div className="uk-overlay-primary uk-position-cover">
                       <div className="uk-position-center uk-position-small uk-text-center uk-light">
-                        {image.title && (
-                          <h2 className="uk-margin-remove">{image.title}</h2>
-                        )}
-                        {image.body && (
-                          <p className="uk-margin-remove">{image.body}</p>
-                        )}
+                        <CardBlock content={image}/>
                       </div>
                     </div>
                   )}
