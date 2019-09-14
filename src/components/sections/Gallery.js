@@ -29,7 +29,7 @@ export const Gallery = ({ content }) => {
         {content.title && (
           <h2>{content.title}</h2>
         )}
-        <div className="uk-flex uk-grid-medium" uk-lightbox="animation: slide">
+        <div className="uk-flex uk-grid" uk-lightbox="animation: slide">
           {
             content.images.map((image, index) => (
               <div className="uk-width-1-2@s uk-width-1-3@m" key={"section-img-" + index}>

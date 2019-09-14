@@ -1,4 +1,5 @@
 
+import { styling } from './blockstyling';
 import { button } from './button';
 export const cards = {
   label: 'Card',
@@ -17,12 +18,13 @@ export const cards = {
       widget: 'markdown',
       required: false
     },
-    button,
     {
       label: 'Image',
       name: 'image',
       widget: 'image',
       required: false
     },
+    button,
+    styling
   ],
 };

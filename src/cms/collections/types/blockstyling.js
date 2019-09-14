@@ -33,3 +33,24 @@ export const blockstyling = {
     },
   ],
 };
+
+
+export const styling = {
+  label: 'Style',
+  name: 'style',
+  widget: 'object',
+  fields: [
+    {
+      label: 'Identifiant',
+      name: 'id',
+      widget: 'string',
+      required: false
+    },
+    {
+      label: 'Class css',
+      name: 'class',
+      widget: 'string',
+      required: false
+    },
+  ],
+};

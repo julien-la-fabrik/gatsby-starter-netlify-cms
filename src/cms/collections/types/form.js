@@ -1,4 +1,5 @@
 
+import { styling } from './blockstyling';
 export const form = {
   label: 'Form',
   name: 'FormBlock',
@@ -12,5 +13,6 @@ export const form = {
       searchFields: 'title',
       valueField: 'title'
     },
+    styling
   ],
 };

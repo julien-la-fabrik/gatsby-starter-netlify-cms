@@ -1,4 +1,5 @@
 
+import { styling } from './blockstyling';
 export const button = {
   label: 'Button',
   name: 'button',
@@ -16,11 +17,6 @@ export const button = {
       widget: 'string',
       required: false
     },
-    {
-      label: 'Class',
-      name: 'css-class',
-      widget: 'string',
-      required: false
-    },
+    styling
   ],
 };

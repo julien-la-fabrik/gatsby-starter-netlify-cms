@@ -30,7 +30,7 @@ export const Columns = ({ content }) => {
         {content.title && (
           <h2>{content.title}</h2>
         )}
-        <div className="uk-flex uk-grid-medium uk-child-width-expand@s">
+        <div className="uk-flex uk-grid uk-child-width-expand@s">
           {
             content.Cards.map((card, index) => (
               <div className="" key={"block-item-" + index}>

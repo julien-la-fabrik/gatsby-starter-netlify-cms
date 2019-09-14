@@ -50,9 +50,9 @@ class TemplateWrapper extends Component {
           <link
             rel="mask-icon"
             href="/img/safari-pinned-tab.svg"
-            color={settings.siteinfos.brandcolor}
+            color={settings.theme.brandcolorprimary}
           />
-          <meta name="theme-color" content={settings.siteinfos.brandcolor} />
+          <meta name="theme-color" content={settings.theme.brandcolorprimary} />
 
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={settings.siteinfos.sitename} />

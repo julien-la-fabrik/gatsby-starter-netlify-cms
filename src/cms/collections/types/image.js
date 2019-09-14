@@ -1,4 +1,5 @@
 
+import { styling } from './blockstyling';
 import { button } from './button';
 export const image = {
   label: 'Image',
@@ -27,6 +28,7 @@ export const image = {
       widget: 'markdown',
       required: false
     },
-    button
+    button,
+    styling
   ],
 };
