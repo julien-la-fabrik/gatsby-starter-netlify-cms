@@ -16,8 +16,14 @@ sections:
           wheel](/img/boat.jpg)
         button:
           label: Y aller
+          style:
+            class: uk-width-1-1
+            id: uk-container
         image: /img/blog-index.jpg
         type: CardBlock
+        style:
+          class: uk-width-1-1
+          id: uk-container
     style:
       container: uk-container
     template: Columns
@@ -40,7 +46,13 @@ sections:
       - alt: filtre
         button:
           label: ca filtre!
+          style:
+            class: uk-width-1-1
+            id: uk-container
         image: /img/products-grid3.jpg
+        style:
+          class: uk-width-1-1
+          id: uk-container
     style:
       class: uk-width-1-1 uk-background-secondary
       container: uk-width-1-1
@@ -59,8 +71,15 @@ sections:
           culpa qui officia deserunt mollit anim id est laborum.
         button:
           label: Y aller
+          link: /contact
+          style:
+            class: uk-button-primary
+            id: uk-container
         image: /img/blog-index.jpg
         type: CardBlock
+        style:
+          class: uk-width-1-3
+          id: uk-container
       - alt: Vapeur
         button:
           label: Chaud!

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown';
+import Button from '../Button.js';
 
 export const CardBlock = ({ content }) => {
   // console.log(content);
@@ -14,7 +15,9 @@ export const CardBlock = ({ content }) => {
       <div>
       <ReactMarkdown source={content.body} />
       </div>
-
+      {content.button && (
+        <Button button={content.button}/>
+      )}
       {//</div>
       }
     </div>

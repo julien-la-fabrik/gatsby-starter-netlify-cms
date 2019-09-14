@@ -33,7 +33,7 @@ export const Columns = ({ content }) => {
         <div className="uk-flex uk-grid uk-child-width-expand@s">
           {
             content.Cards.map((card, index) => (
-              <div className="" key={"block-item-" + index}>
+              <div className={card.style ? card.style.class :''} key={"block-item-" + index}>
                 <Block content={card} />
               </div>
             ))

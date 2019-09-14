@@ -23,13 +23,15 @@ export const blockstyling = {
       label: 'Identifiant',
       name: 'id',
       widget: 'string',
-      required: false
+      required: false,
+      default:""
     },
     {
       label: 'Class css',
       name: 'class',
       widget: 'string',
-      required: false
+      required: false,
+      default:""
     },
   ],
 };
@@ -44,13 +46,15 @@ export const styling = {
       label: 'Identifiant',
       name: 'id',
       widget: 'string',
-      required: false
+      required: false,
+      default:""
     },
     {
       label: 'Class css',
       name: 'class',
       widget: 'string',
-      required: false
+      required: false,
+      default:""
     },
   ],
 };

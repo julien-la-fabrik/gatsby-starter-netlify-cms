@@ -59,6 +59,17 @@ export const PageQuery = graphql`
               type
               formitem
               alt
+              button {
+                label
+                style {
+                  id
+                  class
+                }
+              }
+              style {
+                id
+                class
+              }
               image {
                 childImageSharp {
                   fluid(maxWidth: 2048, quality: 100) {
@@ -79,6 +90,10 @@ export const PageQuery = graphql`
               }
               button {
                 label
+                style {
+                  id
+                  class
+                }
               }
             }
             style {

@@ -9,13 +9,15 @@ export const button = {
       label: 'Label',
       name: 'label',
       widget: 'string',
-      required: false
+      required: false,
+      default:""
     },
     {
       label: 'Link',
       name: 'link',
       widget: 'string',
-      required: false
+      required: false,
+      default:""
     },
     styling
   ],
