@@ -89,14 +89,6 @@ export const PageQuery = graphql`
                   }
                 }
               }
-              button {
-                label
-                link
-                style {
-                  id
-                  class
-                }
-              }
             }
             style {
               container
