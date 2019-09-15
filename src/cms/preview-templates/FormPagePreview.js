@@ -4,18 +4,15 @@ import '../../components/uikit.scss';
 
 
 class FormPagePreview extends Component {
-  componentDidMount = () => {
-    if (typeof window !== 'undefined') {
-      const uikit = require('uikit');
-      const icons = require('uikit/dist/js/uikit-icons.min');
-      uikit.use(icons);
-    }
-  };
   render() {
 
     const content = this.props.entry.getIn(['data']).toJS();
     return (
-      <Form content={content}/>
+      <div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+        <Form content={content}/>
+      </div>
     )
 }
 }
