@@ -1,6 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-import FormElement from '../components/FormElement'
+import FormElement from '../components/FormElement/index'
 
 function encode(data) {
   return Object.keys(data)

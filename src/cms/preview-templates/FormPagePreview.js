@@ -5,7 +5,6 @@ import '../../components/uikit.scss';
 
 class FormPagePreview extends Component {
   componentDidMount = () => {
-    console.log('componentDidMount');
     if (typeof window !== 'undefined') {
       const uikit = require('uikit');
       const icons = require('uikit/dist/js/uikit-icons.min');
@@ -15,7 +14,6 @@ class FormPagePreview extends Component {
   render() {
 
     const content = this.props.entry.getIn(['data']).toJS();
-    console.log(content);
     return (
       <Form content={content}/>
     )

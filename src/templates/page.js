@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 import { HTMLContent } from '../components/Content'
-import Section from '../components/Sections'
+import Section from '../components/Sections/index'
 
 export const PageTemplate = ({ sections }) => {
   // const PageContent = contentComponent || Content
