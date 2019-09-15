@@ -1,9 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
 import { navigate } from 'gatsby-link'
-import { HTMLContent } from '../components/Content'
 import FormElement from '../components/FormElement'
 
 function encode(data) {
@@ -11,11 +7,7 @@ function encode(data) {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
-class FormTemplate extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { isValidated: false }
-  }
+export default class Form extends React.Component {
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
@@ -38,27 +30,28 @@ class FormTemplate extends React.Component {
 
   render() {
     // const FormContent = contentComponent || Content
-    let elements = this.props.elements || [];
-    let form = this.props.post;
+    let content = this.props.content;
+    console.log(content);
+    let elements = content.elements || [];
     return (
       <div className="uk-container">
         <div className="uk-margin">
           <form
-            name={form.frontmatter.formid}
+            name={content.formid}
             method="post"
             action="/contact/thanks/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
           >
-            <input type="hidden" name="form-name" value={form.frontmatter.formid} />
+            <input type="hidden" name="form-name" value={content.formid} />
             {
               elements.map((element, index) => (
                 <FormElement key={"section-" + index} type={element.template} content={element} onChange={this.handleChange} />
               ))
             }
             <div className="uk-margin">
-              <button type="submit" className="uk-button uk-button-primary">{form.frontmatter.submitbtn}</button>
+              <button type="submit" className="uk-button uk-button-primary">{content.button.label}</button>
             </div>
           </form>
         </div>
@@ -67,47 +60,3 @@ class FormTemplate extends React.Component {
   }
 
 }
-const Form = ({ data }) => {
-  const { markdownRemark: post } = data
-  return (
-    <Layout>
-      <FormTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-        post={post}
-        elements={post.frontmatter.elements}
-      />
-    </Layout>
-  )
-}
-
-Form.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
-
-export default Form
-
-export const FormQuery = graphql`
-  query Form($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        formid
-        submitbtn
-        elements {
-          title
-          name
-          template
-          description
-          placeholder
-        }
-      }
-    }
-  }
-`

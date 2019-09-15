@@ -4,6 +4,7 @@ import { form } from './collections/form';
 import { settings } from './collections/settings';
 
 import BlogPostPreview from './preview-templates/BlogPostPreview'
+import FormPagePreview from './preview-templates/FormPagePreview'
 import PagePreview from './preview-templates/PagePreview'
 
 import '../components/uikit.scss';
@@ -31,4 +32,6 @@ CMS.init({
 });
 
 CMS.registerPreviewTemplate('page', PagePreview)
+CMS.registerPreviewTemplate('form', FormPagePreview)
+
  CMS.registerPreviewTemplate('blog', BlogPostPreview)

@@ -1,8 +1,13 @@
 ---
-templateKey: Form
+templateKey: form-page
 title: Contact
-submitbtn: Envoyer
 formid: contactcustom
+button:
+  label: Envoyer
+  link: "/contact/thanks"
+  style:
+    class: uk-button-primary
+    id: uk-container
 elements:
   - description: ''
     placeholder: Votre nom
@@ -10,8 +15,9 @@ elements:
     title: Nom
     type: text
     name: nom
-    cssid: nom
-    cssclass: ''
+    style:
+      class: ""
+      id: nom
   - description: ''
     placeholder: Votre prenom
     template: Text
@@ -19,22 +25,26 @@ elements:
     type: text
     cssid: prenom
     name: prenom
-    cssclass: ''
+    style:
+      class: ""
+      id: prenom
   - description: un email valid
     placeholder: ''
     template: Email
     title: Email
     type: text
-    cssid: email
     name: email
-    cssclass: ''
+    style:
+      class: ''
+      id: email
   - description: ''
     placeholder: ''
     template: TextArea
     title: Message
     type: text
-    cssid: message
     name: message
-    cssclass: ''
+    style:
+      class: ''
+      id: message
 ---
 contact form

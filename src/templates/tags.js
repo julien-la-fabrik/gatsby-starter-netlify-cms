@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+import settings from '../settings';
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -14,7 +15,7 @@ class TagRoute extends React.Component {
       </li>
     ))
     const tag = this.props.pageContext.tag
-    const title = this.props.data.site.siteMetadata.title
+    const title = settings.siteinfos.sitename
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'

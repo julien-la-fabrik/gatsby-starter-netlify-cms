@@ -17,8 +17,12 @@ export const Carousel = ({ content }) => {
                 <li key={"section-img-" + index}>
                   <PreviewCompatibleImage imageInfo={image} />
                   {(image.title || image.body) && (
-                    <div className="uk-position-center uk-panel">
-                    <CardBlock content={image}/>
+                    <div className="uk-overlay-primary uk-position-cover">
+                      <div className="uk-position-center uk-position-small uk-text-center uk-light">
+                      <div className="uk-container">
+                        <CardBlock content={image}/>
+                        </div>
+                      </div>
                     </div>
                   )}
 

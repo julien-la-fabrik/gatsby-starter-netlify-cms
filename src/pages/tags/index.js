@@ -3,6 +3,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import settings from '../../settings';
 
 const TagsPage = ({
   data: {
@@ -15,7 +16,7 @@ const TagsPage = ({
     <Layout>
       <section className="uk-section">
         <div className="uk-container">
-          <Helmet title={`Tags | ${title}`} />
+          <Helmet title={`Tags | ${settings.siteinfos.sitename}`} />
           <h1 className="title is-size-2 is-bold-light">Tags</h1>
           <ul className="uk-list">
             {group.map(tag => (
