@@ -11,11 +11,9 @@ import '../components/uikit.scss';
 
 const collections = require('../settings/collections.json');
 
-if (typeof window !== 'undefined') {
-  const uikit = require('uikit');
-  const icons = require('uikit/dist/js/uikit-icons.min');
-  uikit.use(icons);
-}
+const uikit = require('uikit');
+const icons = require('uikit/dist/js/uikit-icons.min');
+uikit.use(icons);
 
 CMS.init({
   config: {
