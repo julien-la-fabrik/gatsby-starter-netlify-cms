@@ -1,5 +1,6 @@
 
 import { button } from './types/button';
+import { styling } from './types/blockstyling';
 
 export const form = {
   label: 'Form',
@@ -73,6 +74,7 @@ export const form = {
               widget: 'string',
               required: false
             },
+            styling
           ]
         }
       ]

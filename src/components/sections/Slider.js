@@ -3,8 +3,6 @@ import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import CardBlock from '../blocks/CardBlock'
 
 export const Slider = ({ content }) => {
-  content.cssclass = '';
-  content.cssclass = content.cssclass + ' uk-section';
   console.log(content);
   return (
     <section className={content.style.class+" uk-section"} id={content.style.id}>

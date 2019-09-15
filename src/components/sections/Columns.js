@@ -21,9 +21,6 @@ const Block = ({ content }) => {
 
 export const Columns = ({ content }) => {
   // console.log(content);
-  content.cssclass = '';
-  content.cssclass = content.cssclass + ' uk-section'
-  // uk-width-1-2@s uk-width-1-3@m
   return (
     <section className={content.style.class+" uk-section"} id={content.style.id}>
       <div className={content.style.container}>

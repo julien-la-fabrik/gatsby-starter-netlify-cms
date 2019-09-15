@@ -3,8 +3,6 @@ import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import CardBlock from '../blocks/CardBlock'
 
 export const Carousel = ({ content }) => {
-  content.cssclass = '';
-  content.cssclass = content.cssclass + ' uk-section'
   return (
     <section className={content.style.class+" uk-section"} id={content.style.id}>
       <div className={content.style.container}>

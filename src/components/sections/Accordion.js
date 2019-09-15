@@ -1,7 +1,5 @@
 import React from 'react'
 export const Accordion = ({ content }) => {
-  content.cssclass = '';
-  content.cssclass = content.cssclass + ' uk-section'
   return (
     <section className={content.style.class+" uk-section"} id={content.style.id}>
       <div className={content.style.container}>

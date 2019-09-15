@@ -16,7 +16,7 @@ sections:
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. 
+          culpa qui officia deserunt mollit anim id est laborum.
     style:
       class: uk-width-1-1 uk-background-primary
       container: uk-width-1-1
@@ -99,7 +99,7 @@ sections:
         image: /img/blog-index.jpg
         type: CardBlock
         style:
-          class: uk-width-1-3
+          class: uk-width-1-3@s uk-margin-bottom
           id: uk-container
       - alt: Vapeur
         button:

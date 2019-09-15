@@ -39,7 +39,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 // }
 
 export const SliderHero = ({ content }) => {
-  console.log(content);
+  // console.log(content);
   return (
 
     <div className="uk-width-1-1" id={content.style.id}>
