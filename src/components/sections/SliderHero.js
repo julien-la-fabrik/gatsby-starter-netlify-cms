@@ -1,5 +1,5 @@
 import React from 'react'
-import CardBlock from '../Blocks/CardBlock'
+import CardBlock from '../blocks/CardBlock'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const { alt = '', childImageSharp, image } = imageInfo

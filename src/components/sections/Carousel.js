@@ -1,6 +1,6 @@
 import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
-import CardBlock from '../Blocks/CardBlock'
+import CardBlock from '../blocks/CardBlock'
 
 export const Carousel = ({ content }) => {
   content.cssclass = '';
