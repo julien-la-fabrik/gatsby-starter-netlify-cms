@@ -1,6 +1,6 @@
 {
   "title": "Site de test",
-  "logo": "/img/apple-touch-icon.png",
+  "logo": "/img/apple-touch-icon.svg",
   "brandcolorprimary": "#facd00",
   "brandcolorsecondary": "#ff4400",
   "menutopbartype": "normal"

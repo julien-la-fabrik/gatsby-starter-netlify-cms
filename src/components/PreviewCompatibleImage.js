@@ -1,9 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from "gatsby"
+
+const ComponentName = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allFile {
+        nodes {
+          relativePath
+          childImageSharp {
+            id
+            fluid {
+              base64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+              originalImg
+              originalName
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
+      }
+    }
+  `)
+  return <pre>{JSON.stringify(data, null, 4)}</pre>
+}
+
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { }
+  const imageStyle = {}
   const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
