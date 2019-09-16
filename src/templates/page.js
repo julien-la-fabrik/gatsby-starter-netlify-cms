@@ -92,6 +92,7 @@ export const PageQuery = graphql`
               }
               button {
                 label
+                link
                 style {
                   class
                   id

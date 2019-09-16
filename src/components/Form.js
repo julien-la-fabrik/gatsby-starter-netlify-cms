@@ -31,7 +31,7 @@ export default class Form extends React.Component {
   render() {
     // const FormContent = contentComponent || Content
     let content = this.props.content;
-    console.log(content);
+    // console.log(content);
     let elements = content.elements || [];
     return (
       <div className="uk-container">

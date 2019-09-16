@@ -7,7 +7,6 @@ export const ImageBlock = ({ content }) => {
   //
   return (
     <PreviewCompatibleImage imageInfo={content} />
-
   )
 }
 export default ImageBlock
