@@ -172,24 +172,21 @@ sections:
     template: Slider
     type: blockimages
   - Cards:
-      - title: une card
+      - title: Meilleure performance
         body: >-
-          **Lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Pourquoi attendre que les pages se construisent à la volée quand vous
+          pouvez les générer au moment du déploiement? Lorsqu'il s'agit de
+          réduire le temps jusqu'au premier octet, rien ne vaut les fichiers
+          prédéfinis servis sur un CDN.
         button:
-          label: Contactez-nous
-          link: '#contact'
+          label: ''
+          link: ''
           style:
             class: uk-button-primary
             id: uk-container
         image: /img/blog-index.jpg
         style:
-          class: uk-width-1-3@s uk-margin-bottom
+          class: uk-width-1-2@s uk-margin-bottom
           id: uk-container
         type: CardBlock
       - alt: Vapeur
@@ -198,11 +195,106 @@ sections:
         image: /img/products-full-width.jpg
         title: une Image
         type: ImageBlock
+      - alt: port
+        body: ''
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        image: /img/boat.jpg
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        type: ImageBlock
+      - body: >-
+          Les processus côté serveur étant abstraits dans les API de
+          microservice, les surfaces consacrées aux attaques sont réduites. Vous
+          pouvez également tirer parti de l’expertise de domaine de services
+          tiers spécialisés.
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        title: Sécurité accrue
+        type: CardBlock
+      - body: >-
+          Lorsque votre déploiement correspond à une pile de fichiers pouvant
+          être servis n’importe où, la mise à l’échelle consiste à servir ces
+          fichiers plus souvent. Les CDN sont parfaits pour cela et incluent
+          souvent la mise à l'échelle dans tous leurs plans.
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        title: Mise à l'échelle moins chère et plus facile
+        type: CardBlock
+      - alt: grind
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        image: /img/blog-index.jpg
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        type: ImageBlock
+      - body: >-
+          Le couplage lâche et la séparation des contrôles permettent un
+          développement et un débogage plus ciblés, et le choix croissant
+          d'options de CMS pour les générateurs de sites supprime la nécessité
+          de maintenir une pile distincte pour le contenu et le marketing.
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        title: Meilleure expérience de développeur
+        type: CardBlock
+      - alt: green mug
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        image: /img/products-grid2.jpg
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        type: ImageBlock
+      - button:
+          label: Contactez-nous
+          link: '#contact'
+          style:
+            class: uk-button-large uk-button-primary
+            id: ''
+        style:
+          class: uk-margin-large-top uk-width-1-1
+          id: ''
+        type: CardBlock
     style:
-      class: uk-width-1-1 uk-height-viewport uk-flex uk-flex-center uk-flex-middle
+      class: ''
       container: uk-container
     template: Columns
-    title: Des cartes
+    title: Pourquoi utiliser le JAMstack
     type: blockcards
   - images:
       - alt: starbuks
