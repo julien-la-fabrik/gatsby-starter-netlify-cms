@@ -27,17 +27,22 @@ export const Accordion = ({ content }) => {
 
         <ul data-uk-accordion="">
           {
-            content.Cards.map((card, index) => (
+            content.Cards.map((card, index) => {
+              let cardBlock = JSON.parse(JSON.stringify(card));
+              cardBlock.title=""
+              return(
+
               <li key={"section-img-" + index}>
                 {/* eslint-disable-next-line */}
                 <a className="uk-accordion-title" href="#">{card.title}</a>
                 <div className="uk-accordion-content">
                   <div className={card.style ? card.style.class : ''} key={"block-item-" + index}>
-                    <Block content={card} />
+                    <Block content={cardBlock} />
                   </div>
                 </div>
               </li>
-            ))
+            )}
+          )
           }
 
         </ul>

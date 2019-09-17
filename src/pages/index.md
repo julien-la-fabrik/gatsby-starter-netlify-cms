@@ -77,10 +77,11 @@ sections:
     style:
       class: >-
         uk-width-1-1 uk-background-secondary uk-height-viewport uk-flex
-        uk-flex-center uk-flex-middle
+        uk-flex-center uk-flex-middle uk-text-center uk-light
       container: uk-width-1-1
       id: gallery
     template: Gallery
+    title: Gallery
     type: blockimages
   - Cards:
       - title: JavaScript
@@ -164,9 +165,7 @@ sections:
           class: uk-width-1-1
           id: uk-container
     style:
-      class: >-
-        uk-width-1-1 uk-background-primary uk-height-viewport uk-flex
-        uk-flex-center uk-flex-middle
+      class: uk-width-1-1
       container: uk-width-1-1
       id: gallery
     template: Slider
@@ -315,10 +314,11 @@ sections:
           label: ca filtre!
         image: /img/products-grid3.jpg
     style:
-      class: uk-width-1-1 uk-background-primary
+      class: uk-width-1-1 uk-background-primary uk-text-center
       container: uk-container
       id: uk-container
     template: Carousel
+    title: Carousel
     type: blockimages
   - Cards:
       - formitem: Contact
