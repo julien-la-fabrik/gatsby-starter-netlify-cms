@@ -16,7 +16,7 @@ export const Carousel = ({ content }) => {
               content.images.map((image, index) => (
                 <li key={"section-img-" + index}>
                   <PreviewCompatibleImage imageInfo={image} />
-                  {(image.title || image.body) && (
+                  {(image.title || image.body || image.button) && (
                     <div className="uk-overlay-primary uk-position-cover">
                       <div className="uk-position-center uk-position-small uk-text-center uk-light">
                       <div className="uk-container">

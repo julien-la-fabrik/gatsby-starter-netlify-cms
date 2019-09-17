@@ -94,6 +94,71 @@ sections:
         image: /img/blog-index.jpg
         type: CardBlock
         style:
+          class: uk-width-1-1
+          id: uk-container
+      - alt: Vapeur
+        button:
+          label: Chaud!
+        image: /img/products-full-width.jpg
+        title: une Image
+        type: ImageBlock
+    style:
+      container: uk-container
+      class: uk-width-1-1
+    template: Accordion
+    title: Des cartes
+    type: blockcards
+  - images:
+      - alt: starbuks
+        button:
+          link: "#contact"
+          label: Go !
+        image: /img/flavor_wheel.jpg
+      - alt: filtre
+        button:
+          label: ca filtre!
+        image: /img/products-grid3.jpg
+        title: filtre
+      - alt: starbuks
+        button:
+          label: Go !
+        image: /img/flavor_wheel.jpg
+      - alt: filtre
+        button:
+          label: ca filtre!
+          link: "#contact"
+          style:
+            class: uk-width-1-1
+            id: "#contact"
+        image: /img/products-grid3.jpg
+        style:
+          class: uk-width-1-1
+          id: uk-container
+    style:
+      class: uk-width-1-1 uk-background-primary uk-height-viewport uk-flex uk-flex-center uk-flex-middle
+      container: uk-width-1-1
+      id: gallery
+    template: Slider
+    type: blockimages
+  - Cards:
+      - title: une card
+        body: >-
+          **Lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        button:
+          label: Contactez-nous
+          link: "#contact"
+          style:
+            class: uk-button-primary
+            id: uk-container
+        image: /img/blog-index.jpg
+        type: CardBlock
+        style:
           class: uk-width-1-3@s uk-margin-bottom
           id: uk-container
       - alt: Vapeur

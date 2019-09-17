@@ -10,9 +10,11 @@ export const CardBlock = ({ content }) => {
       {content.title && (
         <h3 className="uk-card-title">{content.title}</h3>
       )}
-      <div>
-      <ReactMarkdown source={content.body} />
-      </div>
+      {content.body && (
+        <div>
+        <ReactMarkdown source={content.body} />
+        </div>
+      )}
       {content.button && (
         <Button button={content.button}/>
       )}
