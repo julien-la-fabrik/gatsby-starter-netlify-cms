@@ -7,9 +7,9 @@ export const SliderHero = ({ content }) => {
   return (
 
     <div className="uk-width-1-1 slider-hero" id={content.style.id}>
-      <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slideshow="animation: pull,ratio: false">
+      <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" data-uk-slideshow="animation: pull,ratio: false">
 
-        <ul className="uk-slideshow-items" uk-height-viewport="offset-top: true">
+        <ul className="uk-slideshow-items" data-uk-height-viewport="offset-top: true">
           {
             content.images.map((image, index) => (
               <li key={"section-img-" + index}>
@@ -28,8 +28,8 @@ export const SliderHero = ({ content }) => {
             ))
           }
         </ul>
-        <span className="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous="" uk-slideshow-item="previous"></span>
-        <span className="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next="" uk-slideshow-item="next"></span>
+        <span className="uk-position-center-left uk-position-small uk-hidden-hover" data-uk-slidenav-previous="" data-uk-slideshow-item="previous"></span>
+        <span className="uk-position-center-right uk-position-small uk-hidden-hover" data-uk-slidenav-next="" data-uk-slideshow-item="next"></span>
 
       </div>
     </div>

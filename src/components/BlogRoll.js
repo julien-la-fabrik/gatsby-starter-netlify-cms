@@ -10,7 +10,7 @@ class BlogRoll extends React.Component {
 
     return (
       <section className="uk-section">
-        <div uk-grid="" className="uk-child-width-1-2@s uk-grid-medium uk-grid-match">
+        <div data-uk-grid="" className="uk-child-width-1-2@s uk-grid-medium uk-grid-match">
           {posts && (posts
             .map(({ node: post }) => (
               <div
