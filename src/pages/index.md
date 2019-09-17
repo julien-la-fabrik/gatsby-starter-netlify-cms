@@ -182,8 +182,8 @@ sections:
           label: ''
           link: ''
           style:
-            class: uk-button-primary
-            id: uk-container
+            class: ''
+            id: ''
         image: /img/blog-index.jpg
         style:
           class: uk-width-1-2@s uk-margin uk-flex uk-flex-middle
@@ -287,7 +287,7 @@ sections:
             class: uk-button-large uk-button-primary
             id: ''
         style:
-          class: uk-margin-large-top uk-width-1-1 uk-align-center
+          class: uk-margin-large-top uk-width-1-1 uk-flex uk-flex-center
           id: ''
         type: CardBlock
     style:
