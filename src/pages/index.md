@@ -252,6 +252,18 @@ sections:
           class: uk-width-1-2@s uk-margin-bottom
           id: ''
         type: ImageBlock
+      - alt: green mug
+        button:
+          label: ''
+          link: ''
+          style:
+            class: ''
+            id: ''
+        image: /img/products-grid2.jpg
+        style:
+          class: uk-width-1-2@s uk-margin-bottom
+          id: ''
+        type: ImageBlock
       - body: >-
           Le couplage lâche et la séparation des contrôles permettent un
           développement et un débogage plus ciblés, et le choix croissant
@@ -268,18 +280,6 @@ sections:
           id: ''
         title: Meilleure expérience de développeur
         type: CardBlock
-      - alt: green mug
-        button:
-          label: ''
-          link: ''
-          style:
-            class: ''
-            id: ''
-        image: /img/products-grid2.jpg
-        style:
-          class: uk-width-1-2@s uk-margin-bottom
-          id: ''
-        type: ImageBlock
       - button:
           label: Contactez-nous
           link: '#contact'
@@ -287,7 +287,7 @@ sections:
             class: uk-button-large uk-button-primary
             id: ''
         style:
-          class: uk-margin-large-top uk-width-1-1
+          class: uk-margin-large-top uk-width-1-1 uk-align-center
           id: ''
         type: CardBlock
     style:
