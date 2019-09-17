@@ -39,7 +39,7 @@ sections:
           style:
             class: uk-width-1-1
             id: uk-container
-        image: ''
+        image: /img/flavor_wheel.jpg
         style:
           class: uk-width-1-1
           id: section-1
