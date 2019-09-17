@@ -186,7 +186,7 @@ sections:
             id: uk-container
         image: /img/blog-index.jpg
         style:
-          class: uk-width-1-2@s uk-margin-bottom
+          class: uk-width-1-2@s uk-margin uk-flex uk-flex-middle
           id: uk-container
         type: CardBlock
       - alt: Vapeur
@@ -220,7 +220,7 @@ sections:
             class: ''
             id: ''
         style:
-          class: uk-width-1-2@s uk-margin-bottom
+          class: uk-width-1-2@s uk-margin uk-flex uk-flex-middle
           id: ''
         title: Sécurité accrue
         type: CardBlock
@@ -236,7 +236,7 @@ sections:
             class: ''
             id: ''
         style:
-          class: uk-width-1-2@s uk-margin-bottom
+          class: uk-width-1-2@s uk-margin uk-flex uk-flex-middle
           id: ''
         title: Mise à l'échelle moins chère et plus facile
         type: CardBlock
@@ -264,7 +264,7 @@ sections:
             class: ''
             id: ''
         style:
-          class: uk-width-1-2@s uk-margin-bottom
+          class: uk-width-1-2@s uk-margin uk-flex uk-flex-middle
           id: ''
         title: Meilleure expérience de développeur
         type: CardBlock
