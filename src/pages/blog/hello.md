@@ -350,14 +350,6 @@ nouveau post pour aujourd'hui!
                                 <div class="uk-countdown-number uk-countdown-seconds"><span>4</span><span>7</span></div>
                             </div>
                         </div>
-                        <script>
-                        console.log("it's working");
-                            var date = (new Date(Date.now() + 864e5 * 7)).toISOString();
-                            UIkit.util.$$('[js-countdown]').forEach(function(el) {
-
-                                UIkit.countdown(el, {date: date});
-                            });
-                        </script>
                     </div>
                     <div class="uk-width-2-5@m">
                         <h1 class="uk-heading-2xlarge uk-margin-small">2XL</h1>
