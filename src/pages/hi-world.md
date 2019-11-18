@@ -5,7 +5,7 @@ description: desc
 sections:
   - Cards:
       - title: ''
-        body: '# This is a test'
+        body: '# This is a test2'
         type: CardBlock
     style:
       class: uk-text-center uk-background-primary
