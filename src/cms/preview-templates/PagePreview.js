@@ -39,6 +39,13 @@ function getItemsFromSection(raw){
 }
 
 class PagePreview extends Component {
+  componentDidMount = () => {
+    if (typeof window !== 'undefined') {
+      console.log('PagePreview componentDidMount');
+      const uikit = require('uikit');
+      const icons = require('uikit/dist/js/uikit-icons.min');
+    }
+  };
   render() {
 
     const rawSections = this.props.entry.getIn(['data','sections']);
