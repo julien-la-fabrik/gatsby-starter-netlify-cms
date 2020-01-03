@@ -8,13 +8,13 @@ import FormPagePreview from './preview-templates/FormPagePreview'
 import PagePreview from './preview-templates/PagePreview'
 import '../components/uikit.scss';
 
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-// loads the Icon plugin
-UIkit.use(Icons);
-
 const collections = require('../settings/collections.json');
 
+if (typeof window !== 'undefined') {
+    const uikit = require('uikit');
+    const icons = require('uikit/dist/js/uikit-icons.min');
+    uikit.use(icons);
+}
 
 CMS.init({
   config: {
@@ -32,5 +32,4 @@ CMS.init({
 
 CMS.registerPreviewTemplate('page', PagePreview)
 CMS.registerPreviewTemplate('form', FormPagePreview)
-
- CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('blog', BlogPostPreview)

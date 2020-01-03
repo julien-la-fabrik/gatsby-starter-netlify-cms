@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import { PageTemplate } from '../../templates/page'
 import '../../components/uikit.scss';
 
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-// loads the Icon plugin
-UIkit.use(Icons);
-
 
 function getItemsFromSection(raw){
   var output = [];
@@ -43,6 +38,13 @@ function getItemsFromSection(raw){
 }
 
 class PagePreview extends Component {
+  componentDidMount = () => {
+    if (typeof window !== 'undefined') {
+        const uikit = require('uikit');
+        const icons = require('uikit/dist/js/uikit-icons.min');
+        uikit.use(icons);
+    }
+  };
   render() {
 
     const rawSections = this.props.entry.getIn(['data','sections']);
