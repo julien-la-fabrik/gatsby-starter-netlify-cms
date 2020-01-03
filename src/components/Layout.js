@@ -9,12 +9,12 @@ import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 
 // loads the Icon plugin
-UIkit.use(Icons);
 
 class TemplateWrapper extends Component {
   state = { currentPath: false };
   componentDidMount = () => {
     if (typeof window !== 'undefined') {
+    UIkit.use(Icons);
       this.setState({ currentPath: window.location.pathname });
     }
   };

@@ -7,14 +7,14 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import FormPagePreview from './preview-templates/FormPagePreview'
 import PagePreview from './preview-templates/PagePreview'
 
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
 import '../components/uikit.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const collections = require('../settings/collections.json');
-
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
 
 // loads the Icon plugin
 UIkit.use(Icons);
