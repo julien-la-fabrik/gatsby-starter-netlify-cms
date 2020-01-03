@@ -2,13 +2,13 @@ import React from 'react'
 import Carousel from './Carousel'
 import SliderHero from './SliderHero'
 import Spotlight from './Spotlight'
-import Slider from './Slider'
+import SliderComp from './Slider'
 import Gallery from './Gallery'
 import Columns from './Columns'
 import Accordion from './Accordion'
 
 const Sections= {
-  Carousel, SliderHero, Spotlight, Slider, Gallery, Columns, Accordion
+  Carousel, SliderHero, Spotlight, SliderComp, Gallery, Columns, Accordion
 }
 
 export const Section = ({ template, type, content }) => {
