@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export const Carousel = ({ content }) => {
+export const Carousel_old = ({ content }) => {
   var settings = {
     dots: false,
     autoplaySpeed: 2000,
@@ -63,7 +63,7 @@ export const Carousel = ({ content }) => {
     </section>
   )
 }
-export const CarouselOld = ({ content }) => {
+export const Carousel = ({ content }) => {
   return (
     <section className={content.style.class + " uk-section"} id={content.style.id}>
       <div className={content.style.container}>

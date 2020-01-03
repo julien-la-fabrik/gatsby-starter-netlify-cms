@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
-export const SliderComp = ({ content }) => {
+export const SliderComp_old = ({ content }) => {
   var settings = {
     dots: false,
     autoplaySpeed: 2000,
@@ -61,7 +61,7 @@ export const SliderComp = ({ content }) => {
     </section>
   )
 }
-export const SliderOld = ({ content }) => {
+export const SliderComp = ({ content }) => {
   // console.log(content);
   return (
     <section className={content.style.class + " uk-section"} id={content.style.id}>

@@ -13,9 +13,11 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const collections = require('../settings/collections.json');
 
-const uikit = require('uikit');
-const icons = require('uikit/dist/js/uikit-icons.min');
-uikit.use(icons);
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+// loads the Icon plugin
+UIkit.use(Icons);
 
 CMS.init({
   config: {

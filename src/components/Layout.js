@@ -5,14 +5,16 @@ import Offcanvas from '../components/Offcanvas'
 import Footer from '../components/Footer'
 import settings from '../settings';
 import './uikit.scss';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+// loads the Icon plugin
+UIkit.use(Icons);
 
 class TemplateWrapper extends Component {
   state = { currentPath: false };
   componentDidMount = () => {
     if (typeof window !== 'undefined') {
-      const uikit = require('uikit');
-      const icons = require('uikit/dist/js/uikit-icons.min');
-      uikit.use(icons);
       this.setState({ currentPath: window.location.pathname });
     }
   };
