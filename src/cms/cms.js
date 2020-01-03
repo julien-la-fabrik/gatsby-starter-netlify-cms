@@ -8,6 +8,8 @@ import FormPagePreview from './preview-templates/FormPagePreview'
 import PagePreview from './preview-templates/PagePreview'
 
 import '../components/uikit.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const collections = require('../settings/collections.json');
 
