@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { PageTemplate } from '../../templates/page'
 import '../../components/uikit.scss';
 
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+// loads the Icon plugin
+UIkit.use(Icons);
 
 
 function getItemsFromSection(raw){

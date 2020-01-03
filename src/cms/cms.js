@@ -6,18 +6,15 @@ import { settings } from './collections/settings';
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import FormPagePreview from './preview-templates/FormPagePreview'
 import PagePreview from './preview-templates/PagePreview'
+import '../components/uikit.scss';
 
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
-
-import '../components/uikit.scss';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+// loads the Icon plugin
+UIkit.use(Icons);
 
 const collections = require('../settings/collections.json');
 
-// loads the Icon plugin
-UIkit.use(Icons);
 
 CMS.init({
   config: {
