@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BlogPostTemplate } from '../../templates/blog-post'
-
+if (typeof window !== 'undefined') {
+    const uikit = require('uikit');
+    const icons = require('uikit/dist/js/uikit-icons.min');
+    uikit.use(icons);
+}
 const BlogPostPreview = ({ entry, widgetFor }) => (
 
   <BlogPostTemplate

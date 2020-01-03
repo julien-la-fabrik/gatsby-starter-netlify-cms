@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { PageTemplate } from '../../templates/page'
 import '../../components/uikit.scss';
-
+if (typeof window !== 'undefined') {
+    const uikit = require('uikit');
+    const icons = require('uikit/dist/js/uikit-icons.min');
+    uikit.use(icons);
+}
 
 function getItemsFromSection(raw){
   var output = [];
