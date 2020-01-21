@@ -1,6 +1,8 @@
 import CMS from 'netlify-cms-app';
 import { page } from './collections/page';
 import { form } from './collections/form';
+import { blocks } from './collections/blocks';
+
 import { settings } from './collections/settings';
 
 import BlogPostPreview from './preview-templates/BlogPostPreview'
@@ -22,11 +24,12 @@ CMS.init({
     backend: {
       name: 'git-gateway',
       branch: 'master',
+      // name: 'test-repo'
     },
     // publish_mode: 'editorial_workflow',
     media_folder: 'static/img',
     public_folder: '/img',
-    collections: [page,form,...collections.collections,settings],
+    collections: [page,blocks,form,...collections.collections,settings],
   },
 });
 
