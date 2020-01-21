@@ -64,18 +64,35 @@ export const button = {
           ]
         },
         {
-          label: 'Identifiant',
-          name: 'id',
-          widget: 'string',
-          required: false,
-          default: ""
-        },
-        {
-          label: 'Class css',
-          name: 'class',
-          widget: 'string',
-          required: false,
-          default: ""
+          label: 'Couleur',
+          name: 'size',
+          widget: 'select',
+          options: [
+            {
+              label: "Primaire",
+              value: "primary",
+            },
+            {
+              label: "Secondaire",
+              value: "secondary",
+            },
+            {
+              label: "Danger",
+              value: "danger",
+            },
+            {
+              label: "Succes",
+              value: "success",
+            },
+            {
+              label: "Blanc",
+              value: "white",
+            },
+            {
+              label: "Noir",
+              value: "black",
+            },
+          ]
         },
       ],
     }
