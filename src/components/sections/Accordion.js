@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Blocks from '../blocks'
 
 const Block = ({ content }) => {
@@ -18,6 +18,14 @@ const Block = ({ content }) => {
 }
 
 export const Accordion = ({ content }) => {
+  var accordion= HTMLDivElement || null;
+   useEffect(() => {
+
+     if (accordion) {
+            var UIKit= require('uikit');
+            UIKit.accordion(accordion);
+        }
+  },[]);
   return (
     <section className={content.style.class + " uk-section"} id={content.style.id}>
       <div className={content.style.container}>
@@ -25,7 +33,7 @@ export const Accordion = ({ content }) => {
           <h2>{content.title}</h2>
         )}
 
-        <ul data-uk-accordion="">
+        <ul  ref={node => { accordion = node; }}>
           {
             content.Cards.map((card, index) => {
               let cardBlock = JSON.parse(JSON.stringify(card));

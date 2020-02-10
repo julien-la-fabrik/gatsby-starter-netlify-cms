@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import CardBlock from '../blocks/CardBlock'
 import Slider from 'react-slick';
@@ -64,13 +64,21 @@ export const Carousel_old = ({ content }) => {
   )
 }
 export const Carousel = ({ content }) => {
+  var slideshow= HTMLDivElement || null;
+   useEffect(() => {
+
+     if (slideshow) {
+            var UIKit= require('uikit');
+            UIKit.slideshow(slideshow,{animation: 'pull'});
+        }
+  },[]);
   return (
     <section className={content.style.class + " uk-section"} id={content.style.id}>
       <div className={content.style.container}>
         {content.title && (
           <h2>{content.title}</h2>
         )}
-        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" data-uk-slideshow="animation: pull">
+        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" ref={node => { slideshow = node; }}>
 
           <ul className="uk-slideshow-items">
             {

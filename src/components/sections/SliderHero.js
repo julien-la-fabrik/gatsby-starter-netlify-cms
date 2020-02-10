@@ -1,13 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import CardBlock from '../blocks/CardBlock'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const SliderHero = ({ content }) => {
   // console.log(content)
+  var slideshow= HTMLDivElement || null;
+   useEffect(() => {
+
+     if (slideshow) {
+            var UIKit= require('uikit');
+            UIKit.slideshow(slideshow,{animation: 'pull',ratio: false});
+        }
+  },[]);
   return (
 
     <div className="uk-width-1-1 slider-hero" id={content.style.id}>
-      <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" data-uk-slideshow="animation: pull,ratio: false">
+      <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" ref={node => { slideshow = node; }}>
 
         <ul className="uk-slideshow-items" data-uk-height-viewport="offset-top: true">
           {
