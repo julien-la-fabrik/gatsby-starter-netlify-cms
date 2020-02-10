@@ -4,6 +4,7 @@ import CardBlock from '../blocks/CardBlock'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {Slideshow} from 'uikit-react'
 
 export const Carousel_old = ({ content }) => {
   var settings = {
@@ -64,23 +65,15 @@ export const Carousel_old = ({ content }) => {
   )
 }
 export const Carousel = ({ content }) => {
-  var slideshow= typeof window !== 'undefined'  ? HTMLDivElement : null;
-   useEffect(() => {
 
-     if (slideshow) {
-            var UIKit= require('uikit');
-            UIKit.slideshow(slideshow,{animation: 'pull'});
-        }
-  },[]);
   return (
     <section className={content.style.class + " uk-section"} id={content.style.id}>
       <div className={content.style.container}>
         {content.title && (
           <h2>{content.title}</h2>
         )}
-        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" ref={node => { slideshow = node; }}>
-
-          <ul className="uk-slideshow-items">
+        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" >
+        <Slideshow options="animation: pull;">
             {
               content.images.map((image, index) => (
                 <li key={"section-img-" + index}>
@@ -99,11 +92,10 @@ export const Carousel = ({ content }) => {
               ))
             }
 
-          </ul>
 
           <span className="uk-position-center-left uk-position-small uk-hidden-hover" data-uk-slidenav-previous="" data-uk-slideshow-item="previous"></span>
           <span className="uk-position-center-right uk-position-small uk-hidden-hover" data-uk-slidenav-next="" data-uk-slideshow-item="next"></span>
-
+          </Slideshow>
         </div>
       </div>
     </section>

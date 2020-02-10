@@ -1,5 +1,6 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Blocks from '../blocks'
+import {Accordion as UikitAccordion ,AccordionItem as UikitAccordionItem} from 'uikit-react'
 
 const Block = ({ content }) => {
   // console.log(content);
@@ -18,14 +19,7 @@ const Block = ({ content }) => {
 }
 
 export const Accordion = ({ content }) => {
-  var accordion=  typeof window !== 'undefined'  ? HTMLDivElement : null;
-   useEffect(() => {
 
-     if (accordion) {
-            var UIKit= require('uikit');
-            UIKit.accordion(accordion);
-        }
-  },[]);
   return (
     <section className={content.style.class + " uk-section"} id={content.style.id}>
       <div className={content.style.container}>
@@ -33,7 +27,7 @@ export const Accordion = ({ content }) => {
           <h2>{content.title}</h2>
         )}
 
-        <ul  ref={node => { accordion = node; }}>
+        <UikitAccordion>
           {
             content.Cards.map((card, index) => {
               let cardBlock = JSON.parse(JSON.stringify(card));
@@ -53,7 +47,7 @@ export const Accordion = ({ content }) => {
           )
           }
 
-        </ul>
+        </UikitAccordion>
 
       </div>
     </section>
