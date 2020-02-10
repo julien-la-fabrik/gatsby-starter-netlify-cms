@@ -64,7 +64,7 @@ export const Carousel_old = ({ content }) => {
   )
 }
 export const Carousel = ({ content }) => {
-  var slideshow= HTMLDivElement || null;
+  var slideshow= typeof window !== 'undefined'  ? HTMLDivElement : null;
    useEffect(() => {
 
      if (slideshow) {

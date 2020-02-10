@@ -21,7 +21,7 @@ const GetimgUrl = (imageInfo) => {
 
 export const Gallery = ({ content }) => {
   // console.log(content.images);
-  var lightbox= HTMLDivElement || null;
+  var lightbox=  typeof window !== 'undefined'  ? HTMLDivElement : null;
    useEffect(() => {
 
      if (lightbox) {

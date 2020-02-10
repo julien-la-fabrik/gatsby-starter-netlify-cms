@@ -18,7 +18,7 @@ const Block = ({ content }) => {
 }
 
 export const Accordion = ({ content }) => {
-  var accordion= HTMLDivElement || null;
+  var accordion=  typeof window !== 'undefined'  ? HTMLDivElement : null;
    useEffect(() => {
 
      if (accordion) {

@@ -4,7 +4,7 @@ import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const SliderHero = ({ content }) => {
   // console.log(content)
-  var slideshow= HTMLDivElement || null;
+  var slideshow=  typeof window !== 'undefined'  ? HTMLDivElement : null;
    useEffect(() => {
 
      if (slideshow) {
