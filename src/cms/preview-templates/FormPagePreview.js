@@ -19,7 +19,11 @@ class FormPagePreview extends Component {
 
     const content = this.props.entry.getIn(['data']).toJS();
     return (
-      <Form content={content}/>
+      <div>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit-icons.min.js"></script>
+        <Form content={content}/>
+      </div>
     )
 }
 }

@@ -55,7 +55,11 @@ class PagePreview extends Component {
     const sections = getItemsFromSection(rawSections);
 
     return (
-      <PageTemplate sections={sections}/>
+      <div>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit-icons.min.js"></script>
+        <PageTemplate sections={sections}/>
+      </div>
     )
 }
 }

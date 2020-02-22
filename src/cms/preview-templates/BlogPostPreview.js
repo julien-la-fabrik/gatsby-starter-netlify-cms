@@ -7,13 +7,16 @@ if (typeof window !== 'undefined') {
     uikit.use(icons);
 }
 const BlogPostPreview = ({ entry, widgetFor }) => (
-
-  <BlogPostTemplate
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
-    title={entry.getIn(['data', 'title'])}
-  />
+  <div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit-icons.min.js"></script>
+    <BlogPostTemplate
+      content={widgetFor('body')}
+      description={entry.getIn(['data', 'description'])}
+      tags={entry.getIn(['data', 'tags'])}
+      title={entry.getIn(['data', 'title'])}
+    />
+  </div>
 )
 
 BlogPostPreview.propTypes = {
